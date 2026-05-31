@@ -1,30 +1,10 @@
-// Re-export hub for all shared types.
-// Type modules (primitives, input, data, runtime, pipeline, config, schemas)
-// will be added in the next chat per data-model.md §13.
-export {};
-```
+// Single re-export surface so consumers can `import { ... } from '@/types'`.
+// No collisions across the seven modules — verified by hand.
 
----
-
-### Empty-directory placeholders (`.gitkeep` files)
-
-Git doesn't track empty directories, so we drop a `.gitkeep` in each one to commit the structure.
-
-### File: `components/ui/.gitkeep`
-
-```
-```
-
-### File: `data/.gitkeep`
-
-```
-```
-
-### File: `data-raw/.gitkeep`
-
-```
-```
-
-### File: `scripts/.gitkeep`
-
-```
+export * from './primitives';
+export * from './input';
+export * from './data';
+export * from './runtime';
+export * from './pipeline';
+export * from './config';
+export * from './schemas';
