@@ -105,12 +105,10 @@ const HOUSING_BHK_CODE: Readonly<Record<BHK, HousingBhkCode | null>> = {
   studio: { pathPrefix: '1rk',  suffixCode: 'C1' },
   '1':    { pathPrefix: '1bhk', suffixCode: 'C2' },
   '2':    { pathPrefix: '2bhk', suffixCode: 'C4' },
-  // UNVERIFIED — the C1/C2/C4 series looks like powers of 2 (suggesting C8 for
-  // 3BHK, C16 for 4BHK) but we haven't confirmed via live URLs. Degrading to
-  // the city-wide rent URL keeps the link working; user filters BHK on-page.
-  // Test a 3BHK URL (https://housing.com/rent/3bhk-flats-for-rent-in-gurgaon-haryana-C8P1od1w26jrfqap1jl)
-  // and a 4BHK URL (try C16 first) — if they land on real listings, drop those
-  // values in here and remove this comment.
+  // 4+BHK has no canonical Housing.com rent URL for Gurgaon — tested
+  // .../4bhk-flats-for-rent-in-gurgaon-haryana-C16P1od1w26jrfqap1jl and it
+  // silently redirected to the 1BHK page. Falling back to the city-wide rent
+  // URL is the honest behavior; user filters BHK on-page.
   '3':    null,
   '4+':   null,
 };
