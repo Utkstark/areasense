@@ -111,3 +111,30 @@ export interface OfficeHub {
   centroid:  Coordinates;
   aliases?:  string[];                   // for autocomplete: ["Cyber Hub", "DLF Phase 3 IT"]
 }
+
+/**
+ * Intrinsic per-leg minutes for one (hub × locality) pair.
+ * Stored in the pre-warmed cache; user-dependent fields
+ * (total_minutes, basis_value, in_buffer_zone, office_index)
+ * are derived by the caller.
+ */
+export interface CachedCommuteLegs {
+  outbound_minutes: number;
+  return_minutes: number;
+}
+
+/**
+ * Pre-warmed (office_hub × residential_locality) commute cache.
+ *
+ * Produced offline by scripts/prewarm-commute-cache.ts.
+ * Read-only at runtime via /lib/commute-cache.ts.
+ *
+ * v0: stores the default time slot only (9 AM out / 6 PM return).
+ * Non-default time_of_day → orchestrator treats as cache miss and
+ * falls through to live Distance Matrix.
+ */
+export interface CommuteCache {
+  version: number;
+  generated_at: string; // ISO 8601 timestamp, stamped by prewarm script
+  hubs: Record<OfficeHubId, Record<LocalityId, CachedCommuteLegs>>;
+}

@@ -1,4 +1,9 @@
-// Lookup against pre-warmed (locality × hub) commute cache.
-// See tech-architecture.md §8.
-// Implementation pending.
-export {};
+import type {
+  Coordinates,
+  TimeOfDay,
+  LocalityId,
+  OfficeHub,
+  CommuteCache,
+  CachedCommuteLegs,
+} from '@/types';
+import { CACHE_CONFIG, DEFAULT_TIME_OF_DAY } from '@/types';

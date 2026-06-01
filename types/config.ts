@@ -58,6 +58,14 @@ export const INPUT_LIMITS = {
   BUDGET_INR:          { min: 3000, max: 1_000_000 },
 } as const;
 
+export const CACHE_CONFIG = {
+  // Hub-matching tolerance for the pre-warmed (hub × locality) cache.
+  // Geocoder drift to a named hub centroid is typically <300m; the nearest
+  // hub-to-hub spacing in Gurgaon is well over 1km, so 500m absorbs drift
+  // without false-matching adjacent hubs.
+  HUB_MATCH_TOLERANCE_METERS: 500,
+} as const;
+
 export const DEFAULT_TIME_OF_DAY: TimeOfDay = {
   out:    '09:00',
   return: '18:00',
