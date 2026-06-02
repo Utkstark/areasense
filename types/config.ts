@@ -12,7 +12,7 @@ export const SCORING_CONFIG = {
   // === Rating filter — product-spec §6.1, §6.3 ===
   // Used both as floor filter AND in rating_score numerator.
   // Both this AND the user toggle gate rating.
-  RATING_FLOOR:             3.8,
+  RATING_FLOOR:             3.5,
   RATING_MIN_REVIEWS:       10,
   MIN_QUALIFYING_SOCIETIES: 4,    // rating dimension drops out below this
 
@@ -37,7 +37,7 @@ export const SCORING_CONFIG = {
   RELAXATION_ORDER:        ['budget', 'commute', 'rating'] as const,
   BUDGET_RELAX_PCT:        0.20,    // budget × 1.20 on first relax step
   COMMUTE_RELAX_MINUTES:   15,      // max + 15 (on top of the 15% buffer)
-  RATING_FLOOR_RELAXED_TO: 3.5,     // rating floor dropped on third relax step
+  RATING_FLOOR_RELAXED_TO: 3.2,     // rating floor dropped on third relax step
 } as const;
 
 export const PIPELINE_CONFIG = {
