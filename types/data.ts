@@ -15,7 +15,7 @@ import type {
 // Metro station reference (used inside a locality).
 export interface MetroStation {
   station: string;       // "Sikanderpur" — canonical capitalization
-  line: string;          // "Yellow Line" | "Rapid Metro" — canonical capitalization
+  line?: string;          // "Yellow Line" | "Rapid Metro" — canonical capitalization
                          // (canonicalized at pipeline output; not a strict union
                          //  because metro lines are an evolving domain — new
                          //  lines open routinely.)
@@ -83,7 +83,7 @@ export interface LocalityRecord {
   city:          City;                   // strict union: 'Gurgaon' in v0
 
   centroid:      Coordinates;            // for commute computation
-  geometry:      Polygon | MultiPolygon;
+  geometry?: GeoJSON.Polygon | GeoJSON.MultiPolygon;
   // ^ MultiPolygon is required because real localities can be disjoint:
   //   railways, the Aravalli ridge, or wide highways physically split them.
 

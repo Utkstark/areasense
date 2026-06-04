@@ -9,7 +9,7 @@ export type Household = 'single' | 'family';
 
 // v0: Gurgaon only. v1 extends to | 'Mumbai'.
 // Strict union prevents typo drift ('gurgaon', 'Gurugram') across the codebase.
-export type City = 'Gurgaon';
+export type City = 'Gurgaon' | 'Delhi';
 
 export type CommuteBasis = 'total_daily' | 'avg_one_way';
 
@@ -17,7 +17,7 @@ export type CommuteBasis = 'total_daily' | 'avg_one_way';
 export type CommuteMode = 'driving';
 
 // v0: always 'curated'. Field reserved to avoid v2 schema migration.
-export type LocalitySource = 'curated' | 'osm-import' | 'user-submitted';
+export type LocalitySource = 'curated' | 'auto-bootstrap' | 'osm-import' | 'user-submitted';
 
 // v0 source data does not distinguish bachelor men vs women. The Indian rental
 // market often differentiates these (see product-spec §11). A finer-grained

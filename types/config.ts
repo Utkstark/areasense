@@ -59,11 +59,34 @@ export const INPUT_LIMITS = {
 } as const;
 
 export const CACHE_CONFIG = {
-  // Hub-matching tolerance for the pre-warmed (hub × locality) cache.
-  // Geocoder drift to a named hub centroid is typically <300m; the nearest
-  // hub-to-hub spacing in Gurgaon is well over 1km, so 500m absorbs drift
-  // without false-matching adjacent hubs.
-  HUB_MATCH_TOLERANCE_METERS: 500,
+  // === Commute cache TTL (data-model.md §6: CommuteCacheEntry.last_accessed) ===
+  // Entries not touched in this many weeks are removed by the weekly cron
+  // (scripts/refresh-commute-cache.ts). 4 weeks: long enough that infrequent
+  // users returning after a month still get a cache hit; short enough that
+  // one-off searches don't accumulate in commute-cache.json indefinitely.
+  CACHE_TTL_WEEKS: 4,
+
+  // === Office coordinate rounding (cache key granularity) ===
+  // Office coords are rounded to this granularity before being used as a
+  // cache key. 100m is small enough that "same office" still hits the same
+  // entry (Cyber City building-to-building variance is under 100m for
+  // commute purposes) but large enough to deduplicate addresses that
+  // geocode to slightly different points across sessions.
+  //
+  // Replaces the old HUB_MATCH_TOLERANCE_METERS (500m) from the two-path
+  // hub-vs-live cache model. Under the new single-path model, hubs are
+  // just pre-seeded entries at their own rounded coord — there is no
+  // separate "match office to hub" step. Do NOT reintroduce a hub-match
+  // tolerance constant; it would only mask bugs in the rounding logic.
+  OFFICE_COORD_ROUND_METERS: 100,
+
+  // === Weekday list for Mon–Fri averaged commute computation ===
+  // ISO weekday numbers (Monday = 1 ... Friday = 5). Used by
+  // /lib/distance-matrix.ts when it builds the five "next weekday at
+  // outbound_time" departure timestamps for the Distance Matrix call.
+  // Sat/Sun are excluded because weekend traffic patterns differ
+  // meaningfully from the weekday commute the user is filtering for.
+  WEEKDAYS: [1, 2, 3, 4, 5] as const,
 } as const;
 
 export const DEFAULT_TIME_OF_DAY: TimeOfDay = {

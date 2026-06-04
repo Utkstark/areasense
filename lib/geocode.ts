@@ -67,6 +67,11 @@ export const GURGAON_BBOX: BoundingBox = {
   ne: { lat: 28.55, lng: 77.16 },
 } as const;
 
+export const DELHI_BBOX: BoundingBox = {
+  sw: { lat: 28.40, lng: 76.83 },
+  ne: { lat: 28.90, lng: 77.35 },
+} as const;
+
 const ENDPOINT = 'https://maps.googleapis.com/maps/api/geocode/json';
 
 // ─── Internal types — Google's response shape, kept private to this module ──

@@ -72,6 +72,15 @@ const CITY_SLUGS: Readonly<Record<City, CitySlugRecord>> = {
     //   https://apify.com/ecomscrape/magicbricks-property-search-scraper
     magicbricks: 'Gurgaon',
   },
+  Delhi: {
+    // VERIFIED via live URL: https://www.nobroker.in/flats-for-rent-in-delhi-delhi
+    nobroker:    'delhi',
+    // VERIFIED via live URL: https://www.99acres.com/flats-for-rent-in-delhi-ffid
+    '99acres':   'delhi',
+    // UNVERIFIED — best guess from the Apify scraper docs pattern; confirm a real
+    // magicbricks Delhi rent URL before any Delhi-facing UI launch.
+    magicbricks: 'New-Delhi',
+  },
 };
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -94,6 +103,15 @@ const HOUSING_CITY_RENT: Readonly<Record<City, HousingCityRent>> = {
   Gurgaon: {
     citySlug: 'gurgaon-haryana',
     cityUuid: 'P1od1w26jrfqap1jl',
+  },
+  // TODO: verify before Delhi launch — housing.com's per-city UUID is opaque
+  // and couldn't be derived without inspecting a live URL. Empty values here
+  // produce broken Housing.com deep-links for Delhi if a Delhi search runs
+  // before this is filled in. Other portals (NoBroker, 99acres, Magicbricks)
+  // are wired above.
+  Delhi: {
+    citySlug: '',
+    cityUuid: '',
   },
 };
 
