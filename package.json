@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "build:data": "tsx scripts/pipeline/index.ts",
     "build:cache": "tsx scripts/prewarm-commute-cache.ts",
+    "refresh:cache": "tsx scripts/refresh-commute-cache.ts",
     "verify:deeplinks": "tsx scripts/verify-deeplinks.ts"
   },
   "dependencies": {
