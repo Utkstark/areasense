@@ -98,6 +98,55 @@ export function nextOccurrenceInIST(
   return Math.floor(targetMs / 1000);
 }
 
+/**
+ * Returns five Unix-seconds timestamps for the next Mon, Tue, Wed, Thu, Fri at
+ * the given IST wall-clock time. Used for Mon–Fri averaged commute computation
+ * by the prewarm script, the weekly cron, and the cold-start path. All five
+ * are guaranteed to be in the future (Distance Matrix rejects past departure_time).
+ *
+ * If today is Monday and the requested time has already passed in IST, the
+ * function jumps to NEXT Monday — the returned five timestamps span Mon–Fri
+ * of next week, never partially this week.
+ */
+export function nextFiveWeekdaysAtTimeInIST(
+  timeHHMM: string,
+  baseDate: Date = new Date(),
+): number[] {
+  const match = /^([01]\d|2[0-3]):([0-5]\d)$/.exec(timeHHMM);
+  if (!match) {
+    throw new DistanceMatrixError(
+      'config_error',
+      `Invalid HH:MM time: "${timeHHMM}"`,
+    );
+  }
+  const hours = Number(match[1]);
+  const minutes = Number(match[2]);
+
+  // Same shift trick as nextOccurrenceInIST — read baseDate as IST wall-clock.
+  const baseAsIST = new Date(baseDate.getTime() + IST_OFFSET_MS);
+  const year = baseAsIST.getUTCFullYear();
+  const month = baseAsIST.getUTCMonth();
+  const day = baseAsIST.getUTCDate();
+  const dayOfWeek = baseAsIST.getUTCDay(); // 0=Sun, 1=Mon, ..., 6=Sat
+
+  // Days until next Monday. (8 - dayOfWeek) % 7 maps Mon→0, Tue→6, ..., Sun→1.
+  const daysUntilMon = (8 - dayOfWeek) % 7;
+
+  // Build Monday-at-HH:MM-IST timestamp.
+  let mondayMs =
+    Date.UTC(year, month, day + daysUntilMon, hours, minutes, 0) - IST_OFFSET_MS;
+
+  // Edge case: today IS Monday and the time has already passed in IST.
+  if (mondayMs <= baseDate.getTime()) {
+    mondayMs += 7 * 24 * 60 * 60 * 1000;
+  }
+
+  const dayMs = 24 * 60 * 60 * 1000;
+  return [0, 1, 2, 3, 4].map((offset) =>
+    Math.floor((mondayMs + offset * dayMs) / 1000),
+  );
+}
+
 // ─── Public: batch duration fetch ───────────────────────────────────────────
 
 /**
