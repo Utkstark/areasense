@@ -8,3 +8,4 @@ export * from './runtime';
 export * from './pipeline';
 export * from './config';
 export * from './schemas';
+export * from './cache';
