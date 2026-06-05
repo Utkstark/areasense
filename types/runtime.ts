@@ -1,7 +1,6 @@
 // Runtime computation types — produced per search.
 // Source of truth: data-model.md §8.
 
-import type { Polygon } from 'geojson';
 import type {
   BudgetAnnotation,
   Coordinates,
@@ -135,9 +134,27 @@ export interface SearchResult {
   tradeoff_points?:    TradeoffPoint[];      // populated when filters returned zero,
                                              // shown alongside the relaxed results
   search_metadata: {
-    offices_resolved:           Coordinates[];  // array — aligns with offices[] in input
+    offices_resolved: Coordinates[];            // array — aligns with offices[] in input
                                                 // and commutes[] in results
-    isochrone_polygon:          Polygon;        // for the map's reachable bubble
+
+    // True iff this request triggered a synchronous live computation
+    // (Upstash Redis miss). Required (not optional) so an explicit `false`
+    // carries real information — "we did NOT cold-start, the cache was warm."
+    // See tech-architecture.md §8 for the cold-start contract; product-spec
+    // §5 for the user-facing copy.
+    cold_start: boolean;
+
+    // Optional — Mapbox isochrone polygon for the map overlay. Absent when
+    // the isochrone call failed (graceful degrade — search still 200s).
+    // `clamped_at_minutes` is present iff the caller's max_minutes exceeded
+    // the Mapbox 60-min cap, carrying the ORIGINAL max so the UI can render
+    // "Map only shows the 60-min reachable area. Your full {X}-min results
+    // are in the list." See tech-architecture.md §10.
+    isochrone?: {
+      geometry:            GeoJSON.Polygon | GeoJSON.MultiPolygon;
+      clamped_at_minutes?: number;
+    };
+
     timestamp:                  string;         // ISO 8601
     total_localities_evaluated: number;
   };
