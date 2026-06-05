@@ -1,0 +1,97 @@
+name: Refresh commute cache
+
+# What this does (see tech-architecture.md §8 + §13.4):
+#   1. Reads current cache state from Upstash Redis
+#   2. Recomputes entries where computed_at > 7d AND last_accessed ≤ 4w
+#   3. Prunes entries where last_accessed > 4w
+#   4. Snapshots remaining Redis state to data/commute-cache.json
+#   5. Commits + pushes the JSON if it changed (Vercel auto-deploys harmlessly)
+#
+# Schedule: Wed 04:30 IST = Tue 23:00 UTC. Midweek low-traffic window.
+# Manual trigger available via the Actions tab with an optional dry-run toggle.
+
+on:
+  schedule:
+    - cron: '0 23 * * 2'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Preview only — no Redis writes, no commit'
+        type: boolean
+        required: false
+        default: false
+
+# Prevent a manual run racing with a scheduled run on shared Redis state.
+# Both write to the same Upstash database; serializing them avoids torn snapshots.
+concurrency:
+  group: refresh-commute-cache
+  cancel-in-progress: false
+
+# Scope permissions to the minimum the job needs: commit + push to main.
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      GOOGLE_MAPS_API_KEY:      ${{ secrets.GOOGLE_MAPS_API_KEY }}
+      UPSTASH_REDIS_REST_URL:   ${{ secrets.UPSTASH_REDIS_REST_URL }}
+      UPSTASH_REDIS_REST_TOKEN: ${{ secrets.UPSTASH_REDIS_REST_TOKEN }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          # Default GITHUB_TOKEN with the contents:write permission above is
+          # sufficient to push back to main — no PAT needed.
+          fetch-depth: 1
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run refresh script
+        # Pipe the input through env (safer than inlining ${{ }} into shell —
+        # avoids any expression-injection surface even for trivial booleans).
+        env:
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          if [ "$DRY_RUN" = "true" ]; then
+            echo "→ Running in dry-run mode (no Redis writes, no commit)"
+            npx tsx scripts/refresh-commute-cache.ts --dry-run
+          else
+            npx tsx scripts/refresh-commute-cache.ts
+          fi
+
+      - name: Commit snapshot if changed
+        # Skip in dry-run — script wouldn't have written anything anyway.
+        if: ${{ inputs.dry_run != true }}
+        run: |
+          # Standard github-actions[bot] identity. The numeric ID in the email
+          # is the bot's GitHub user ID; the noreply form keeps the commit
+          # cleanly attributed in the GitHub UI.
+          git config user.name  'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          # Stage only the snapshot — never sweep up unrelated changes.
+          git add data/commute-cache.json
+
+          # Skip the commit if Redis state was unchanged (no refresh, no prune
+          # → byte-identical JSON). Heartbeat commits add noise; absence of a
+          # Wed commit is detectable via the Actions tab if you need to verify.
+          if git diff --cached --quiet; then
+            echo "→ No changes to commute-cache.json — skipping commit"
+            exit 0
+          fi
+
+          TS=$(date -u +'%Y-%m-%dT%H:%M:%SZ')
+          git commit -m "chore(cache): weekly refresh ${TS}"
+          git push origin HEAD:main
