@@ -162,8 +162,16 @@ function loadLocalities(): LocalityRecord[] {
   const all: LocalityRecord[] = [];
   for (const city of CITIES) {
     const file = path.join(DATA_DIR, `locality-data-${city.toLowerCase()}.json`);
-    if (!fs.existsSync(file)) continue;
-    const parsed = JSON.parse(fs.readFileSync(file, 'utf8')) as unknown;
+    if (!fs.existsSync(file)) {
+      console.warn(`  (skipping ${file} — file not found)`);
+      continue;
+    }
+    const raw = fs.readFileSync(file, 'utf8');
+    if (raw.trim() === '') {
+      console.warn(`  (skipping ${file} — file is empty)`);
+      continue;
+    }
+    const parsed = JSON.parse(raw) as unknown;
     if (!Array.isArray(parsed)) {
       throw new Error(`${file} does not contain a JSON array`);
     }
