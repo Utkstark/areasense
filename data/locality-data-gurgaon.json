@@ -1,1 +1,114 @@
-[]
+[
+  {
+    "id": "gur-sec-65",
+    "name": "Sector 65",
+    "sector_label": "Sector 65, Golf Course Extension Road",
+    "city": "Gurgaon",
+    "centroid": { "lat": 28.3975, "lng": 77.0655 },
+    "source": "curated",
+    "rent_ranges": {
+      "2": [45000, 70000],
+      "3": [60000, 95000],
+      "4+": [150000, 280000]
+    },
+    "rent_sample_sizes": {
+      "2": 15, 
+      "3": 34, 
+      "4+": 12
+    },
+    "nearest_metros": [
+      { "station": "Sector 55-56", "line": "Rapid Metro", "distance_km": 3.5 },
+      { "station": "Millennium City Centre", "line": "Yellow Line", "distance_km": 7.2 }
+    ],
+    "societies": [
+      {
+        "id": "soc-m3m-golfestate",
+        "name": "M3M Golf Estate",
+        "coordinates": { "lat": 28.3980, "lng": 77.0660 },
+        "rating_data": { "score": 4.6, "review_count": 128 },
+        "tenant_preference_signal": "accepts_family"
+      },
+      {
+        "id": "soc-m3m-heights",
+        "name": "M3M Heights",
+        "coordinates": { "lat": 28.3965, "lng": 77.0650 },
+        "rating_data": { "score": 4.3, "review_count": 85 },
+        "tenant_preference_signal": "accepts_both"
+      }
+    ]
+  },
+  {
+    "id": "gur-sec-102",
+    "name": "Sector 102",
+    "sector_label": "Sector 102, Dwarka Expressway",
+    "city": "Gurgaon",
+    "centroid": { "lat": 28.4735, "lng": 76.9745 },
+    "source": "curated",
+    "rent_ranges": {
+      "2": [32000, 42000],
+      "3": [40000, 55000],
+      "4+": [60000, 100000]
+    },
+    "rent_sample_sizes": {
+      "2": 10, 
+      "3": 18, 
+      "4+": 8
+    },
+    "nearest_metros": [
+      { "station": "Gurgaon Railway Station", "line": "Indian Railways", "distance_km": 6.5 },
+      { "station": "Dwarka Sector 21", "line": "Blue Line", "distance_km": 14.0 }
+    ],
+    "societies": [
+      {
+        "id": "soc-adani-oyster",
+        "name": "Adani M2K Oyster Grande",
+        "coordinates": { "lat": 28.4740, "lng": 76.9750 },
+        "rating_data": { "score": 4.1, "review_count": 65 },
+        "tenant_preference_signal": "accepts_family"
+      },
+      {
+        "id": "soc-shapoorji-joyville",
+        "name": "Shapoorji Pallonji Joyville",
+        "coordinates": { "lat": 28.4720, "lng": 76.9730 },
+        "tenant_preference_signal": "accepts_both"
+      }
+    ]
+  },
+  {
+    "id": "gur-sec-69",
+    "name": "Sector 69",
+    "sector_label": "Sector 69, SPR Road",
+    "city": "Gurgaon",
+    "centroid": { "lat": 28.3845, "lng": 77.0335 },
+    "source": "curated",
+    "rent_ranges": {
+      "2": [22000, 30000],
+      "3": [45000, 62000],
+      "4+": [50000, 65000]
+    },
+    "rent_sample_sizes": {
+      "2": 14, 
+      "3": 25, 
+      "4+": 5
+    },
+    "nearest_metros": [
+      { "station": "Millennium City Centre", "line": "Yellow Line", "distance_km": 8.0 },
+      { "station": "Sector 55-56", "line": "Rapid Metro", "distance_km": 7.5 }
+    ],
+    "societies": [
+      {
+        "id": "soc-tulip-violet",
+        "name": "Tulip Violet",
+        "coordinates": { "lat": 28.3850, "lng": 77.0340 },
+        "rating_data": { "score": 4.2, "review_count": 110 },
+        "tenant_preference_signal": "accepts_bachelors"
+      },
+      {
+        "id": "soc-tulip-lemon",
+        "name": "Tulip Lemon",
+        "coordinates": { "lat": 28.3830, "lng": 77.0320 },
+        "tenant_preference_signal": "accepts_both"
+      }
+    ]
+  }
+]
