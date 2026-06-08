@@ -10,7 +10,7 @@ interface PortalLinkProps {
 
 export function PortalLink({ href, label, compact = false }: PortalLinkProps) {
   const sizeClasses = compact ? 'px-2 py-0.5' : 'px-2.5 py-1';
-  const className = `inline-flex items-center gap-1 rounded border ${sizeClasses} text-xs hover:bg-accent hover:text-accent-foreground transition-colors`;
+  const className = `inline-flex items-center gap-1 rounded border border-brand-text/10 ${sizeClasses} text-xs text-brand-text hover:bg-brand-bg transition-colors`;
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" className={className}>
       {label}

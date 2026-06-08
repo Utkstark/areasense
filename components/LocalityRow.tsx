@@ -49,84 +49,103 @@ export function LocalityRow({ result, rank }: LocalityRowProps) {
   } = result;
 
   const commute = commutes[0];
-
-  // Guard to satisfy TypeScript's strict array checking (noUncheckedIndexedAccess)
   if (!commute) return null;
 
   const nearestMetro = locality.nearest_metros[0];
   const visibleSocieties = matched_societies.filter((s) => s.passes_household_filter);
   const scorePct = Math.round(score.final_score * 100);
-  const headerClass = 'flex w-full items-start gap-3 p-4 text-left hover:bg-accent/40 transition-colors';
+
+  const headerClass =
+    'flex w-full items-start gap-3 p-4 text-left hover:bg-brand-bg transition-colors';
 
   return (
-    <Card className="overflow-hidden p-0">
-      <button type="button" onClick={() => setExpanded(!expanded)} className={headerClass} aria-expanded={expanded}>
-        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-muted text-sm font-semibold text-muted-foreground tabular-nums">
+    <Card className="overflow-hidden p-0 border-brand-text/10">
+      <button
+        type="button"
+        onClick={() => setExpanded(!expanded)}
+        className={headerClass}
+        aria-expanded={expanded}
+      >
+        <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-text/5 text-sm font-bold text-brand-text tabular-nums">
           {rank}
         </div>
 
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
-              <div className="font-semibold leading-tight">{locality.name}</div>
+              <div className="font-bold text-brand-text leading-tight">{locality.name}</div>
               {locality.sector_label && (
-                <div className="text-xs text-muted-foreground">{locality.sector_label}</div>
+                <div className="text-xs text-brand-muted">{locality.sector_label}</div>
               )}
             </div>
-            <div className="flex shrink-0 items-center gap-2 pt-1">
-              <div className="h-1.5 w-20 overflow-hidden rounded-full bg-muted">
-                <div className="h-full rounded-full bg-foreground/70" style={{ width: `${scorePct}%` }} />
+
+            <div className="flex shrink-0 items-center gap-3 pt-1">
+              <div className="h-2 w-28 overflow-hidden rounded-full bg-brand-text/10">
+                <div
+                  className="h-full rounded-full bg-brand-primary shadow-sm"
+                  style={{ width: `${scorePct}%` }}
+                />
               </div>
-              <span className="text-xs font-medium tabular-nums text-muted-foreground">{scorePct}%</span>
+              <span className="text-sm font-bold tabular-nums text-brand-text">{scorePct}%</span>
             </div>
           </div>
 
           <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5 text-sm">
             <span>
-              <span className="text-muted-foreground">Commute:</span>{' '}
-              <span className="font-medium tabular-nums">{commute.total_minutes} min</span>
-              <span className="text-xs text-muted-foreground"> (out {commute.outbound_minutes} · return {commute.return_minutes})</span>
+              <span className="text-brand-muted">Commute:</span>{' '}
+              <span className="font-bold tabular-nums text-brand-text">
+                {commute.total_minutes} min
+              </span>
+              <span className="text-xs text-brand-muted">
+                {' '}
+                (out {commute.outbound_minutes} · return {commute.return_minutes})
+              </span>
               {commute.in_buffer_zone && (
-                <span className="ml-1 text-xs text-amber-700 dark:text-amber-400">· just over your limit</span>
+                <span className="ml-1 text-xs text-amber-600">· just over limit</span>
               )}
             </span>
-            <span className="text-muted-foreground">·</span>
+            <span className="text-brand-muted">·</span>
             <span className="inline-flex items-center gap-2">
               <span>
-                <span className="text-muted-foreground">Rent:</span>{' '}
-                <span className="font-medium tabular-nums">{formatRange(rent_range_used)}</span>
+                <span className="text-brand-muted">Rent:</span>{' '}
+                <span className="font-bold tabular-nums text-brand-text">
+                  {formatRange(rent_range_used)}
+                </span>
               </span>
               <BudgetPositionBadge fit={budget_fit} />
             </span>
             {nearestMetro && (
               <>
-                <span className="text-muted-foreground">·</span>
+                <span className="text-brand-muted">·</span>
                 <span>
-                  <span className="text-muted-foreground">Metro:</span>{' '}
-                  <span className="font-medium">{nearestMetro.station}</span>
-                  <span className="text-xs text-muted-foreground tabular-nums"> · {nearestMetro.distance_km.toFixed(1)} km</span>
+                  <span className="text-brand-muted">Metro:</span>{' '}
+                  <span className="font-bold text-brand-text">{nearestMetro.station}</span>
+                  <span className="text-xs text-brand-muted tabular-nums">
+                    {' '}
+                    · {nearestMetro.distance_km.toFixed(1)} km
+                  </span>
                 </span>
               </>
             )}
           </div>
 
           {score.rating_dropped_reason === 'insufficient_societies' && (
-            <div className="mt-1.5 text-xs text-muted-foreground">
+            <div className="mt-1.5 text-xs text-brand-muted">
               Rating not used: fewer than 4 well-rated societies in this locality.
             </div>
           )}
         </div>
 
-        <div className="shrink-0 pt-1 text-muted-foreground">
+        <div className="shrink-0 pt-1 text-brand-muted">
           {expanded ? <ChevronDown className="h-5 w-5" /> : <ChevronRight className="h-5 w-5" />}
         </div>
       </button>
 
       {expanded && (
-        <div className="border-t bg-muted/20 px-4 py-3">
+        <div className="border-t border-brand-text/10 bg-brand-bg px-4 py-3">
           {visibleSocieties.length > 0 ? (
             <>
-              <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              <div className="mb-2 text-xs font-bold uppercase tracking-wider text-brand-muted">
                 Named picks ({visibleSocieties.length})
               </div>
               <div className="space-y-2">
@@ -136,18 +155,22 @@ export function LocalityRow({ result, rank }: LocalityRowProps) {
               </div>
             </>
           ) : (
-            <div className="text-sm text-muted-foreground">
+            <div className="text-sm text-brand-muted">
               No matching societies for your household type — browse all listings below.
             </div>
           )}
 
-          <div className="mt-4 border-t pt-3">
-            <div className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+          <div className="mt-4 border-t border-brand-text/10 pt-3">
+            <div className="mb-2 text-xs font-bold uppercase tracking-wider text-brand-muted">
               Browse all rental listings in {locality.name}
             </div>
             <div className="flex flex-wrap gap-1.5">
               {PORTAL_KEYS.map((portal) => (
-                <PortalLink key={portal} href={locality_wide_deep_links[portal]} label={PORTAL_LABEL[portal]} />
+                <PortalLink
+                  key={portal}
+                  href={locality_wide_deep_links[portal]}
+                  label={PORTAL_LABEL[portal]}
+                />
               ))}
             </div>
           </div>

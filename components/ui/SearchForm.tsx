@@ -1,13 +1,4 @@
 // components/SearchForm.tsx
-//
-// Main search form. Client component. react-hook-form + Zod resolver for
-// validation, with field-level error mapping from the backend's 400 ZodIssue[]
-// response shape.
-//
-// Office address has its own autocomplete state (debounced suggestions +
-// Place Details resolution on selection). Submit is blocked until an address
-// is resolved to coordinates — without coords the backend can't run Distance
-// Matrix calls.
 
 'use client';
 
@@ -27,7 +18,6 @@ import {
 import { useLocalPreferences } from '@/hooks/useLocalPreferences';
 import type { OfficeSuggestion } from '@/lib/office-suggest';
 
-// shadcn primitives
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -40,8 +30,6 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible';
-
-// ─── Constants / helpers ──────────────────────────────────────────────────
 
 const BHK_OPTIONS: { value: BHK; label: string }[] = [
   { value: 'studio', label: 'Studio' },
@@ -57,8 +45,8 @@ const HOUSEHOLD_OPTIONS: { value: Household; label: string }[] = [
 ];
 
 const BASIS_OPTIONS: { value: CommuteBasis; label: string; help: string }[] = [
-  { value: 'avg_one_way', label: 'One-way average', help: 'Avg of morning + evening per leg' },
-  { value: 'total_daily', label: 'Total daily',     help: 'Morning + evening summed'         },
+  { value: 'avg_one_way', label: 'One-Way Average', help: 'Avg of morning + evening' },
+  { value: 'total_daily', label: 'Total Daily',     help: 'Morning + evening summed' },
 ];
 
 const COORDINATES_SENTINEL = { lat: 0, lng: 0 };
@@ -83,8 +71,6 @@ function isUnresolved(coords: { lat: number; lng: number }): boolean {
   return coords.lat === COORDINATES_SENTINEL.lat && coords.lng === COORDINATES_SENTINEL.lng;
 }
 
-// Clamp threshold per product-spec §4.1 + tech-arch §6:
-//   avg_one_way > 60 OR total_daily > 120 → Mapbox isochrone will clamp at 60 min.
 function shouldShowClampHint(basis: CommuteBasis, max: number): boolean {
   if (basis === 'avg_one_way') return max > 60;
   if (basis === 'total_daily') return max > 120;
@@ -94,8 +80,6 @@ function shouldShowClampHint(basis: CommuteBasis, max: number): boolean {
 function formatInr(value: number): string {
   return new Intl.NumberFormat('en-IN').format(value);
 }
-
-// ─── Component ────────────────────────────────────────────────────────────
 
 interface SearchFormProps {
   onResult: (result: SearchResult) => void;
@@ -113,7 +97,6 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
 
   const { register, handleSubmit, control, watch, setValue, setError, formState, reset } = form;
 
-  // Hydrate from localStorage when it loads
   useEffect(() => {
     if (!hydrated || !preferences) return;
     reset({
@@ -129,7 +112,6 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
     });
   }, [hydrated, preferences, reset]);
 
-  // ── Autocomplete state (local — not part of form values) ──
   const [addressQuery, setAddressQuery] = useState('');
   const [suggestions, setSuggestions] = useState<OfficeSuggestion[]>([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -140,7 +122,6 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
   const officeCoords = watch('offices.0.coordinates');
   const addressResolved = !isUnresolved(officeCoords);
 
-  // Mirror localStorage address into the local input state on hydration
   useEffect(() => {
     if (hydrated && preferences?.office?.address) {
       setAddressQuery(preferences.office.address);
@@ -154,12 +135,8 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
     }
     try {
       const res = await fetch(`/api/office-suggest?q=${encodeURIComponent(q)}`);
-      if (!res.ok) {
-        setSuggestionError('Could not fetch suggestions');
-        setSuggestions([]);
-        return;
-      }
-      const data: { suggestions: OfficeSuggestion[] } = await res.json();
+      if (!res.ok) throw new Error();
+      const data = await res.json();
       setSuggestions(data.suggestions);
       setSuggestionError(null);
     } catch {
@@ -171,7 +148,6 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
   const onAddressChange = (value: string) => {
     setAddressQuery(value);
     setValue('offices.0.address', value);
-    // Editing the address invalidates any previously-resolved coordinates
     setValue('offices.0.coordinates', COORDINATES_SENTINEL);
     setShowSuggestions(true);
 
@@ -186,30 +162,23 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
     setAddressQuery(suggestion.description);
     setValue('offices.0.address', suggestion.description);
     try {
-      const res = await fetch(
-        `/api/office-resolve?placeId=${encodeURIComponent(suggestion.place_id)}`
-      );
-      if (!res.ok) {
-        setSuggestionError('Could not resolve location. Try a different suggestion.');
-        return;
-      }
-      const data: { coordinates: { lat: number; lng: number } } = await res.json();
+      const res = await fetch(`/api/office-resolve?placeId=${encodeURIComponent(suggestion.place_id)}`);
+      if (!res.ok) throw new Error();
+      const data = await res.json();
       setValue('offices.0.coordinates', data.coordinates, { shouldValidate: true });
       setSuggestionError(null);
     } catch {
-      setSuggestionError('Could not resolve location. Try a different suggestion.');
+      setSuggestionError('Could not resolve location.');
     } finally {
       setResolving(false);
     }
   };
 
-  // ── Watched fields for live UI hints ──
   const basis = watch('commute.basis');
   const maxMinutes = watch('commute.max_minutes');
   const budget = watch('budget_inr');
   const showClampHint = shouldShowClampHint(basis, maxMinutes);
 
-  // ── Submit ──
   const onSubmit = async (data: SearchInput) => {
     onLoading(true);
     try {
@@ -221,13 +190,9 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
 
       if (res.status === 400) {
         const errBody = await res.json().catch(() => ({}));
-        const issues: Array<{ path: (string | number)[]; message: string }> = errBody.details ?? [];
-        if (issues.length === 0) {
-          setError('root', { message: errBody.error ?? 'Invalid input' });
-        }
+        const issues = errBody.details ?? [];
+        if (issues.length === 0) setError('root', { message: errBody.error ?? 'Invalid input' });
         for (const issue of issues) {
-          // Path arrays from Zod become dot-paths react-hook-form understands.
-          // Cast is needed because the path is dynamic.
           const path = issue.path.join('.') as FieldPath<SearchInput>;
           setError(path, { message: issue.message });
         }
@@ -235,7 +200,7 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
       }
 
       if (res.status === 503) {
-        setError('root', { message: 'Search temporarily unavailable. Try again in a moment.' });
+        setError('root', { message: 'Search temporarily unavailable.' });
         return;
       }
 
@@ -247,10 +212,7 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
       const result: SearchResult = await res.json();
 
       setPreferences({
-        office: {
-        address: data.offices[0]!.address,
-        coordinates: data.offices[0]!.coordinates,
-        },
+        office: { address: data.offices[0]!.address, coordinates: data.offices[0]!.coordinates },
         commute: data.commute,
         budget_inr: data.budget_inr,
         bhk: data.bhk,
@@ -264,12 +226,12 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
     }
   };
 
-  // ── JSX ──
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-      {/* Office address */}
-      <div className="space-y-2">
-        <Label htmlFor="office-address">Your office</Label>
+    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-8">
+      
+      {/* Row 1: Office Address (Full Width) */}
+      <div className="space-y-3">
+        <Label htmlFor="office-address" className="text-lg font-bold text-black">Your Office</Label>
         <div className="relative">
           <Input
             id="office-address"
@@ -278,158 +240,174 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
             value={addressQuery}
             onChange={(e) => onAddressChange(e.target.value)}
             onFocus={() => setShowSuggestions(true)}
-            onBlur={() => {
-              // Delay so a suggestion click registers before the dropdown closes
-              setTimeout(() => setShowSuggestions(false), 150);
-            }}
+            onBlur={() => setTimeout(() => setShowSuggestions(false), 150)}
             autoComplete="off"
+            className="h-14 text-lg rounded-xl border-2 border-gray-200 focus-visible:border-black focus-visible:ring-0 placeholder:text-gray-400"
           />
           {showSuggestions && suggestions.length > 0 && (
-            <div className="absolute top-full left-0 right-0 mt-1 border rounded-md bg-popover shadow-md z-50 max-h-72 overflow-auto">
+            <div className="absolute top-full left-0 right-0 mt-2 border-2 border-black rounded-xl bg-white shadow-xl z-50 max-h-72 overflow-auto">
               {suggestions.map((s) => (
                 <button
                   key={s.place_id}
                   type="button"
                   onClick={() => onSelectSuggestion(s)}
-                  className="w-full text-left px-3 py-2 hover:bg-accent focus:bg-accent focus:outline-none"
+                  className="w-full text-left px-5 py-4 border-b border-gray-100 last:border-0 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none transition-colors"
                 >
-                  <div className="font-medium text-sm">{s.main_text}</div>
+                  <div className="font-bold text-base text-black">{s.main_text}</div>
                   {s.secondary_text && (
-                    <div className="text-xs text-muted-foreground">{s.secondary_text}</div>
+                    <div className="text-sm text-gray-500 mt-1">{s.secondary_text}</div>
                   )}
                 </button>
               ))}
             </div>
           )}
         </div>
-
-        {resolving && <p className="text-xs text-muted-foreground">Resolving location...</p>}
-        {suggestionError && <p className="text-xs text-destructive">{suggestionError}</p>}
-        {!addressResolved && addressQuery.length > 0 && !resolving && !suggestionError && (
-          <p className="text-xs text-muted-foreground">
-            Pick a suggestion from the list to confirm your office location.
-          </p>
-        )}
+        {resolving && <p className="text-sm font-medium text-gray-500">Resolving location...</p>}
+        {suggestionError && <p className="text-sm font-bold text-red-600">{suggestionError}</p>}
         {addressResolved && (
-          <p className="text-xs text-muted-foreground">
-            ✓ Location confirmed ({officeCoords.lat.toFixed(4)}, {officeCoords.lng.toFixed(4)})
-          </p>
+          <p className="text-sm font-bold text-black">✓ Location Confirmed</p>
         )}
       </div>
 
-      {/* Commute basis */}
-      <div className="space-y-2">
-        <Label>How do you measure commute tolerance?</Label>
-        <Controller
-          control={control}
-          name="commute.basis"
-          render={({ field }) => (
-            <RadioGroup
-              value={field.value}
-              onValueChange={field.onChange}
-              className="flex flex-col gap-2 sm:flex-row sm:gap-4"
-            >
-              {BASIS_OPTIONS.map((opt) => (
-                <div key={opt.value} className="flex items-start gap-2 border rounded-md p-3 flex-1">
-                  <RadioGroupItem value={opt.value} id={`basis-${opt.value}`} className="mt-1" />
-                  <Label htmlFor={`basis-${opt.value}`} className="cursor-pointer flex-1">
-                    <div className="font-medium">{opt.label}</div>
-                    <div className="text-xs text-muted-foreground font-normal">{opt.help}</div>
-                  </Label>
-                </div>
-              ))}
-            </RadioGroup>
-          )}
-        />
-      </div>
-
-      {/* Max commute */}
-      <div className="space-y-2">
-        <Label htmlFor="max-minutes">
-          Maximum {basis === 'avg_one_way' ? 'one-way average' : 'total daily'} commute
-        </Label>
-        <Controller
-          control={control}
-          name="commute.max_minutes"
-          render={({ field }) => (
-            <div className="flex items-center gap-4">
-              <Slider
-                value={[field.value]}
-                onValueChange={(vals) => field.onChange(vals[0])}
-                min={INPUT_LIMITS.MAX_COMMUTE_MINUTES.min}
-                max={INPUT_LIMITS.MAX_COMMUTE_MINUTES.max}
-                step={5}
-                className="flex-1"
-              />
-              <div className="flex items-center gap-1">
+      {/* Row 2 & 3: Two-Column Grid for Budget, Commute, and Household */}
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-8">
+        
+        {/* Budget */}
+        <div className="space-y-3">
+          <Label htmlFor="budget" className="text-lg font-bold text-black">
+            Monthly Base Rent
+          </Label>
+          <div className="flex items-center gap-3">
+            <span className="text-xl font-bold text-gray-400">₹</span>
+            <Controller
+              control={control}
+              name="budget_inr"
+              render={({ field }) => (
                 <Input
-                  id="max-minutes"
+                  id="budget"
                   type="number"
                   value={field.value}
                   onChange={(e) => {
                     const v = Number(e.target.value);
                     if (!Number.isNaN(v)) field.onChange(v);
                   }}
-                  min={INPUT_LIMITS.MAX_COMMUTE_MINUTES.min}
-                  max={INPUT_LIMITS.MAX_COMMUTE_MINUTES.max}
-                  className="w-20"
+                  min={INPUT_LIMITS.BUDGET_INR.min}
+                  step={1000}
+                  className="h-14 w-full text-xl font-bold rounded-xl border-2 border-gray-200 focus-visible:border-black focus-visible:ring-0"
                 />
-                <span className="text-sm text-muted-foreground">min</span>
-              </div>
-            </div>
-          )}
-        />
-        {showClampHint && (
-          <p className="text-xs text-muted-foreground">
-            ℹ Map preview will only show the 60-min reachable area. Ranked results
-            will use your full setting.
-          </p>
-        )}
-        {formState.errors.commute?.max_minutes && (
-          <p className="text-xs text-destructive">
-            {formState.errors.commute.max_minutes.message}
-          </p>
-        )}
-      </div>
+              )}
+            />
+          </div>
+        </div>
 
-      {/* Budget */}
-      <div className="space-y-2">
-        <Label htmlFor="budget">
-          Monthly rent budget (base rent, excludes maintenance)
-        </Label>
-        <div className="flex items-center gap-2">
-          <span className="text-sm text-muted-foreground">₹</span>
+        {/* Max Commute */}
+        <div className="space-y-3">
+          <Label htmlFor="max-minutes" className="text-lg font-bold text-black">
+            Max Commute ({basis === 'avg_one_way' ? 'One-Way' : 'Daily'})
+          </Label>
           <Controller
             control={control}
-            name="budget_inr"
+            name="commute.max_minutes"
             render={({ field }) => (
-              <Input
-                id="budget"
-                type="number"
-                value={field.value}
-                onChange={(e) => {
-                  const v = Number(e.target.value);
-                  if (!Number.isNaN(v)) field.onChange(v);
-                }}
-                min={INPUT_LIMITS.BUDGET_INR.min}
-                step={1000}
-              />
+              <div className="flex items-center gap-4">
+                {/* Explicit overrides for Slider colors */}
+                <Slider
+                  value={[field.value]}
+                  onValueChange={(vals) => field.onChange(vals[0])}
+                  min={INPUT_LIMITS.MAX_COMMUTE_MINUTES.min}
+                  max={INPUT_LIMITS.MAX_COMMUTE_MINUTES.max}
+                  step={5}
+                  className="flex-1 cursor-pointer [&>span:first-of-type]:!bg-gray-200 [&>span:first-of-type>span]:!bg-black [&_[role=slider]]:!border-black [&_[role=slider]]:!bg-white"
+                />
+                <div className="flex items-center gap-2">
+                  <Input
+                    id="max-minutes"
+                    type="number"
+                    value={field.value}
+                    onChange={(e) => {
+                      const v = Number(e.target.value);
+                      if (!Number.isNaN(v)) field.onChange(v);
+                    }}
+                    className="w-20 h-14 text-xl font-bold text-center rounded-xl border-2 border-gray-200 focus-visible:border-black focus-visible:ring-0"
+                  />
+                  <span className="text-lg font-bold text-gray-400">min</span>
+                </div>
+              </div>
             )}
           />
-          <span className="text-sm text-muted-foreground whitespace-nowrap">
-            (₹{formatInr(budget ?? 0)})
-          </span>
         </div>
-        {formState.errors.budget_inr && (
-          <p className="text-xs text-destructive">
-            {formState.errors.budget_inr.message}
-          </p>
-        )}
+
+        {/* Household */}
+        <div className="space-y-3">
+          <Label className="text-lg font-bold text-black">Household</Label>
+          <Controller
+            control={control}
+            name="household"
+            render={({ field }) => (
+              <RadioGroup
+                value={field.value}
+                onValueChange={field.onChange}
+                className="flex flex-col sm:flex-row gap-3"
+              >
+                {HOUSEHOLD_OPTIONS.map((opt) => {
+                  const isSelected = field.value === opt.value;
+                  return (
+                    <Label
+                      key={opt.value}
+                      htmlFor={`household-${opt.value}`}
+                      className={`flex items-center justify-center border-2 rounded-xl p-4 flex-1 cursor-pointer transition-all ${
+                        isSelected ? 'bg-black border-black text-white' : 'bg-white border-gray-200 text-gray-500 hover:border-gray-400'
+                      }`}
+                    >
+                      <RadioGroupItem value={opt.value} id={`household-${opt.value}`} className="sr-only" />
+                      <span className={`font-bold text-lg ${isSelected ? 'text-white' : 'text-black'}`}>
+                        {opt.label}
+                      </span>
+                    </Label>
+                  );
+                })}
+              </RadioGroup>
+            )}
+          />
+        </div>
+
+        {/* Commute Basis */}
+        <div className="space-y-3">
+          <Label className="text-lg font-bold text-black">Measurement</Label>
+          <Controller
+            control={control}
+            name="commute.basis"
+            render={({ field }) => (
+              <RadioGroup
+                value={field.value}
+                onValueChange={field.onChange}
+                className="flex flex-col sm:flex-row gap-3"
+              >
+                {BASIS_OPTIONS.map((opt) => {
+                  const isSelected = field.value === opt.value;
+                  return (
+                    <Label
+                      key={opt.value}
+                      htmlFor={`basis-${opt.value}`}
+                      className={`flex flex-col items-center justify-center border-2 rounded-xl py-2 px-3 flex-1 cursor-pointer transition-all ${
+                        isSelected ? 'bg-black border-black text-white' : 'bg-white border-gray-200 text-gray-500 hover:border-gray-400'
+                      }`}
+                    >
+                      <RadioGroupItem value={opt.value} id={`basis-${opt.value}`} className="sr-only" />
+                      <div className={`font-bold text-base ${isSelected ? 'text-white' : 'text-black'}`}>{opt.label}</div>
+                      <div className={`text-xs mt-1 text-center ${isSelected ? 'text-gray-300' : 'text-gray-400'}`}>{opt.help}</div>
+                    </Label>
+                  );
+                })}
+              </RadioGroup>
+            )}
+          />
+        </div>
       </div>
 
-      {/* BHK */}
-      <div className="space-y-2">
-        <Label>BHK preference</Label>
+      {/* Row 4: BHK (Full Width) */}
+      <div className="space-y-3">
+        <Label className="text-lg font-bold text-black">BHK Preference</Label>
         <Controller
           control={control}
           name="bhk"
@@ -438,10 +416,15 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
               type="single"
               value={field.value}
               onValueChange={(v) => v && field.onChange(v)}
-              className="justify-start flex-wrap"
+              className="justify-start flex-wrap gap-3"
             >
               {BHK_OPTIONS.map((opt) => (
-                <ToggleGroupItem key={opt.value} value={opt.value} aria-label={opt.label}>
+                <ToggleGroupItem 
+                  key={opt.value} 
+                  value={opt.value} 
+                  aria-label={opt.label}
+                  className="h-14 flex-1 min-w-[80px] px-4 text-base sm:text-lg font-bold rounded-xl border-2 border-gray-200 data-[state=on]:bg-black data-[state=on]:text-white data-[state=on]:border-black hover:bg-gray-100 transition-all"
+                >
                   {opt.label}
                 </ToggleGroupItem>
               ))}
@@ -450,119 +433,82 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
         />
       </div>
 
-      {/* Household */}
-      <div className="space-y-2">
-        <Label>Household</Label>
-        <Controller
-          control={control}
-          name="household"
-          render={({ field }) => (
-            <RadioGroup
-              value={field.value}
-              onValueChange={field.onChange}
-              className="flex flex-col gap-2 sm:flex-row sm:gap-4"
-            >
-              {HOUSEHOLD_OPTIONS.map((opt) => (
-                <div key={opt.value} className="flex items-center gap-2 border rounded-md p-3 flex-1">
-                  <RadioGroupItem value={opt.value} id={`household-${opt.value}`} />
-                  <Label htmlFor={`household-${opt.value}`} className="cursor-pointer flex-1 font-medium">
-                    {opt.label}
-                  </Label>
+      {/* Advanced & Submit */}
+      <div className="pt-2">
+        <Collapsible>
+          <CollapsibleTrigger asChild>
+            <Button type="button" variant="ghost" className="text-base font-bold text-gray-500 hover:text-black hover:bg-gray-100 rounded-xl px-4 py-6 w-full">
+              Advanced Options ▾
+            </Button>
+          </CollapsibleTrigger>
+          <CollapsibleContent className="pt-6 space-y-8 border-t-2 border-gray-100 mt-4">
+            <div className="space-y-3">
+              <Label className="text-base font-bold text-black">Time of Day</Label>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
+                <div className="flex items-center gap-3 w-full sm:w-auto">
+                  <span className="text-base font-bold text-gray-500 w-12">Out</span>
+                  <Input type="time" {...register('commute.time_of_day.out')} className="h-12 text-lg font-bold rounded-xl border-2 border-gray-200 w-full sm:w-36" />
                 </div>
-              ))}
-            </RadioGroup>
-          )}
-        />
-      </div>
-
-      {/* Advanced */}
-      <Collapsible>
-        <CollapsibleTrigger asChild>
-          <Button type="button" variant="ghost" size="sm" className="text-muted-foreground">
-            Advanced options ▾
-          </Button>
-        </CollapsibleTrigger>
-        <CollapsibleContent className="pt-4 space-y-4">
-          <div className="space-y-2">
-            <Label>Time of day</Label>
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-muted-foreground">Out</span>
-                <Input
-                  type="time"
-                  {...register('commute.time_of_day.out')}
-                  className="w-32"
-                />
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-muted-foreground">Return</span>
-                <Input
-                  type="time"
-                  {...register('commute.time_of_day.return')}
-                  className="w-32"
-                />
+                <div className="flex items-center gap-3 w-full sm:w-auto">
+                  <span className="text-base font-bold text-gray-500 w-12">Return</span>
+                  <Input type="time" {...register('commute.time_of_day.return')} className="h-12 text-lg font-bold rounded-xl border-2 border-gray-200 w-full sm:w-36" />
+                </div>
               </div>
             </div>
-            <p className="text-xs text-muted-foreground">
-              Defaults to 9:00 AM out, 6:00 PM return. Mon–Fri averaged.
+
+            <div className="space-y-6">
+              <Controller
+                control={control}
+                name="scoring_toggles.metro"
+                render={({ field }) => (
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-base font-bold text-black">Metro Proximity</div>
+                      <div className="text-sm font-medium text-gray-500">Score localities by walking distance to metro</div>
+                    </div>
+                    <Switch 
+                      checked={field.value} 
+                      onCheckedChange={field.onChange} 
+                      className="scale-110 data-[state=checked]:!bg-black data-[state=unchecked]:!bg-gray-300 [&>span]:!bg-white" 
+                    />
+                  </div>
+                )}
+              />
+              <Controller
+                control={control}
+                name="scoring_toggles.rating"
+                render={({ field }) => (
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="text-base font-bold text-black">Society Ratings</div>
+                      <div className="text-sm font-medium text-gray-500">Factor in Google ratings of gated societies</div>
+                    </div>
+                    <Switch 
+                      checked={field.value} 
+                      onCheckedChange={field.onChange} 
+                      className="scale-110 data-[state=checked]:!bg-black data-[state=unchecked]:!bg-gray-300 [&>span]:!bg-white" 
+                    />
+                  </div>
+                )}
+              />
+            </div>
+          </CollapsibleContent>
+        </Collapsible>
+
+        <div className="pt-6 mt-4 border-t-2 border-gray-100">
+          <Button
+            type="submit"
+            className="w-full h-16 text-xl font-bold bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-xl"
+            disabled={!addressResolved || formState.isSubmitting || resolving}
+          >
+            {formState.isSubmitting ? 'Searching...' : 'Find Localities'}
+          </Button>
+          {!addressResolved && (
+            <p className="text-sm font-bold text-gray-500 mt-4 text-center">
+              Select an office from the suggestions to enable search.
             </p>
-          </div>
-
-          <div className="space-y-3">
-            <Label>Scoring toggles</Label>
-            <Controller
-              control={control}
-              name="scoring_toggles.metro"
-              render={({ field }) => (
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-sm font-medium">Metro proximity</div>
-                    <div className="text-xs text-muted-foreground">
-                      Score localities by walking distance to metro
-                    </div>
-                  </div>
-                  <Switch checked={field.value} onCheckedChange={field.onChange} />
-                </div>
-              )}
-            />
-            <Controller
-              control={control}
-              name="scoring_toggles.rating"
-              render={({ field }) => (
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-sm font-medium">Society ratings</div>
-                    <div className="text-xs text-muted-foreground">
-                      Factor in Google ratings of gated societies (opt-in)
-                    </div>
-                  </div>
-                  <Switch checked={field.value} onCheckedChange={field.onChange} />
-                </div>
-              )}
-            />
-          </div>
-        </CollapsibleContent>
-      </Collapsible>
-
-      {/* Submit */}
-      <div className="pt-2">
-        <Button
-          type="submit"
-          className="w-full"
-          disabled={!addressResolved || formState.isSubmitting || resolving}
-        >
-          {formState.isSubmitting ? 'Searching...' : 'Find localities'}
-        </Button>
-        {!addressResolved && (
-          <p className="text-xs text-muted-foreground mt-2 text-center">
-            Select an office from the autocomplete suggestions to enable search.
-          </p>
-        )}
-        {formState.errors.root && (
-          <p className="text-sm text-destructive mt-2 text-center">
-            {formState.errors.root.message}
-          </p>
-        )}
+          )}
+        </div>
       </div>
     </form>
   );

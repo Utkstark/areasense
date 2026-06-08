@@ -36,7 +36,7 @@ export function ResultsList({ result, onReset }: ResultsListProps) {
 
 function MaintenanceNotice() {
   return (
-    <p className="text-xs text-muted-foreground">
+    <p className="text-xs text-brand-muted">
       Rent ranges shown are base rent. Society maintenance typically adds ₹3–15k/month and
       varies by society.
     </p>
@@ -71,7 +71,7 @@ function RelaxationBanner({
     <Card className="border-amber-300 bg-amber-50 p-3 dark:border-amber-900/50 dark:bg-amber-950/30">
       <div className="flex items-start gap-2">
         <Info className="mt-0.5 h-4 w-4 shrink-0 text-amber-700 dark:text-amber-400" />
-        <div className="flex-1 text-sm">
+        <div className="flex-1 text-sm text-brand-text">
           <span className="font-medium">No exact matches.</span>{' '}
           <span>Showing results with {parts.join(' and ')}.</span>
           {onReset && (
@@ -95,8 +95,8 @@ function EmptyState({ tradeoffPoints }: { tradeoffPoints?: TradeoffPoint[] }) {
   return (
     <Card className="p-6">
       <div className="space-y-3">
-        <h3 className="text-lg font-semibold">No matches found</h3>
-        <p className="text-sm text-muted-foreground">
+        <h3 className="text-lg font-semibold text-brand-text">No matches found</h3>
+        <p className="text-sm text-brand-muted">
           {hasTradeoffs
             ? "Nothing fits your current filters, but here's the shape of the tradeoff:"
             : "We couldn't find any localities matching your filters. Try widening your commute or budget."}
@@ -116,11 +116,11 @@ function EmptyState({ tradeoffPoints }: { tradeoffPoints?: TradeoffPoint[] }) {
 function TradeoffCard({ point }: { point: TradeoffPoint }) {
   if (point.type === 'cheapest_at_commute') {
     return (
-      <div className="rounded-md border bg-muted/30 p-3">
-        <div className="text-xs uppercase tracking-wide text-muted-foreground">
+      <div className="rounded-md border border-brand-text/10 bg-brand-bg p-3">
+        <div className="text-xs uppercase tracking-wide text-brand-muted">
           At your budget
         </div>
-        <div className="mt-1 text-sm">
+        <div className="mt-1 text-sm text-brand-text">
           The shortest commute available is{' '}
           <span className="font-semibold tabular-nums">{point.commute_minutes} min</span> — in{' '}
           <span className="font-semibold">{point.locality_name}</span>.
@@ -129,11 +129,11 @@ function TradeoffCard({ point }: { point: TradeoffPoint }) {
     );
   }
   return (
-    <div className="rounded-md border bg-muted/30 p-3">
-      <div className="text-xs uppercase tracking-wide text-muted-foreground">
+    <div className="rounded-md border border-brand-text/10 bg-brand-bg p-3">
+      <div className="text-xs uppercase tracking-wide text-brand-muted">
         Within your commute
       </div>
-      <div className="mt-1 text-sm">
+      <div className="mt-1 text-sm text-brand-text">
         The lowest rent is{' '}
         <span className="font-semibold tabular-nums">
           ₹{point.rent_inr.toLocaleString('en-IN')}/mo

@@ -3,6 +3,8 @@
 import type { BudgetFit } from '@/types';
 import { Badge } from '@/components/ui/badge';
 
+type BadgeVariant = 'default' | 'secondary' | 'destructive' | 'outline';
+
 interface BudgetPositionBadgeProps {
   fit: BudgetFit;
 }
@@ -14,10 +16,7 @@ const BADGE_TEXT: Record<BudgetFit['annotation'], string> = {
   full_range: 'Well within budget',
 };
 
-const BADGE_VARIANT: Record<
-  BudgetFit['annotation'],
-  'default' | 'secondary' | 'destructive' | 'outline'
-> = {
+const BADGE_VARIANT: Record<BudgetFit['annotation'], BadgeVariant> = {
   below_range: 'destructive',
   lower_part: 'outline',
   most_options: 'secondary',
