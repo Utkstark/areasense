@@ -3,7 +3,6 @@
 
 import type {
   BHK,
-  CommuteBasis,
   Coordinates,
   Household,
   TimeOfDay,
@@ -34,8 +33,9 @@ export interface SearchInput {
                                       // refactor consumers — only the Zod length
                                       // check changes.
   commute: {
-    basis:        CommuteBasis;       // 'total_daily' or 'avg_one_way'
-    max_minutes:  number;             // 10–180; interpretation depends on basis
+    max_minutes:  number;             // 10–180. TOTAL DAILY commute (morning +
+                                      // evening combined). No basis toggle in v0
+                                      // — see product-spec §4.2.
     time_of_day?: TimeOfDay;          // optional; defaults to {09:00, 18:00}
   };
   budget_inr: number;                 // monthly base rent budget in INR

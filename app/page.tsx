@@ -5,12 +5,16 @@ import { useEffect, useState } from 'react';
 import { SearchForm } from '@/components/ui/SearchForm';
 import { ResultsList } from '@/components/ResultsList';
 import { MapView } from '@/components/MapView';
-import type { SearchResult } from '@/types';
+import type { SearchInput, SearchResult } from '@/types';
 
 type Tab = 'list' | 'map';
 
 export default function HomePage() {
   const [result, setResult] = useState<SearchResult | null>(null);
+  // Holds the input that produced `result`. Threaded into ResultsList so
+  // LocalityRow can render buffer-zone copy against the user's stated max
+  // (e.g., "~5 min over your stated max"). Always set together with result.
+  const [lastInput, setLastInput] = useState<SearchInput | null>(null);
   const [loading, setLoading] = useState(false);
   const [activeTab, setActiveTab] = useState<Tab>('list');
   const [mapEverActive, setMapEverActive] = useState(false);
@@ -29,6 +33,11 @@ export default function HomePage() {
     if (resultsCount === 0 && activeTab === 'map') setActiveTab('list');
   }, [resultsCount, activeTab]);
 
+  const handleResult = (r: SearchResult, input: SearchInput) => {
+    setResult(r);
+    setLastInput(input);
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 pb-16 pt-8">
       <div className="w-full max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
@@ -46,7 +55,7 @@ export default function HomePage() {
 
           <aside className="w-full shrink-0 lg:sticky lg:top-12 lg:w-[550px] xl:w-[700px] 2xl:w-[850px]">
             <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-xl">
-              <SearchForm onResult={setResult} onLoading={setLoading} />
+              <SearchForm onResult={handleResult} onLoading={setLoading} />
             </div>
           </aside>
 
@@ -80,7 +89,7 @@ export default function HomePage() {
               </div>
             )}
 
-            {result && !loading && (
+            {result && lastInput && !loading && (
               <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 space-y-4">
 
                 {showToggle && (
@@ -111,7 +120,7 @@ export default function HomePage() {
                 )}
 
                 <div className={activeTab === 'list' ? 'block' : 'hidden'}>
-                  <ResultsList result={result} />
+                  <ResultsList result={result} userMaxMinutes={lastInput.commute.max_minutes} />
                 </div>
 
                 {mapEverActive && (

@@ -18,7 +18,7 @@
  * Error contract:
  *   - DistanceMatrixError: cold-start compute failed → route handler maps to 503
  *   - CacheUnavailableError: Redis read failed → route handler maps to 503
- *   - Isochrone failure: caught here, field omitted from response (still 200)
+ *   - Isochrone failure: caught at promise creation, field omitted from response (still 200)
  *   - Cache write failure post-compute: swallowed, data still returned
  *   - Other errors: bubble to route handler as 500
  */
@@ -98,21 +98,6 @@ const ALL_LOCALITIES: LocalityRecord[] = [
 // Internal helpers
 // ─────────────────────────────────────────────────────────────────────────
 
-/** Convert user's stated max (in their basis) to total-daily minutes. */
-function toMaxTotalDaily(input: SearchInput): number {
-  return input.commute.basis === 'avg_one_way'
-    ? input.commute.max_minutes * 2
-    : input.commute.max_minutes;
-}
-
-/** Convert total-daily commute back to the user-facing basis value. */
-function toBasisValue(
-  totalMinutes: number,
-  basis: SearchInput['commute']['basis'],
-): number {
-  return basis === 'avg_one_way' ? totalMinutes / 2 : totalMinutes;
-}
-
 /** Apply spec defaults to optional scoring_toggles (data-model §4). */
 function resolveToggles(
   input: SearchInput,
@@ -126,7 +111,6 @@ function resolveToggles(
 /** Build a CommuteResult from a raw matrix entry. */
 function buildCommuteResult(
   entry: CommuteMatrixEntry,
-  basis: SearchInput['commute']['basis'],
   maxTotalDaily: number,
 ): CommuteResult {
   const total = entry.outbound_minutes + entry.return_minutes;
@@ -135,7 +119,6 @@ function buildCommuteResult(
     outbound_minutes: entry.outbound_minutes,
     return_minutes: entry.return_minutes,
     total_minutes: total,
-    basis_value: toBasisValue(total, basis),
     in_buffer_zone: isInBufferZone(total, maxTotalDaily),
   };
 }
@@ -161,8 +144,9 @@ export async function search(input: SearchInput): Promise<SearchResult> {
     input.commute.time_of_day?.out ?? DEFAULT_TIME_OF_DAY.out;
   const returnTime =
     input.commute.time_of_day?.return ?? DEFAULT_TIME_OF_DAY.return;
-  const maxTotalDaily = toMaxTotalDaily(input);
-  const basis = input.commute.basis;
+  // `max_minutes` is total-daily directly (basis simplification per
+  // product-spec §4.2 — no avg_one_way/total_daily toggle in v0).
+  const maxTotalDaily = input.commute.max_minutes;
 
   const cacheKey: CacheKey = {
     office_coords_rounded: roundOfficeCoords(office.coordinates),
@@ -176,12 +160,21 @@ export async function search(input: SearchInput): Promise<SearchResult> {
   // cache state. Launching it now overlaps its ~1-2s with whatever the cache
   // lookup + cold-start compute end up taking. We deliberately do NOT use
   // Promise.all — isochrone failure must degrade (omit field), not abort.
-  // We await it at step 8 inside its own try/catch.
+  //
+  // The `.catch()` attached HERE (at creation, not at the eventual await) is
+  // critical: it guarantees the rejection is handled regardless of what the
+  // orchestrator does later. If `cacheGet` throws (Redis down) and we exit
+  // before step 8's await, the catch still fires when Mapbox eventually
+  // rejects — no unhandled rejection. Without this, simultaneous Redis +
+  // Mapbox failure would bubble as `unhandledRejection` and crash the lambda.
   const isochronePromise = getIsochrone(
     office.coordinates,
     maxTotalDaily,
     'driving',
-  );
+  ).catch((err: unknown) => {
+    console.error('isochrone failed; degrading (response omits field)', err);
+    return null;
+  });
 
   let cacheEntry;
   try {
@@ -240,7 +233,7 @@ export async function search(input: SearchInput): Promise<SearchResult> {
   for (const entry of matrix) {
     commuteByLocality.set(
       entry.locality_id,
-      buildCommuteResult(entry, basis, maxTotalDaily),
+      buildCommuteResult(entry, maxTotalDaily),
     );
   }
 
@@ -355,19 +348,15 @@ export async function search(input: SearchInput): Promise<SearchResult> {
   scored.sort((a, b) => b.score.final_score - a.score.final_score);
 
   // ─── Step 8: resolve isochrone (launched at top, awaited here) ───
-  // Polygon is decorative — failure omits the field, search still 200s.
+  // Polygon is decorative. Failure was already caught at the promise's
+  // creation site (returning null), so we just check for null here.
   let isochroneField: SearchResult['search_metadata']['isochrone'];
-  try {
-    const iso = await isochronePromise;
+  const iso = await isochronePromise;
+  if (iso) {
     isochroneField =
       iso.clamped_at_minutes !== undefined
         ? { geometry: iso.geometry, clamped_at_minutes: iso.clamped_at_minutes }
         : { geometry: iso.geometry };
-  } catch (err) {
-    console.error(
-      'isochrone failed; degrading (response omits field)',
-      err,
-    );
   }
 
   // ─── Step 9: assemble typed SearchResult ───

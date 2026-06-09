@@ -11,8 +11,6 @@ export type Household = 'single' | 'family';
 // Strict union prevents typo drift ('gurgaon', 'Gurugram') across the codebase.
 export type City = 'Gurgaon' | 'Delhi';
 
-export type CommuteBasis = 'total_daily' | 'avg_one_way';
-
 // v0: driving only. v1: 'driving' | 'transit' | 'walking'
 export type CommuteMode = 'driving';
 

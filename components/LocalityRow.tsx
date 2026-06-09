@@ -33,9 +33,12 @@ function formatRange(range: readonly [number, number]): string {
 interface LocalityRowProps {
   result: LocalityResult;
   rank: number;
+  // User's stated max (total daily, minutes). Used to render buffer-zone copy
+  // with the actual delta — see product-spec §6.1.
+  userMaxMinutes: number;
 }
 
-export function LocalityRow({ result, rank }: LocalityRowProps) {
+export function LocalityRow({ result, rank, userMaxMinutes }: LocalityRowProps) {
   const [expanded, setExpanded] = useState(false);
 
   const {
@@ -54,6 +57,11 @@ export function LocalityRow({ result, rank }: LocalityRowProps) {
   const nearestMetro = locality.nearest_metros[0];
   const visibleSocieties = matched_societies.filter((s) => s.passes_household_filter);
   const scorePct = Math.round(score.final_score * 100);
+
+  // Buffer-zone delta: how far over the user's stated max this commute is.
+  // Only meaningful when commute.in_buffer_zone is true (i.e., commute >
+  // userMaxMinutes but ≤ userMaxMinutes × 1.15). Rounded for honesty.
+  const minutesOverMax = Math.round(commute.total_minutes - userMaxMinutes);
 
   const headerClass =
     'flex w-full items-start gap-3 p-4 text-left hover:bg-brand-bg transition-colors';
@@ -101,7 +109,9 @@ export function LocalityRow({ result, rank }: LocalityRowProps) {
                 (out {commute.outbound_minutes} · return {commute.return_minutes})
               </span>
               {commute.in_buffer_zone && (
-                <span className="ml-1 text-xs text-amber-600">· just over limit</span>
+                <span className="ml-1 text-xs text-amber-600">
+                  · ~{minutesOverMax} min over your stated max
+                </span>
               )}
             </span>
             <span className="text-brand-muted">·</span>

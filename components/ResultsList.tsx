@@ -7,10 +7,14 @@ import { Info } from 'lucide-react';
 
 interface ResultsListProps {
   result: SearchResult;
+  // The user's stated max (total daily, in minutes). Threaded down to
+  // LocalityRow so buffer-zone copy can show "~X min over your stated max"
+  // per product-spec §6.1.
+  userMaxMinutes: number;
   onReset?: () => void;
 }
 
-export function ResultsList({ result, onReset }: ResultsListProps) {
+export function ResultsList({ result, userMaxMinutes, onReset }: ResultsListProps) {
   const { results, relaxation_applied, tradeoff_points } = result;
 
   return (
@@ -26,7 +30,7 @@ export function ResultsList({ result, onReset }: ResultsListProps) {
       ) : (
         <div className="space-y-3">
           {results.map((r, i) => (
-            <LocalityRow key={r.locality.id} result={r} rank={i + 1} />
+            <LocalityRow key={r.locality.id} result={r} rank={i + 1} userMaxMinutes={userMaxMinutes} />
           ))}
         </div>
       )}

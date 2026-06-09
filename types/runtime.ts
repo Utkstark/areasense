@@ -14,9 +14,9 @@ export interface CommuteResult {
   office_index:     number;     // which office in input.offices (v0 always 0)
   outbound_minutes: number;     // locality → office at outbound_time
   return_minutes:   number;     // office → locality at return_time
-  total_minutes:    number;     // outbound + return
-  basis_value:      number;     // total_minutes / (basis === 'avg_one_way' ? 2 : 1)
-                                // — the user-facing number based on their basis choice
+  total_minutes:    number;     // outbound + return — the user-facing number.
+                                // (basis simplification per product-spec §4.2:
+                                //  no one-way/total toggle in v0.)
   in_buffer_zone:   boolean;    // true if over user's stated max but within buffered max
 }
 

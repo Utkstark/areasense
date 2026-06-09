@@ -82,7 +82,9 @@ export function runEdgeCases(
   input: SearchInput,
   annotated: AnnotatedLocality[],
 ): EdgeCaseResult {
-  const userMaxTotalDaily = toTotalDaily(input);
+  // `max_minutes` IS total-daily directly (basis simplification per
+  // product-spec §4.2 — no avg_one_way/total_daily toggle in v0).
+  const userMaxTotalDaily = input.commute.max_minutes;
 
   // --- Step 1: budget + 20%, original commute ---
   const relaxedBudget = Math.round(
@@ -145,20 +147,6 @@ export function runEdgeCases(
 // ============================================================================
 // Helpers
 // ============================================================================
-
-/**
- * Converts the user's max_minutes into a single total-daily threshold based
- * on their stated basis. Matches the filters.ts convention: callers pass
- * basis-converted total-daily values.
- *
- *   total_daily basis: max_minutes IS the total-daily threshold
- *   avg_one_way basis: max_minutes × 2 = total-daily threshold
- */
-function toTotalDaily(input: SearchInput): number {
-  return input.commute.basis === 'avg_one_way'
-    ? input.commute.max_minutes * 2
-    : input.commute.max_minutes;
-}
 
 interface FilterThresholds {
   maxCommuteTotalDaily: number;

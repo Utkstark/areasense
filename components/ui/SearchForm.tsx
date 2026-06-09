@@ -12,7 +12,6 @@ import {
   type SearchInput,
   type SearchResult,
   type BHK,
-  type CommuteBasis,
   type Household,
 } from '@/types';
 import { useLocalPreferences } from '@/hooks/useLocalPreferences';
@@ -44,21 +43,17 @@ const HOUSEHOLD_OPTIONS: { value: Household; label: string }[] = [
   { value: 'family', label: 'Family' },
 ];
 
-const BASIS_OPTIONS: { value: CommuteBasis; label: string; help: string }[] = [
-  { value: 'avg_one_way', label: 'One-Way Average', help: 'Avg of morning + evening' },
-  { value: 'total_daily', label: 'Total Daily',     help: 'Morning + evening summed' },
-];
-
 const COORDINATES_SENTINEL = { lat: 0, lng: 0 };
 
+// Default 90 min total-daily ≈ 45 min one-way each leg (matches the prior
+// avg_one_way:45 default but now expressed honestly as total-daily).
 const DEFAULT_VALUES: SearchInput = {
   offices: [{
     address: '',
     coordinates: COORDINATES_SENTINEL,
   }],
   commute: {
-    basis: 'avg_one_way',
-    max_minutes: 45,
+    max_minutes: 90,
     time_of_day: DEFAULT_TIME_OF_DAY,
   },
   budget_inr: 50_000,
@@ -71,10 +66,11 @@ function isUnresolved(coords: { lat: number; lng: number }): boolean {
   return coords.lat === COORDINATES_SENTINEL.lat && coords.lng === COORDINATES_SENTINEL.lng;
 }
 
-function shouldShowClampHint(basis: CommuteBasis, max: number): boolean {
-  if (basis === 'avg_one_way') return max > 60;
-  if (basis === 'total_daily') return max > 120;
-  return false;
+// Mapbox isochrone caps at 60 min one-way ≈ 120 min daily.
+// Above this, the map polygon will clip even though the ranked list (Distance
+// Matrix, no cap) is still accurate.
+function shouldShowClampHint(max: number): boolean {
+  return max > 120;
 }
 
 function formatInr(value: number): string {
@@ -82,7 +78,9 @@ function formatInr(value: number): string {
 }
 
 interface SearchFormProps {
-  onResult: (result: SearchResult) => void;
+  // Carries the submitted input alongside the result so the parent can thread
+  // user-stated values (e.g., userMaxMinutes) down into the results UI.
+  onResult: (result: SearchResult, input: SearchInput) => void;
   onLoading: (loading: boolean) => void;
 }
 
@@ -174,10 +172,9 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
     }
   };
 
-  const basis = watch('commute.basis');
   const maxMinutes = watch('commute.max_minutes');
   const budget = watch('budget_inr');
-  const showClampHint = shouldShowClampHint(basis, maxMinutes);
+  const showClampHint = shouldShowClampHint(maxMinutes);
 
   const onSubmit = async (data: SearchInput) => {
     onLoading(true);
@@ -220,7 +217,7 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
         scoring_toggles: data.scoring_toggles,
       });
 
-      onResult(result);
+      onResult(result, data);
     } finally {
       onLoading(false);
     }
@@ -228,7 +225,7 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-8">
-      
+
       {/* Row 1: Office Address (Full Width) */}
       <div className="space-y-3">
         <Label htmlFor="office-address" className="text-lg font-bold text-black">Your Office</Label>
@@ -269,9 +266,9 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
         )}
       </div>
 
-      {/* Row 2 & 3: Two-Column Grid for Budget, Commute, and Household */}
+      {/* Row 2: Budget + Max Commute (Two-Column Grid) */}
       <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-8 gap-y-8">
-        
+
         {/* Budget */}
         <div className="space-y-3">
           <Label htmlFor="budget" className="text-lg font-bold text-black">
@@ -300,17 +297,16 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
           </div>
         </div>
 
-        {/* Max Commute */}
+        {/* Max Daily Commute */}
         <div className="space-y-3">
           <Label htmlFor="max-minutes" className="text-lg font-bold text-black">
-            Max Commute ({basis === 'avg_one_way' ? 'One-Way' : 'Daily'})
+            Max Daily Commute
           </Label>
           <Controller
             control={control}
             name="commute.max_minutes"
             render={({ field }) => (
               <div className="flex items-center gap-4">
-                {/* Explicit overrides for Slider colors */}
                 <Slider
                   value={[field.value]}
                   onValueChange={(vals) => field.onChange(vals[0])}
@@ -335,74 +331,44 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
               </div>
             )}
           />
+          <p className="text-xs text-gray-500">
+            Morning + evening combined. Thinking one-way? Double it (e.g., 45 min one-way ≈ 90 min daily).
+          </p>
         </div>
+      </div>
 
-        {/* Household */}
-        <div className="space-y-3">
-          <Label className="text-lg font-bold text-black">Household</Label>
-          <Controller
-            control={control}
-            name="household"
-            render={({ field }) => (
-              <RadioGroup
-                value={field.value}
-                onValueChange={field.onChange}
-                className="flex flex-col sm:flex-row gap-3"
-              >
-                {HOUSEHOLD_OPTIONS.map((opt) => {
-                  const isSelected = field.value === opt.value;
-                  return (
-                    <Label
-                      key={opt.value}
-                      htmlFor={`household-${opt.value}`}
-                      className={`flex items-center justify-center border-2 rounded-xl p-4 flex-1 cursor-pointer transition-all ${
-                        isSelected ? 'bg-black border-black text-white' : 'bg-white border-gray-200 text-gray-500 hover:border-gray-400'
-                      }`}
-                    >
-                      <RadioGroupItem value={opt.value} id={`household-${opt.value}`} className="sr-only" />
-                      <span className={`font-bold text-lg ${isSelected ? 'text-white' : 'text-black'}`}>
-                        {opt.label}
-                      </span>
-                    </Label>
-                  );
-                })}
-              </RadioGroup>
-            )}
-          />
-        </div>
-
-        {/* Commute Basis */}
-        <div className="space-y-3">
-          <Label className="text-lg font-bold text-black">Measurement</Label>
-          <Controller
-            control={control}
-            name="commute.basis"
-            render={({ field }) => (
-              <RadioGroup
-                value={field.value}
-                onValueChange={field.onChange}
-                className="flex flex-col sm:flex-row gap-3"
-              >
-                {BASIS_OPTIONS.map((opt) => {
-                  const isSelected = field.value === opt.value;
-                  return (
-                    <Label
-                      key={opt.value}
-                      htmlFor={`basis-${opt.value}`}
-                      className={`flex flex-col items-center justify-center border-2 rounded-xl py-2 px-3 flex-1 cursor-pointer transition-all ${
-                        isSelected ? 'bg-black border-black text-white' : 'bg-white border-gray-200 text-gray-500 hover:border-gray-400'
-                      }`}
-                    >
-                      <RadioGroupItem value={opt.value} id={`basis-${opt.value}`} className="sr-only" />
-                      <div className={`font-bold text-base ${isSelected ? 'text-white' : 'text-black'}`}>{opt.label}</div>
-                      <div className={`text-xs mt-1 text-center ${isSelected ? 'text-gray-300' : 'text-gray-400'}`}>{opt.help}</div>
-                    </Label>
-                  );
-                })}
-              </RadioGroup>
-            )}
-          />
-        </div>
+      {/* Row 3: Household (Full Width) */}
+      <div className="space-y-3">
+        <Label className="text-lg font-bold text-black">Household</Label>
+        <Controller
+          control={control}
+          name="household"
+          render={({ field }) => (
+            <RadioGroup
+              value={field.value}
+              onValueChange={field.onChange}
+              className="flex flex-col sm:flex-row gap-3"
+            >
+              {HOUSEHOLD_OPTIONS.map((opt) => {
+                const isSelected = field.value === opt.value;
+                return (
+                  <Label
+                    key={opt.value}
+                    htmlFor={`household-${opt.value}`}
+                    className={`flex items-center justify-center border-2 rounded-xl p-4 flex-1 cursor-pointer transition-all ${
+                      isSelected ? 'bg-black border-black text-white' : 'bg-white border-gray-200 text-gray-500 hover:border-gray-400'
+                    }`}
+                  >
+                    <RadioGroupItem value={opt.value} id={`household-${opt.value}`} className="sr-only" />
+                    <span className={`font-bold text-lg ${isSelected ? 'text-white' : 'text-black'}`}>
+                      {opt.label}
+                    </span>
+                  </Label>
+                );
+              })}
+            </RadioGroup>
+          )}
+        />
       </div>
 
       {/* Row 4: BHK (Full Width) */}
@@ -419,9 +385,9 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
               className="justify-start flex-wrap gap-3"
             >
               {BHK_OPTIONS.map((opt) => (
-                <ToggleGroupItem 
-                  key={opt.value} 
-                  value={opt.value} 
+                <ToggleGroupItem
+                  key={opt.value}
+                  value={opt.value}
                   aria-label={opt.label}
                   className="h-14 flex-1 min-w-[80px] px-4 text-base sm:text-lg font-bold rounded-xl border-2 border-gray-200 data-[state=on]:bg-black data-[state=on]:text-white data-[state=on]:border-black hover:bg-gray-100 transition-all"
                 >
@@ -466,10 +432,10 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
                       <div className="text-base font-bold text-black">Metro Proximity</div>
                       <div className="text-sm font-medium text-gray-500">Score localities by walking distance to metro</div>
                     </div>
-                    <Switch 
-                      checked={field.value} 
-                      onCheckedChange={field.onChange} 
-                      className="scale-110 data-[state=checked]:!bg-black data-[state=unchecked]:!bg-gray-300 [&>span]:!bg-white" 
+                    <Switch
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                      className="scale-110 data-[state=checked]:!bg-black data-[state=unchecked]:!bg-gray-300 [&>span]:!bg-white"
                     />
                   </div>
                 )}
@@ -483,10 +449,10 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
                       <div className="text-base font-bold text-black">Society Ratings</div>
                       <div className="text-sm font-medium text-gray-500">Factor in Google ratings of gated societies</div>
                     </div>
-                    <Switch 
-                      checked={field.value} 
-                      onCheckedChange={field.onChange} 
-                      className="scale-110 data-[state=checked]:!bg-black data-[state=unchecked]:!bg-gray-300 [&>span]:!bg-white" 
+                    <Switch
+                      checked={field.value}
+                      onCheckedChange={field.onChange}
+                      className="scale-110 data-[state=checked]:!bg-black data-[state=unchecked]:!bg-gray-300 [&>span]:!bg-white"
                     />
                   </div>
                 )}

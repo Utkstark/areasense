@@ -45,8 +45,7 @@ export const SearchInputSchema = z.object({
   offices: z.array(OfficeSchema).length(1),     // v0: enforce length 1
                                                 // v1: change to .min(1).max(2)
   commute: z.object({
-    basis:       z.enum(['total_daily', 'avg_one_way']),
-    max_minutes: z.number().int().min(10).max(180),
+    max_minutes: z.number().int().min(10).max(180),  // total daily; no basis toggle
     time_of_day: TimeOfDaySchema.optional(),
   }),
   budget_inr: z.number().int().min(3000).max(1_000_000),

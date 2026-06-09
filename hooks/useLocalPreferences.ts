@@ -5,7 +5,8 @@
 //
 // What we persist:
 //   - office (address + coordinates — coords don't go stale at v0 scale)
-//   - commute (basis, max_minutes, time_of_day)
+//   - commute (max_minutes, time_of_day) — total-daily; basis removed per
+//     product-spec §4.2 (founders: clear localStorage once after deploy)
 //   - budget, BHK, household
 //   - scoring toggles
 //
@@ -18,7 +19,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import type {
   BHK,
-  CommuteBasis,
   Coordinates,
   Household,
   ScoringToggles,
@@ -33,7 +33,6 @@ export interface PersistedPreferences {
     coordinates: Coordinates;
   };
   commute?: {
-    basis: CommuteBasis;
     max_minutes: number;
     time_of_day?: TimeOfDay;
   };
