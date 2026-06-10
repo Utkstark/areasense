@@ -1,5 +1,173 @@
 {
-  "version": 1,
-  "generated_at": "1970-01-01T00:00:00Z",
-  "hubs": {}
+  "commute:v1:28.402803:77.069298:09:00:18:00": {
+    "key": {
+      "office_coords_rounded": {
+        "lat": 28.40280273086597,
+        "lng": 77.06929761462452
+      },
+      "outbound_time": "09:00",
+      "return_time": "18:00"
+    },
+    "matrix": [
+      {
+        "locality_id": "gur-sec-65",
+        "outbound_minutes": 5,
+        "return_minutes": 6
+      },
+      {
+        "locality_id": "gur-sec-102",
+        "outbound_minutes": 39,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "gur-sec-69",
+        "outbound_minutes": 20,
+        "return_minutes": 19
+      }
+    ],
+    "computed_at": "2026-06-07T02:35:40.084Z",
+    "last_accessed": "2026-06-07T02:35:40.084Z"
+  },
+  "commute:v1:28.484549:77.085683:09:00:18:00": {
+    "key": {
+      "office_coords_rounded": {
+        "lat": 28.484549047790154,
+        "lng": 77.08568293192837
+      },
+      "outbound_time": "09:00",
+      "return_time": "18:00"
+    },
+    "matrix": [
+      {
+        "locality_id": "gur-sec-65",
+        "outbound_minutes": 40,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "gur-sec-102",
+        "outbound_minutes": 47,
+        "return_minutes": 44
+      },
+      {
+        "locality_id": "gur-sec-69",
+        "outbound_minutes": 47,
+        "return_minutes": 43
+      }
+    ],
+    "computed_at": "2026-06-07T02:39:49.356Z",
+    "last_accessed": "2026-06-07T04:50:31.245Z"
+  },
+  "commute:v1:28.484549:77.085683:09:00:20:00": {
+    "key": {
+      "office_coords_rounded": {
+        "lat": 28.484549047790154,
+        "lng": 77.08568293192837
+      },
+      "outbound_time": "09:00",
+      "return_time": "20:00"
+    },
+    "matrix": [
+      {
+        "locality_id": "gur-sec-65",
+        "outbound_minutes": 40,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-sec-102",
+        "outbound_minutes": 47,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "gur-sec-69",
+        "outbound_minutes": 47,
+        "return_minutes": 42
+      }
+    ],
+    "computed_at": "2026-06-07T04:50:53.764Z",
+    "last_accessed": "2026-06-08T12:05:25.772Z"
+  },
+  "commute:v1:28.495329:77.089253:09:00:18:00": {
+    "key": {
+      "office_coords_rounded": {
+        "lat": 28.495328781890045,
+        "lng": 77.08925317571808
+      },
+      "outbound_time": "09:00",
+      "return_time": "18:00"
+    },
+    "matrix": [],
+    "computed_at": "2026-06-05T22:18:27.510Z",
+    "last_accessed": "2026-06-05T22:21:27.014Z"
+  },
+  "commute:v1:28.495329:77.089309:09:00:18:00": {
+    "key": {
+      "office_coords_rounded": {
+        "lat": 28.495328781890045,
+        "lng": 77.08930883008243
+      },
+      "outbound_time": "09:00",
+      "return_time": "18:00"
+    },
+    "matrix": [],
+    "computed_at": "2026-06-06T23:33:52.787Z",
+    "last_accessed": "2026-06-07T02:35:07.779Z"
+  },
+  "commute:v1:28.496227:77.093163:09:00:19:00": {
+    "key": {
+      "office_coords_rounded": {
+        "lat": 28.496227093065038,
+        "lng": 77.09316269944514
+      },
+      "outbound_time": "09:00",
+      "return_time": "19:00"
+    },
+    "matrix": [
+      {
+        "locality_id": "gur-sec-65",
+        "outbound_minutes": 44,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "gur-sec-102",
+        "outbound_minutes": 46,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "gur-sec-69",
+        "outbound_minutes": 53,
+        "return_minutes": 54
+      }
+    ],
+    "computed_at": "2026-06-09T23:46:38.555Z",
+    "last_accessed": "2026-06-09T23:58:55.581Z"
+  },
+  "commute:v1:28.496227:77.093163:09:00:20:00": {
+    "key": {
+      "office_coords_rounded": {
+        "lat": 28.496227093065038,
+        "lng": 77.09316269944514
+      },
+      "outbound_time": "09:00",
+      "return_time": "20:00"
+    },
+    "matrix": [
+      {
+        "locality_id": "gur-sec-65",
+        "outbound_minutes": 44,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "gur-sec-102",
+        "outbound_minutes": 46,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "gur-sec-69",
+        "outbound_minutes": 52,
+        "return_minutes": 45
+      }
+    ],
+    "computed_at": "2026-06-08T12:05:45.883Z",
+    "last_accessed": "2026-06-09T23:47:14.356Z"
+  }
 }
