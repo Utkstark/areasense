@@ -167,9 +167,14 @@ export async function search(input: SearchInput): Promise<SearchResult> {
   // before step 8's await, the catch still fires when Mapbox eventually
   // rejects — no unhandled rejection. Without this, simultaneous Redis +
   // Mapbox failure would bubble as `unhandledRejection` and crash the lambda.
+  // Mapbox Isochrone is one-way ("places reachable in N min FROM origin"),
+  // but maxTotalDaily is morning + evening combined. Halve to approximate
+  // the one-way budget that the polygon should visualize. Decorative only —
+  // the actual ranked list comes from the full both-legs Distance Matrix
+  // computation below. See product-spec.md §5, tech-architecture.md §6.
   const isochronePromise = getIsochrone(
     office.coordinates,
-    maxTotalDaily,
+    Math.floor(maxTotalDaily / 2),
     'driving',
   ).catch((err: unknown) => {
     console.error('isochrone failed; degrading (response omits field)', err);
@@ -353,9 +358,13 @@ export async function search(input: SearchInput): Promise<SearchResult> {
   let isochroneField: SearchResult['search_metadata']['isochrone'];
   const iso = await isochronePromise;
   if (iso) {
+    // If the wrapper clamped (one-way budget > 60), surface the user's
+    // ORIGINAL total-daily input to the UI — not the one-way value that
+    // got clamped. Keeps MapView's clamp message ("your full {X}-min
+    // results are in the list") consistent with the form input.
     isochroneField =
       iso.clamped_at_minutes !== undefined
-        ? { geometry: iso.geometry, clamped_at_minutes: iso.clamped_at_minutes }
+        ? { geometry: iso.geometry, clamped_at_minutes: maxTotalDaily }
         : { geometry: iso.geometry };
   }
 

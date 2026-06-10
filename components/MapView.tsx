@@ -7,16 +7,15 @@ import type { SearchResult } from '@/types';
 
 const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_PUBLIC_TOKEN ?? '';
 const MAP_STYLE = 'mapbox://styles/mapbox/streets-v12';
-const BRAND_PRIMARY_FALLBACK = '#4f46e5';
+// Mapbox GL JS paint properties don't accept oklch() — must be hex/rgb/hsl.
+// Brand color is duplicated here as a hex literal that approximates
+// --brand-primary (oklch(0.55 0.25 260)). See tech-architecture.md §3.
+const BRAND_PRIMARY_HEX = '#4f46e5';
 const GURGAON_DEFAULT_CENTER: [number, number] = [77.09, 28.45];
 
-function readBrandPrimary(): string {
-  if (typeof window === 'undefined') return BRAND_PRIMARY_FALLBACK;
-  const v = getComputedStyle(document.documentElement)
-    .getPropertyValue('--color-brand-primary')
-    .trim();
-  return v || BRAND_PRIMARY_FALLBACK;
-}
+// Mapbox GL JS paint properties don't accept oklch() — must be hex/rgb/hsl.
+// Brand color is duplicated here as a hex literal that approximates
+// --brand-primary (oklch(0.55 0.25 260)). See tech-architecture.md §3.
 
 interface Props {
   result: SearchResult;
@@ -27,7 +26,6 @@ export function MapView({ result, active }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const markersRef = useRef<mapboxgl.Marker[]>([]);
-  const brandColorRef = useRef<string>(BRAND_PRIMARY_FALLBACK);
   const hasInitRef = useRef(false);
 
   // Lazy init: only fires the first time `active` becomes true. Guarded by
@@ -42,7 +40,6 @@ export function MapView({ result, active }: Props) {
     }
 
     mapboxgl.accessToken = MAPBOX_TOKEN;
-    brandColorRef.current = readBrandPrimary();
 
     const office = result.search_metadata.offices_resolved[0];
     const map = new mapboxgl.Map({
@@ -54,7 +51,7 @@ export function MapView({ result, active }: Props) {
     map.addControl(new mapboxgl.NavigationControl({ showCompass: false }), 'top-left');
 
     map.on('load', () => {
-      renderOverlays(map, result, brandColorRef.current, markersRef);
+      renderOverlays(map, result, markersRef);
     });
 
     mapRef.current = map;
@@ -84,7 +81,7 @@ export function MapView({ result, active }: Props) {
     const map = mapRef.current;
     if (!map || !hasInitRef.current) return;
 
-    const apply = () => renderOverlays(map, result, brandColorRef.current, markersRef);
+    const apply = () => renderOverlays(map, result, markersRef);
     if (map.isStyleLoaded()) {
       apply();
     } else {
@@ -138,7 +135,6 @@ export function MapView({ result, active }: Props) {
 function renderOverlays(
   map: mapboxgl.Map,
   result: SearchResult,
-  brandColor: string,
   markersRef: React.MutableRefObject<mapboxgl.Marker[]>,
 ) {
   // Clear old markers
@@ -167,13 +163,13 @@ function renderOverlays(
       id: 'isochrone-fill',
       type: 'fill',
       source: 'isochrone',
-      paint: { 'fill-color': brandColor, 'fill-opacity': 0.15 },
+      paint: { 'fill-color': BRAND_PRIMARY_HEX, 'fill-opacity': 0.15 },
     });
     map.addLayer({
       id: 'isochrone-line',
       type: 'line',
       source: 'isochrone',
-      paint: { 'line-color': brandColor, 'line-width': 2, 'line-opacity': 0.85 },
+      paint: { 'line-color': BRAND_PRIMARY_HEX, 'line-width': 2, 'line-opacity': 0.85 },
     });
   }
 
@@ -211,7 +207,7 @@ function renderOverlays(
       width: '32px',
       height: '32px',
       borderRadius: '9999px',
-      background: brandColor,
+      background: BRAND_PRIMARY_HEX,
       color: '#ffffff',
       fontWeight: '700',
       fontSize: '14px',
