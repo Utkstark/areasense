@@ -9,6 +9,8 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "build:data": "tsx scripts/pipeline/index.ts",
+    "pipeline:preprocess": "tsx scripts/pipeline/run-preprocess.ts",
+    "pipeline:detect-roads": "tsx scripts/pipeline/detect-road-aggregators.ts",
     "build:cache": "tsx scripts/prewarm-commute-cache.ts",
     "refresh:cache": "tsx scripts/refresh-commute-cache.ts",
     "verify:deeplinks": "tsx scripts/verify-deeplinks.ts"
@@ -39,6 +41,8 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "autoprefixer": "^10.4.20",
+    "csv-parse": "^5.6.0",
+    "csv-stringify": "^6.7.0",
     "eslint": "^9.0.0",
     "eslint-config-next": "^15.0.0",
     "postcss": "^8.4.47",
