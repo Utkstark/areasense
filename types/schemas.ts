@@ -28,12 +28,13 @@ export const OfficeSchema = z.object({
   label:       z.string().max(100).optional(),
 });
 
-// Real 24-hour clock validation — not just "two digits, colon, two digits".
-// Pattern matches 00:00–23:59 only. "25:99" is rejected.
+// Hourly-only clock validation. Pattern matches HH:00 where HH is 00–23.
+// "09:30" or "25:00" are rejected. The form surfaces 24 dropdown options
+// (12 AM through 11 PM); the backend rejects anything off-the-hour.
 export const TimeStringSchema = z
   .string()
-  .regex(/^([01]\d|2[0-3]):([0-5]\d)$/, {
-    message: 'Time must be in HH:MM format (00:00–23:59)',
+  .regex(/^([01]\d|2[0-3]):00$/, {
+    message: 'Time must be on the hour (HH:00 format)',
   });
 
 export const TimeOfDaySchema = z.object({

@@ -25,6 +25,13 @@ import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Switch } from '@/components/ui/switch';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
+import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
@@ -42,6 +49,18 @@ const HOUSEHOLD_OPTIONS: { value: Household; label: string }[] = [
   { value: 'single', label: 'Single / Bachelor' },
   { value: 'family', label: 'Family' },
 ];
+
+// 24 hourly options — value is HH:00 24-hour string (matches the Zod schema
+// in /types/schemas.ts), label is 12-hour AM/PM format for readability.
+const HOUR_OPTIONS: { value: string; label: string }[] = Array.from(
+  { length: 24 },
+  (_, i) => {
+    const value = `${String(i).padStart(2, '0')}:00`;
+    const hour12 = i === 0 ? 12 : i > 12 ? i - 12 : i;
+    const ampm = i < 12 ? 'AM' : 'PM';
+    return { value, label: `${hour12} ${ampm}` };
+  },
+);
 
 const COORDINATES_SENTINEL = { lat: 0, lng: 0 };
 
@@ -93,7 +112,7 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
     mode: 'onBlur',
   });
 
-  const { register, handleSubmit, control, watch, setValue, setError, formState, reset } = form;
+  const { handleSubmit, control, watch, setValue, setError, formState, reset } = form;
 
   useEffect(() => {
     if (!hydrated || !preferences) return;
@@ -413,11 +432,53 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8">
                 <div className="flex items-center gap-3 w-full sm:w-auto">
                   <span className="text-base font-bold text-gray-500 w-12">Out</span>
-                  <Input type="time" {...register('commute.time_of_day.out')} className="h-12 text-lg font-bold rounded-xl border-2 border-gray-200 w-full sm:w-36" />
+                  <Controller
+                    control={control}
+                    name="commute.time_of_day.out"
+                    render={({ field }) => (
+                      <Select value={field.value} onValueChange={field.onChange}>
+                        <SelectTrigger className="h-12 text-lg font-bold rounded-xl border-2 border-gray-200 w-full sm:w-36 bg-white">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white border-2 border-gray-200 rounded-xl shadow-xl">
+                          {HOUR_OPTIONS.map((opt) => (
+                            <SelectItem
+                              key={opt.value}
+                              value={opt.value}
+                              className="text-base font-bold focus:bg-gray-100 cursor-pointer"
+                            >
+                              {opt.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
                 </div>
                 <div className="flex items-center gap-3 w-full sm:w-auto">
                   <span className="text-base font-bold text-gray-500 w-12">Return</span>
-                  <Input type="time" {...register('commute.time_of_day.return')} className="h-12 text-lg font-bold rounded-xl border-2 border-gray-200 w-full sm:w-36" />
+                  <Controller
+                    control={control}
+                    name="commute.time_of_day.return"
+                    render={({ field }) => (
+                      <Select value={field.value} onValueChange={field.onChange}>
+                        <SelectTrigger className="h-12 text-lg font-bold rounded-xl border-2 border-gray-200 w-full sm:w-36 bg-white">
+                          <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent className="bg-white border-2 border-gray-200 rounded-xl shadow-xl">
+                          {HOUR_OPTIONS.map((opt) => (
+                            <SelectItem
+                              key={opt.value}
+                              value={opt.value}
+                              className="text-base font-bold focus:bg-gray-100 cursor-pointer"
+                            >
+                              {opt.label}
+                            </SelectItem>
+                          ))}
+                        </SelectContent>
+                      </Select>
+                    )}
+                  />
                 </div>
               </div>
             </div>
