@@ -35,6 +35,22 @@ import {
 
 import { findNearestMetroStations } from '@/lib/places-nearby';
 
+// ───────────────────────── Constants ─────────────────────────
+
+/**
+ * Radius (km) for metro-station nearby-search during locality bootstrap.
+ * NCR has many residential pockets with the nearest metro 5–8 km out, and
+ * legitimately some further still. 15 km comfortably covers the realistic
+ * range.
+ *
+ * Note: this is the SEARCH radius for the bootstrap step (prove a locality
+ * has *some* nearest metro to record). The metro proximity SCORING window
+ * is separate and tighter — `SCORING_CONFIG.METRO_D_MAX_METERS = 2000`
+ * (data-model §9). Localities whose nearest metro lands beyond 2 km simply
+ * get `metro_score = 0` at search time — no false amenity claim.
+ */
+const BOOTSTRAP_METRO_RADIUS_KM = 15;
+
 // ───────────────────────── Public types & API ─────────────────────────
 
 export interface BootstrapInput {
@@ -106,11 +122,13 @@ export async function bootstrapLocality(
   }
 
   // ─── Step 4: Find nearby metros ───────────────────────────────────────
-  const nearby = await findNearestMetroStations(geocoded.coordinates);
+  const nearby = await findNearestMetroStations(geocoded.coordinates, {
+    radiusMeters: BOOTSTRAP_METRO_RADIUS_KM * 1000,
+  });
   if (nearby.length === 0) {
     return skip(
       'no_metros_found',
-      `no metros within 3 km of ${formatCoords(geocoded.coordinates)}`,
+      `no metros within ${BOOTSTRAP_METRO_RADIUS_KM} km of ${formatCoords(geocoded.coordinates)}`,
     );
   }
 

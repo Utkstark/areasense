@@ -22,7 +22,7 @@
 import type { Coordinates } from '@/types';
 
 const PLACES_ENDPOINT = 'https://places.googleapis.com/v1/places:searchNearby';
-const FIELD_MASK = 'places.id,places.displayName,places.location';
+const FIELD_MASK = 'places.id,places.displayName,places.location,places.primaryType';
 
 // ───────────────────────── Public types & API ─────────────────────────
 
@@ -155,6 +155,7 @@ interface ParsedPlace {
   id: string;
   displayName: { text: string };
   location: { latitude: number; longitude: number };
+  primaryType: string;
 }
 
 /**
@@ -192,10 +193,20 @@ function parsePlacesResponse(data: unknown): ParsedPlace[] {
       continue;
     }
 
+    // Strict primary-type filter — guards against railway stations and
+    // other non-metro transit places that Google's permissive `includedTypes`
+    // matching can leak through (e.g., interchanges tagged with both
+    // train_station AND subway_station).
+    const primaryType = obj.primaryType;
+    if (typeof primaryType !== 'string' || primaryType !== 'subway_station') {
+      continue;
+    }
+
     out.push({
       id,
       displayName: { text: displayName.text },
       location: { latitude: location.latitude, longitude: location.longitude },
+      primaryType,
     });
   }
   return out;

@@ -10,7 +10,7 @@
 
 import { readRawCsv, validateRows } from './parse-csv';
 import { preprocessRows } from './preprocess';
-import { resolveLocalities } from './resolve-locality';
+import { resolveLocalities, persistNewRecords } from './resolve-locality';
 import { backfillFields } from './backfill-fields';
 
 const RAW_CSV = 'data-raw/rentals.csv';
@@ -36,7 +36,15 @@ async function main() {
   console.log(`    society_lookup decomposed: ${pre.stats.decomposed_via_society_lookup}`);
   console.log(`    unchanged:                 ${pre.stats.unchanged}`);
   console.log(`    synonym_merges_applied:    ${pre.stats.synonym_merges_applied}`);
+  console.log(`    prefix_stripped:           ${pre.stats.prefix_stripped}`);
+  console.log(`    sec_expanded:              ${pre.stats.sec_expanded}`);
   console.log(`    unresolved (dropped):      ${pre.stats.unresolved_count}`);
+  if (pre.stats.unresolved_count > 0) {
+    console.log('    by reason:');
+    for (const [reason, count] of Object.entries(pre.stats.bySkipReason)) {
+      if (count > 0) console.log(`      ${reason}: ${count}`);
+    }
+  }
 
   // -------- Stage 1 — validate preprocessed rows --------
   console.log('\n[stage 1] validating + type-coercing preprocessed rows...');
@@ -60,9 +68,27 @@ async function main() {
       console.log(`      ${reason}: ${count}`);
     }
   }
+  // -------- Tier-3 persistence (chat 1c item 4) --------
+  // Runs BEFORE the cap-hit warning so successful bootstraps are saved
+  // even when the cap fires later in the run. Without this ordering, every
+  // cap-hit run would discard the records it paid for.
+  if (resolve.newRecords.length > 0) {
+    console.log('\n[persist] writing new tier-3 locality records to disk...');
+    const persistResult = persistNewRecords(resolve.newRecords);
+    for (const [city, counts] of Object.entries(persistResult.perCity)) {
+      if (counts.added > 0 || counts.duplicates > 0) {
+        console.log(`  ${city}: +${counts.added} added, ${counts.duplicates} duplicates, total now ${counts.total}`);
+      }
+    }
+    console.log(`  files written: ${persistResult.filesWritten.join(', ') || '(none)'}`);
+  }
+
   if (resolve.stats.bootstrapCapReached) {
-    console.error('\n[orchestrator] HALT — tier-3 bootstrap cap reached. Fix overrides and re-run.');
-    process.exit(1);
+    console.warn('\n[orchestrator] WARN — tier-3 bootstrap cap reached; resolution is partial.');
+    console.warn('  Successful bootstraps from this run have been persisted above.');
+    console.warn('  Re-run `npm run build:data` to continue resolving the remainder');
+    console.warn('  (previously-persisted records will hit tier 2 and free up the cap).');
+    process.exitCode = 1; // non-zero for CI; doesn't abort, so stage 3 still runs
   }
 
   // -------- Stage 3 — backfill BHK / Property_Type --------

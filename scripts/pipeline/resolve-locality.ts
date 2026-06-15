@@ -9,7 +9,7 @@
 // Tier-3 cap (default 150) prevents runaway API spend; on hit, remaining
 // unresolved rows are marked skipped and the orchestrator should exit non-zero.
 
-import { readFileSync, existsSync } from 'fs';
+import { readFileSync, existsSync, writeFileSync, renameSync } from 'fs';
 import path from 'path';
 import type {
   RawListingRecord,
@@ -23,7 +23,7 @@ import type { City, LocalityId } from '../../types/primitives';
 import type { LocalityRecord } from '../../types/data';
 import { bootstrapLocality } from './bootstrap-locality';
 
-const DEFAULT_TIER3_CAP = 150;
+const DEFAULT_TIER3_CAP = 500;
 const MAPPING_FILE = path.resolve('data/locality-mapping.json');
 const LOCALITY_DATA_FILES: Record<City, string> = {
   Gurgaon: 'data/locality-data-gurgaon.json',
@@ -45,6 +45,11 @@ export interface ResolveResult {
   skipped:     SkippedRow[];
   newRecords:  LocalityRecord[];
   stats:       ResolverStats;
+}
+
+export interface PersistResult {
+  perCity:      Record<City, { added: number; duplicates: number; total: number }>;
+  filesWritten: string[];
 }
 
 export async function resolveLocalities(
@@ -226,4 +231,68 @@ function buildTier2Index(records: Record<City, LocalityRecord[]>): Map<string, L
     }
   }
   return idx;
+}
+
+// ============================================================================
+// tier-3 persistence (chat 1c item 4)
+// ============================================================================
+
+/**
+ * Append `newRecords` to data/locality-data-{city}.json (deduped by id;
+ * existing records always win on collision). Atomic per-city via temp-file
+ * + rename.
+ *
+ * CALLER CONTRACT: invoke ONLY on a successful pipeline run — i.e. when
+ * `stats.bootstrapCapReached === false`. Persisting partial bootstrap output
+ * after a cap-hit is explicitly out of scope per the chat-1c kickoff: the
+ * operator should fix overrides/mapping first, then let a clean re-run
+ * produce the canonical records.
+ */
+export function persistNewRecords(newRecords: LocalityRecord[]): PersistResult {
+  const byCity: Record<City, LocalityRecord[]> = { Gurgaon: [], Delhi: [] };
+  for (const rec of newRecords) byCity[rec.city].push(rec);
+
+  const existing = loadLocalityRecords();
+  const result: PersistResult = {
+    perCity: {
+      Gurgaon: { added: 0, duplicates: 0, total: existing.Gurgaon.length },
+      Delhi:   { added: 0, duplicates: 0, total: existing.Delhi.length },
+    },
+    filesWritten: [],
+  };
+
+  for (const city of Object.keys(byCity) as City[]) {
+    if (byCity[city].length === 0) continue;
+
+    const seenIds = new Set(existing[city].map((r) => r.id));
+    const toAppend: LocalityRecord[] = [];
+    let duplicates = 0;
+    for (const rec of byCity[city]) {
+      if (seenIds.has(rec.id)) {
+        duplicates++;
+      } else {
+        toAppend.push(rec);
+        seenIds.add(rec.id); // guard against newRecords having dupes within itself
+      }
+    }
+
+    const merged = [...existing[city], ...toAppend];
+    const file = LOCALITY_DATA_FILES[city];
+    writeAtomic(file, JSON.stringify(merged, null, 2) + '\n');
+
+    result.perCity[city] = {
+      added:      toAppend.length,
+      duplicates,
+      total:      merged.length,
+    };
+    result.filesWritten.push(file);
+  }
+
+  return result;
+}
+
+function writeAtomic(file: string, content: string): void {
+  const tmp = `${file}.tmp`;
+  writeFileSync(tmp, content, 'utf-8');
+  renameSync(tmp, file);
 }

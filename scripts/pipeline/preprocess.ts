@@ -17,6 +17,7 @@
 import type { City } from '@/types';
 import localitySynonyms from '@/data/locality-synonyms.json';
 import societySectorOverrides from '@/data/society-sector-overrides.json';
+import localityJunkValues from '@/data/locality-junk-values.json';
 
 // ─── Types ──────────────────────────────────────────────────────────────────
 
@@ -39,6 +40,7 @@ export type PreprocessedCSVRow = RawCSVRow;
 
 export type UnresolvedReason =
   | 'invalid_city'
+  | 'junk_value'
   | 'road_aggregator_unresolved';
 
 export interface UnresolvedRow {
@@ -59,6 +61,9 @@ export interface PreprocessStats {
   unchanged: number;
   unresolved_count: number;
   synonym_merges_applied: number;
+  prefix_stripped: number;
+  sec_expanded: number;
+  bySkipReason: Record<UnresolvedReason, number>;
 }
 
 export interface PreprocessOutcome {
@@ -99,6 +104,54 @@ function aggregatorKey(city: City, value: string): string {
 }
 
 const TITLE_SECTOR_REGEX = /Sector\s+(\d+[A-Za-z]?)/i;
+
+// ─── 0d — Junk-value skip list ──────────────────────────────────────────────
+
+const JUNK_VALUES = new Set<string>(
+  (localityJunkValues as string[]).map(v => v.toLowerCase()),
+);
+
+const POSTAL_CODE_REGEX = /^\d{6}$/;
+
+/** True if the (post-0a normalized) value is a known junk token or a 6-digit
+ *  postal code. Hand-curated tokens live in data/locality-junk-values.json. */
+export function isJunkValue(value: string): boolean {
+  const trimmed = value.trim();
+  if (POSTAL_CODE_REGEX.test(trimmed)) return true;
+  return JUNK_VALUES.has(trimmed.toLowerCase());
+}
+
+// ─── 0e — Prefix stripping ──────────────────────────────────────────────────
+
+const PREFIX_STRIP_PATTERNS = [
+  /^Block\s+[A-Z]\d*\s+(?=\S)/,    // "Block A Sector 45" → "Sector 45"
+  /^Pocket\s+[A-Z]\d*\s+(?=\S)/,   // "Pocket H Sarita Vihar" → "Sarita Vihar"
+  /^Phase\s+\d+\s+(?=\S)/,         // "Phase 2 Sector 57" → "Sector 57"
+];
+
+/** Strip an overly-specific prefix from a (post-0a normalized) value. Returns
+ *  the value unchanged if no pattern matches. The `(?=\S)` lookahead on each
+ *  pattern ensures we never strip the entire value (e.g. bare "Block A"
+ *  stays "Block A" — there's nothing meaningful after it to keep). */
+export function stripGranularPrefix(value: string): string {
+  for (const pattern of PREFIX_STRIP_PATTERNS) {
+    const stripped = value.replace(pattern, '');
+    if (stripped !== value) return stripped;
+  }
+  return value;
+}
+
+// ─── 0f — "Sec" abbreviation expansion ──────────────────────────────────────
+
+const SEC_ABBREV_REGEX = /\b(?:Sec|Sector)[-\s]*(\d+[A-Za-z]?)\b/g;
+
+/** Normalize "Sec N" / "Sec-N" / "SecN" / "Sector-N" / "SectorN" → "Sector N".
+ *  No-op when the value is already canonical ("Sector 57"). Does NOT affect
+ *  "Section 5", "Sector A", or other patterns where the post-Sec(tor) token
+ *  doesn't start with a digit. */
+export function expandSecAbbreviation(value: string): string {
+  return value.replace(SEC_ABBREV_REGEX, 'Sector $1');
+}
 
 // ─── 0a — Title Case normalization ──────────────────────────────────────────
 
@@ -179,11 +232,13 @@ interface PerRowResult {
     society_lookup: 0 | 1;
     unchanged: 0 | 1;
     synonym: 0 | 1;
+    prefix_stripped: 0 | 1;
+    sec_expanded: 0 | 1;
   };
 }
 
 function preprocessRow(row: RawCSVRow, row_index: number): PerRowResult {
-  const ZERO = { title_regex: 0, society_lookup: 0, unchanged: 0, synonym: 0 } as const;
+  const ZERO = { title_regex: 0, society_lookup: 0, unchanged: 0, synonym: 0, prefix_stripped: 0, sec_expanded: 0 } as const;
   const original_locality = row['Locality/Sector'] ?? '';
 
   if (!isValidCity(row.City)) {
@@ -204,9 +259,35 @@ function preprocessRow(row: RawCSVRow, row_index: number): PerRowResult {
 
   // 0a
   const normalized = titleCaseLocality(original_locality);
+
+  // 0d — junk value check
+  if (isJunkValue(normalized)) {
+    return {
+      preprocessed: null,
+      unresolved: {
+        row_index,
+        city: row.City,
+        original_locality_sector: original_locality,
+        normalized_locality_sector: normalized,
+        society: row.Society,
+        title: row.Title,
+        reason: 'junk_value',
+      },
+      delta: ZERO,
+    };
+  }
+
+  // 0e — prefix stripping (Block X / Pocket X / Phase N)
+  const stripped = stripGranularPrefix(normalized);
+  const prefix_strip_delta: 0 | 1 = stripped !== normalized ? 1 : 0;
+
+  // 0f — "Sec" abbreviation expansion
+  const sec_expanded = expandSecAbbreviation(stripped);
+  const sec_expanded_delta: 0 | 1 = sec_expanded !== stripped ? 1 : 0;
+
   // 0b
-  const after_synonym = applySynonym(row.City, normalized);
-  const synonym_delta: 0 | 1 = after_synonym !== normalized ? 1 : 0;
+  const after_synonym = applySynonym(row.City, sec_expanded);
+  const synonym_delta: 0 | 1 = after_synonym !== sec_expanded ? 1 : 0;
   // 0c
   const decompose = decomposeRoadAggregator(row.City, after_synonym, row.Society, row.Title);
 
@@ -222,7 +303,7 @@ function preprocessRow(row: RawCSVRow, row_index: number): PerRowResult {
         title: row.Title,
         reason: 'road_aggregator_unresolved',
       },
-      delta: { ...ZERO, synonym: synonym_delta },
+      delta: { ...ZERO, synonym: synonym_delta, prefix_stripped: prefix_strip_delta, sec_expanded: sec_expanded_delta },
     };
   }
 
@@ -236,6 +317,8 @@ function preprocessRow(row: RawCSVRow, row_index: number): PerRowResult {
       society_lookup: decompose.kind === 'society_lookup' ? 1 : 0,
       unchanged: decompose.kind === 'unchanged' ? 1 : 0,
       synonym: synonym_delta,
+      prefix_stripped: prefix_strip_delta,
+      sec_expanded: sec_expanded_delta,
     },
   };
 }
@@ -249,15 +332,27 @@ export function preprocessRows(rows: RawCSVRow[]): PreprocessOutcome {
   let society_lookup = 0;
   let unchanged = 0;
   let synonym = 0;
+  let prefix_stripped = 0;
+  let sec_expanded = 0;
+  const bySkipReason: Record<UnresolvedReason, number> = {
+    invalid_city: 0,
+    junk_value: 0,
+    road_aggregator_unresolved: 0,
+  };
 
   for (const [i, row] of rows.entries()) {
     const result = preprocessRow(row, i);
     if (result.preprocessed) preprocessed.push(result.preprocessed);
-    if (result.unresolved) unresolved.push(result.unresolved);
+    if (result.unresolved) {
+      unresolved.push(result.unresolved);
+      bySkipReason[result.unresolved.reason]++;
+    }
     title_regex += result.delta.title_regex;
     society_lookup += result.delta.society_lookup;
     unchanged += result.delta.unchanged;
     synonym += result.delta.synonym;
+    prefix_stripped += result.delta.prefix_stripped;
+    sec_expanded += result.delta.sec_expanded;
   }
 
   return {
@@ -271,6 +366,9 @@ export function preprocessRows(rows: RawCSVRow[]): PreprocessOutcome {
       unchanged,
       unresolved_count: unresolved.length,
       synonym_merges_applied: synonym,
+      prefix_stripped,
+      sec_expanded,
+      bySkipReason,
     },
   };
 }

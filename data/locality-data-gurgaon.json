@@ -4,35 +4,67 @@
     "name": "Sector 65",
     "sector_label": "Sector 65, Golf Course Extension Road",
     "city": "Gurgaon",
-    "centroid": { "lat": 28.3975, "lng": 77.0655 },
+    "centroid": {
+      "lat": 28.3975,
+      "lng": 77.0655
+    },
     "source": "curated",
     "rent_ranges": {
-      "2": [45000, 70000],
-      "3": [60000, 95000],
-      "4+": [150000, 280000]
+      "2": [
+        45000,
+        70000
+      ],
+      "3": [
+        60000,
+        95000
+      ],
+      "4+": [
+        150000,
+        280000
+      ]
     },
     "rent_sample_sizes": {
-      "2": 15, 
-      "3": 34, 
+      "2": 15,
+      "3": 34,
       "4+": 12
     },
     "nearest_metros": [
-      { "station": "Sector 55-56", "line": "Rapid Metro", "distance_km": 3.5 },
-      { "station": "Millennium City Centre", "line": "Yellow Line", "distance_km": 7.2 }
+      {
+        "station": "Sector 55-56",
+        "line": "Rapid Metro",
+        "distance_km": 3.5
+      },
+      {
+        "station": "Millennium City Centre",
+        "line": "Yellow Line",
+        "distance_km": 7.2
+      }
     ],
     "societies": [
       {
         "id": "soc-m3m-golfestate",
         "name": "M3M Golf Estate",
-        "coordinates": { "lat": 28.3980, "lng": 77.0660 },
-        "rating_data": { "score": 4.6, "review_count": 128 },
+        "coordinates": {
+          "lat": 28.398,
+          "lng": 77.066
+        },
+        "rating_data": {
+          "score": 4.6,
+          "review_count": 128
+        },
         "tenant_preference_signal": "accepts_family"
       },
       {
         "id": "soc-m3m-heights",
         "name": "M3M Heights",
-        "coordinates": { "lat": 28.3965, "lng": 77.0650 },
-        "rating_data": { "score": 4.3, "review_count": 85 },
+        "coordinates": {
+          "lat": 28.3965,
+          "lng": 77.065
+        },
+        "rating_data": {
+          "score": 4.3,
+          "review_count": 85
+        },
         "tenant_preference_signal": "accepts_both"
       }
     ]
@@ -42,34 +74,58 @@
     "name": "Sector 102",
     "sector_label": "Sector 102, Dwarka Expressway",
     "city": "Gurgaon",
-    "centroid": { "lat": 28.4735, "lng": 76.9745 },
+    "centroid": {
+      "lat": 28.4735,
+      "lng": 76.9745
+    },
     "source": "curated",
     "rent_ranges": {
-      "2": [32000, 42000],
-      "3": [40000, 55000],
-      "4+": [60000, 100000]
+      "2": [
+        32000,
+        42000
+      ],
+      "3": [
+        40000,
+        55000
+      ],
+      "4+": [
+        60000,
+        100000
+      ]
     },
     "rent_sample_sizes": {
-      "2": 10, 
-      "3": 18, 
+      "2": 10,
+      "3": 18,
       "4+": 8
     },
     "nearest_metros": [
-      { "station": "Gurgaon Railway Station", "line": "Indian Railways", "distance_km": 6.5 },
-      { "station": "Dwarka Sector 21", "line": "Blue Line", "distance_km": 14.0 }
+      {
+        "station": "Dwarka Sector 21",
+        "line": "Blue Line",
+        "distance_km": 14
+      }
     ],
     "societies": [
       {
         "id": "soc-adani-oyster",
         "name": "Adani M2K Oyster Grande",
-        "coordinates": { "lat": 28.4740, "lng": 76.9750 },
-        "rating_data": { "score": 4.1, "review_count": 65 },
+        "coordinates": {
+          "lat": 28.474,
+          "lng": 76.975
+        },
+        "rating_data": {
+          "score": 4.1,
+          "review_count": 65
+        },
         "tenant_preference_signal": "accepts_family"
       },
       {
         "id": "soc-shapoorji-joyville",
         "name": "Shapoorji Pallonji Joyville",
-        "coordinates": { "lat": 28.4720, "lng": 76.9730 },
+        "coordinates": {
+          "lat": 28.472,
+          "lng": 76.973
+        },
         "tenant_preference_signal": "accepts_both"
       }
     ]
@@ -79,36 +135,6976 @@
     "name": "Sector 69",
     "sector_label": "Sector 69, SPR Road",
     "city": "Gurgaon",
-    "centroid": { "lat": 28.3845, "lng": 77.0335 },
+    "centroid": {
+      "lat": 28.3845,
+      "lng": 77.0335
+    },
     "source": "curated",
     "rent_ranges": {
-      "2": [22000, 30000],
-      "3": [45000, 62000],
-      "4+": [50000, 65000]
+      "2": [
+        22000,
+        30000
+      ],
+      "3": [
+        45000,
+        62000
+      ],
+      "4+": [
+        50000,
+        65000
+      ]
     },
     "rent_sample_sizes": {
-      "2": 14, 
-      "3": 25, 
+      "2": 14,
+      "3": 25,
       "4+": 5
     },
     "nearest_metros": [
-      { "station": "Millennium City Centre", "line": "Yellow Line", "distance_km": 8.0 },
-      { "station": "Sector 55-56", "line": "Rapid Metro", "distance_km": 7.5 }
+      {
+        "station": "Millennium City Centre",
+        "line": "Yellow Line",
+        "distance_km": 8
+      },
+      {
+        "station": "Sector 55-56",
+        "line": "Rapid Metro",
+        "distance_km": 7.5
+      }
     ],
     "societies": [
       {
         "id": "soc-tulip-violet",
         "name": "Tulip Violet",
-        "coordinates": { "lat": 28.3850, "lng": 77.0340 },
-        "rating_data": { "score": 4.2, "review_count": 110 },
+        "coordinates": {
+          "lat": 28.385,
+          "lng": 77.034
+        },
+        "rating_data": {
+          "score": 4.2,
+          "review_count": 110
+        },
         "tenant_preference_signal": "accepts_bachelors"
       },
       {
         "id": "soc-tulip-lemon",
         "name": "Tulip Lemon",
-        "coordinates": { "lat": 28.3830, "lng": 77.0320 },
+        "coordinates": {
+          "lat": 28.383,
+          "lng": 77.032
+        },
         "tenant_preference_signal": "accepts_both"
       }
     ]
+  },
+  {
+    "id": "gur-sushant-lok-phase-1",
+    "name": "Sushant Lok Phase 1",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4634412,
+      "lng": 77.07675569999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 0.63
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.07
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 1.82
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-63",
+    "name": "Sector 63",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3971448,
+      "lng": 77.08666459999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 3.44
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.36
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 5.64
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-48",
+    "name": "Sector 48",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4176955,
+      "lng": 77.0359426
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.84
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 6.8
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.96
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-23",
+    "name": "Sector 23",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5121376,
+      "lng": 77.0477559
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.33
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 4.34
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 4.56
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sushant-lok-2-sec-57",
+    "name": "Sushant Lok 2 Sector 57",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4255615,
+      "lng": 77.0873907
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 1.76
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 1.9
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 2.65
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-prem-nagar-sec-13",
+    "name": "Prem Nagar Sector 13",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4675494,
+      "lng": 77.035577
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 3.64
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.72
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 4.55
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-108",
+    "name": "Sector 108",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.513372,
+      "lng": 76.9830277
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 7.39
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 8.53
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 9.86
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-51",
+    "name": "Sector 51",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4320397,
+      "lng": 77.0686159
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.04
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 3.5
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 3.56
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-42",
+    "name": "Sector 42",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4576032,
+      "lng": 77.1020369
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 42-43",
+        "distance_km": 0.5
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.25
+      },
+      {
+        "station": "Phase 1",
+        "distance_km": 1.72
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-47",
+    "name": "Sector 47",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4275535,
+      "lng": 77.0491679
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.19
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 5.44
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.46
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-phase-3-dlf",
+    "name": "Phase 3 DLF",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4916812,
+      "lng": 77.094897
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 3",
+        "distance_km": 0.27
+      },
+      {
+        "station": "Phase-2",
+        "distance_km": 0.49
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 0.65
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-3",
+    "name": "Sector 3",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4909088,
+      "lng": 77.01758319999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.75
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.23
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.42
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-24",
+    "name": "Sector 24",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4938677,
+      "lng": 77.1037786
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 3",
+        "distance_km": 1.01
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 1.19
+      },
+      {
+        "station": "Phase-2",
+        "distance_km": 1.27
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-palam-vihar",
+    "name": "Palam Vihar",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5146969,
+      "lng": 77.0348848
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.17
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 4.76
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 5.62
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-28",
+    "name": "Sector 28",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4728421,
+      "lng": 77.08646139999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 1",
+        "distance_km": 0.75
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 0.98
+      },
+      {
+        "station": "Sikanderpur",
+        "distance_km": 1.14
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-67",
+    "name": "Sector 67",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3858823,
+      "lng": 77.0607728
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 6.02
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.78
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 7.77
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-52",
+    "name": "Sector 52",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4379091,
+      "lng": 77.07854789999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 2.34
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.44
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 2.64
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-56",
+    "name": "Sector 56",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4244603,
+      "lng": 77.09912419999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 0.61
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 1.1
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 2.45
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-54",
+    "name": "Sector 54",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4348171,
+      "lng": 77.10894119999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 0.44
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 1.32
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.53
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-62",
+    "name": "Sector 62",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4139095,
+      "lng": 77.08859439999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 1.94
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 2.65
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 3.8
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-111",
+    "name": "Sector 111",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5238449,
+      "lng": 77.0319784
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 3.3
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 4.07
+      },
+      {
+        "station": "Dwarka Sector-8",
+        "distance_km": 5.78
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-46",
+    "name": "Sector 46",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4374374,
+      "lng": 77.05857499999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.78
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.1
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 4.21
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-37c",
+    "name": "Sector 37C",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4514653,
+      "lng": 76.98821029999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 8.28
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 8.55
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 9.51
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-63a",
+    "name": "Sector 63A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3923291,
+      "lng": 77.0888228
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 3.81
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.78
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 6.12
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-33",
+    "name": "Sector 33",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4420427,
+      "lng": 77.02065379999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.41
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.07
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 7.15
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-huda-colony-sec-46",
+    "name": "Huda Colony Sector 46",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4316859,
+      "lng": 77.0578855
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.38
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 4.47
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.61
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-23a",
+    "name": "Sector 23A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5054381,
+      "lng": 77.04925039999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 3.99
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 4.11
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 4.16
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-70a",
+    "name": "Sector 70A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3845297,
+      "lng": 77.0226217
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 9.16
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 9.63
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 9.68
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-40",
+    "name": "Sector 40",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4498494,
+      "lng": 77.0566887
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.86
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 2.93
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 4.02
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-south-city-2",
+    "name": "South City 2",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4175717,
+      "lng": 77.05284840000002
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.01
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 5.16
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 5.37
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-15",
+    "name": "Sector 15",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4621359,
+      "lng": 77.0463719
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.57
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 2.78
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 3.82
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-palam-vihar-extension",
+    "name": "Palam Vihar Extension",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4985501,
+      "lng": 77.0372251
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.51
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 4.69
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 5.04
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-37d",
+    "name": "Sector 37D",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4478404,
+      "lng": 76.9703205
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 10.07
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 10.34
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 11.29
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-31",
+    "name": "Sector 31",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4528403,
+      "lng": 77.0497982
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.33
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 3.09
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 4.19
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-57",
+    "name": "Sector 57",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4231993,
+      "lng": 77.07521059999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 2.93
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 3.1
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 3.57
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sushant-lok-2-sec-55",
+    "name": "Sushant Lok 2 Sector 55",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4274252,
+      "lng": 77.11178269999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 0.78
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 0.9
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 2.38
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-39",
+    "name": "Sector 39",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4433834,
+      "lng": 77.0515376
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.7
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 3.8
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 4.71
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-79",
+    "name": "Sector 79",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3623546,
+      "lng": 76.97870759999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 14.11
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 14.14
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 14.63
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-south-city",
+    "name": "South City",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4717504,
+      "lng": 77.0447057
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 2.71
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.05
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 3.56
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-27",
+    "name": "Sector 27",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4657793,
+      "lng": 77.0917003
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 1",
+        "distance_km": 0.65
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.06
+      },
+      {
+        "station": "Sikanderpur",
+        "distance_km": 1.73
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-49",
+    "name": "Sector 49",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4121197,
+      "lng": 77.048024
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 5.73
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.76
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.03
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-new-gurgaon",
+    "name": "New Gurgaon",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3935909,
+      "lng": 76.9484561
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 14.15
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 14.95
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sheetla-colony-ashok-vihar-phase-2",
+    "name": "Sheetla Colony Ashok Vihar Phase 2",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4834171,
+      "lng": 77.0290995
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.41
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.02
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-6",
+    "name": "Sector 6",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4745345,
+      "lng": 77.0262205
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.52
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.83
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.29
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-88a",
+    "name": "Sector 88A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4347199,
+      "lng": 76.9556643
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 11.74
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 12.15
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 13.14
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-43",
+    "name": "Sector 43",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4629171,
+      "lng": 77.07724549999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 0.62
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.14
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 1.87
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-99",
+    "name": "Sector 99",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4639607,
+      "lng": 76.96142549999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 10.87
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 10.89
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 11.73
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-gurgaon",
+    "name": "Gurgaon",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4594965,
+      "lng": 77.0266383
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.48
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.69
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.68
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-asf-insignia-rd",
+    "name": "Asf Insignia Rd",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4334896,
+      "lng": 77.15026
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.43
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 4.55
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 5.08
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-new-palam-vihar-phase-2",
+    "name": "New Palam Vihar Phase 2",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5169968,
+      "lng": 77.0204624
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.5
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 5.38
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 7.04
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-104",
+    "name": "Sector 104",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.478782,
+      "lng": 76.9959872
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 7.5
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.79
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 8.22
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-83",
+    "name": "Sector 83",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3985667,
+      "lng": 76.9646908
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 12.51
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 13.34
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 14.02
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-9",
+    "name": "Sector 9",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4603267,
+      "lng": 77.00000849999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.09
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 7.2
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 8.11
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-30",
+    "name": "Sector 30",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4603762,
+      "lng": 77.0578855
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.43
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.94
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 3.04
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-81",
+    "name": "Sector 81",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3866865,
+      "lng": 76.9484624
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 14.56
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-72a",
+    "name": "Sector 72A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4236375,
+      "lng": 77.0190228
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.55
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 7.51
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 8.36
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-new-colony-sec-7",
+    "name": "New Colony Sector 7",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4657428,
+      "lng": 77.01686339999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.48
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.49
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.37
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sushant-lok",
+    "name": "Sushant Lok",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4634412,
+      "lng": 77.07675569999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 0.63
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.07
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 1.82
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-45",
+    "name": "Sector 45",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.446591,
+      "lng": 77.06595279999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.54
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 2.92
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 3.26
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-v-block",
+    "name": "V Block",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4938257,
+      "lng": 77.1084206
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Guru Dronacharya",
+        "distance_km": 1.45
+      },
+      {
+        "station": "Phase 3",
+        "distance_km": 1.47
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 1.56
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-south-city-1",
+    "name": "South City 1",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4583384,
+      "lng": 77.06652
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 0.59
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.65
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 2.71
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-12a",
+    "name": "Sector 12A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4652778,
+      "lng": 77.0269326
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.5
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.51
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.43
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-ashok-vihar-phase-3-extension",
+    "name": "Ashok Vihar Phase 3 Extension",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4946844,
+      "lng": 77.022601
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.47
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.86
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.27
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-22",
+    "name": "Sector 22",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.507241,
+      "lng": 77.06404859999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 2.66
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 2.93
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 3.07
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-71",
+    "name": "Sector 71",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4103693,
+      "lng": 77.028145
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.95
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 7.67
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 7.92
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-7-extension",
+    "name": "Sector 7 Extension",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4680783,
+      "lng": 77.0101418
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.1
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.17
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.95
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-53",
+    "name": "Sector 53",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4433129,
+      "lng": 77.0947514
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 0.66
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 1.53
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.58
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-saraswati-kunj",
+    "name": "Saraswati Kunj",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4431892,
+      "lng": 77.0948303
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 0.66
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 1.52
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.6
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-107",
+    "name": "Sector 107",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5052259,
+      "lng": 76.9729472
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 8.72
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 9.84
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 10.39
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-5",
+    "name": "Sector 5",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4794366,
+      "lng": 77.01758319999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.42
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.82
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.11
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-67a",
+    "name": "Sector 67A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3802449,
+      "lng": 77.0673669
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 6.06
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.91
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 8.04
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-36a",
+    "name": "Sector 36A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4146508,
+      "lng": 76.9779875
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 10.48
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 11.23
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 12.32
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-wazirabad",
+    "name": "Wazirabad",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4348214,
+      "lng": 77.0839526
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 2.07
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 2.07
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 2.43
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-7",
+    "name": "Sector 7",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4643736,
+      "lng": 77.0142942
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.72
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.75
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.65
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-89a",
+    "name": "Sector 89A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4336015,
+      "lng": 76.944141
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 12.87
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 13.25
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 14.24
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-17",
+    "name": "Sector 17",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4790935,
+      "lng": 77.06084469999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.36
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 1.88
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.49
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-43-block-c",
+    "name": "Sector 43 Block C",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4539122,
+      "lng": 77.0811923
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.03
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.59
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 2.06
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-110a",
+    "name": "Sector 110A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5178317,
+      "lng": 77.0290995
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.02
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 4.77
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 6.27
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-4",
+    "name": "Sector 4",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4738044,
+      "lng": 77.01067610000001
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.04
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.26
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.81
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-mayfield-gardens",
+    "name": "Mayfield Gardens",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4253544,
+      "lng": 77.06304709999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.87
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 4.13
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.19
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-38",
+    "name": "Sector 38",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4346993,
+      "lng": 77.0430483
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.96
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.07
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 5.76
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-city-phase-3",
+    "name": "DLF City Phase 3",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4916812,
+      "lng": 77.094897
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 3",
+        "distance_km": 0.27
+      },
+      {
+        "station": "Phase-2",
+        "distance_km": 0.49
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 0.65
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-17a",
+    "name": "Sector 17A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4785131,
+      "lng": 77.0600442
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.39
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 1.96
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.47
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-badshahpur",
+    "name": "Badshahpur",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3982709,
+      "lng": 77.053568
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 5.77
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.33
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.02
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-11",
+    "name": "Sector 11",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4530909,
+      "lng": 77.02017529999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.16
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.53
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.55
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-59",
+    "name": "Sector 59",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4050911,
+      "lng": 77.1096829
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 2.08
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 3.12
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 4.68
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-105",
+    "name": "Sector 105",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4951851,
+      "lng": 77.0114025
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.48
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.93
+      },
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 7.04
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-52a",
+    "name": "Sector 52A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4462246,
+      "lng": 77.0869137
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.32
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.59
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.02
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-21",
+    "name": "Sector 21",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5133929,
+      "lng": 77.0722759
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 2.38
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 2.59
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 2.88
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-suncity",
+    "name": "Suncity",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4369353,
+      "lng": 77.1125599
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 0.87
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.59
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 1.67
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-ganga-vihar-new-palam-vihar-phase-3",
+    "name": "Ganga Vihar New Palam Vihar Phase 3",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5190353,
+      "lng": 77.03413760000001
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 3.73
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 4.38
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 5.87
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-14",
+    "name": "Sector 14",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4710811,
+      "lng": 77.0454144
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 2.64
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.96
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 3.52
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-103",
+    "name": "Sector 103",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4948731,
+      "lng": 76.9844677
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 8.63
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 8.95
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 9.47
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-72",
+    "name": "Sector 72",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4225192,
+      "lng": 77.0211379
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.47
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 7.46
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 8.2
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-34",
+    "name": "Sector 34",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4293894,
+      "lng": 77.0048023
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.4
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 8.15
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 9.23
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-city",
+    "name": "DLF City",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4949762,
+      "lng": 77.0895421
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 0.33
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 0.39
+      },
+      {
+        "station": "Phase 3",
+        "distance_km": 0.41
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-shanti-nagar-sec-11",
+    "name": "Shanti Nagar Sector 11",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4491437,
+      "lng": 77.0241387
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.86
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.37
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.43
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-new-palam-vihar-sec-110",
+    "name": "New Palam Vihar Sector 110",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5124381,
+      "lng": 77.0225883
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.84
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 5.63
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.61
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dundahera",
+    "name": "Dundahera",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5134376,
+      "lng": 77.0801899
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 1.93
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 1.99
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 2.55
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-50",
+    "name": "Sector 50",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4177867,
+      "lng": 77.0627653
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 4.2
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.46
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.7
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-77",
+    "name": "Sector 77",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3801295,
+      "lng": 76.9844677
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 12.3
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 12.75
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 13.17
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-shushant-lok-1-sec-43-c-block",
+    "name": "Shushant Lok 1 Sector 43 C Block",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4634412,
+      "lng": 77.07675569999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 0.63
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.07
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 1.82
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-block-5-phase-3-dlf",
+    "name": "Block 5 Phase 3 DLF",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4886809,
+      "lng": 77.1009389
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Guru Dronacharya",
+        "distance_km": 0.76
+      },
+      {
+        "station": "Phase-2",
+        "distance_km": 0.8
+      },
+      {
+        "station": "Phase 3",
+        "distance_km": 0.92
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-huda-sec-43",
+    "name": "Huda Sector 43",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4550265,
+      "lng": 77.09108379999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 42-43",
+        "distance_km": 0.63
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.32
+      },
+      {
+        "station": "Phase 1",
+        "distance_km": 1.83
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-61",
+    "name": "Sector 61",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4050436,
+      "lng": 77.0962693
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 2.22
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 3.21
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 4.62
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-part-2-sec-15",
+    "name": "Part 2 Sector 15",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4600344,
+      "lng": 77.0421521
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.97
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 3.25
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 4.3
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-central-park-2",
+    "name": "Central Park 2",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4243778,
+      "lng": 77.03413760000001
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.39
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.51
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 6.93
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-55",
+    "name": "Sector 55",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4281173,
+      "lng": 77.1100123
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 0.7
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 0.72
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 2.24
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-46-greenwood-city",
+    "name": "Sector 46 Greenwood City",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4456606,
+      "lng": 77.06148329999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.85
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 3.14
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 3.71
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-cyber-city",
+    "name": "DLF Cyber City",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4960543,
+      "lng": 77.0930937
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 3",
+        "distance_km": 0.27
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 0.44
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 0.55
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-22a",
+    "name": "Sector 22A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.507243,
+      "lng": 77.0674481
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 2.36
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 2.67
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 2.75
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-22b",
+    "name": "Sector 22B",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5078888,
+      "lng": 77.0672395
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 2.41
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 2.73
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 2.79
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-66",
+    "name": "Sector 66",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3924859,
+      "lng": 77.0540907
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 6.07
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.7
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 7.52
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-89",
+    "name": "Sector 89",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4253428,
+      "lng": 76.94389269999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 13.12
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 13.6
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 14.61
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-74",
+    "name": "Sector 74",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4157699,
+      "lng": 77.01182460000001
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.65
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 8.63
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 9.17
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-112",
+    "name": "Sector 112",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5281881,
+      "lng": 77.01758319999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 3.72
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 4.79
+      },
+      {
+        "station": "Dwarka Sector-8",
+        "distance_km": 6.39
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-25",
+    "name": "Sector 25",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4844116,
+      "lng": 77.0859978
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase-2",
+        "distance_km": 0.76
+      },
+      {
+        "station": "Sikanderpur",
+        "distance_km": 0.78
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 0.79
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-68",
+    "name": "Sector 68",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3852948,
+      "lng": 77.04835539999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 6.99
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 7.66
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 8.49
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-85",
+    "name": "Sector 85",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.40418,
+      "lng": 76.9513432
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 13.33
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 14.05
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-82",
+    "name": "Sector 82",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3935416,
+      "lng": 76.95998519999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 13.2
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 14.05
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 14.59
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-106",
+    "name": "Sector 106",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5007088,
+      "lng": 77.0003067
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 7.12
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 7.72
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 8.06
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dhanwapur-village",
+    "name": "Dhanwapur Village",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.476372,
+      "lng": 76.9859077
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 8.47
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 8.68
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 9.21
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-shikohpur",
+    "name": "Shikohpur",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3673551,
+      "lng": 76.9859077
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 13.23
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 13.27
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 13.74
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-daulatabad",
+    "name": "Daulatabad",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5006588,
+      "lng": 76.99238749999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 7.63
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 8.43
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 8.62
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-old-railway-road",
+    "name": "Old Railway Road",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4671161,
+      "lng": 77.0209383
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.06
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.11
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.94
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-36",
+    "name": "Sector 36",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4160281,
+      "lng": 76.9914395
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 9.26
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 10.09
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 11.16
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-76",
+    "name": "Sector 76",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3934596,
+      "lng": 76.9887876
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 10.97
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 11.86
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 11.98
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-99a",
+    "name": "Sector 99A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4560918,
+      "lng": 76.954224
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 11.57
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 11.69
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 12.57
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-58",
+    "name": "Sector 58",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4200136,
+      "lng": 77.1105434
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 0.64
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 1.53
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 3.1
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-70",
+    "name": "Sector 70",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3967953,
+      "lng": 77.0233415
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 8.44
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 8.54
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 8.94
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-surya-vihar-sec-9a",
+    "name": "Surya Vihar Sector 9A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4749583,
+      "lng": 77.00166
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.92
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.14
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 7.68
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-rail-vihar-sec-56",
+    "name": "Rail Vihar Sector 56",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4304862,
+      "lng": 77.1014112
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 0.44
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 0.87
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.77
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sikandarpur-badha",
+    "name": "Sikandarpur Badha",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.402517,
+      "lng": 76.9563845
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 12.98
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 13.74
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 14.74
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-109",
+    "name": "Sector 109",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5072801,
+      "lng": 77.0089452
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 6.03
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 6.94
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 7.32
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-greenopolis",
+    "name": "Greenopolis",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4141459,
+      "lng": 76.94763999999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 13.19
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 13.8
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 14.85
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-60",
+    "name": "Sector 60",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.400332,
+      "lng": 77.097455
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 2.68
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 3.69
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 5.13
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-urban-estate-sec-40",
+    "name": "Urban Estate Sector 40",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4520243,
+      "lng": 77.0568062
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.73
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 2.72
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 3.81
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-old-dlf-colony",
+    "name": "Old DLF Colony",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4702791,
+      "lng": 77.0452925
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 2.66
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.93
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 3.55
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-1-palam-vihar",
+    "name": "Sector 1 Palam Vihar",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5176128,
+      "lng": 77.0453919
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 3.72
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 4.05
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 4.8
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-113",
+    "name": "Sector 113",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.528745,
+      "lng": 77.0233415
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 3.28
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 4.3
+      },
+      {
+        "station": "Dwarka Sector-8",
+        "distance_km": 5.93
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sikanderpur-ghosi",
+    "name": "Sikanderpur Ghosi",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4790256,
+      "lng": 77.0936492
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sikanderpur",
+        "distance_km": 0.26
+      },
+      {
+        "station": "Phase 1",
+        "distance_km": 0.86
+      },
+      {
+        "station": "Guru Dronacharya",
+        "distance_km": 0.9
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-mayfield-garden",
+    "name": "Mayfield Garden",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4253544,
+      "lng": 77.06304709999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.87
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 4.13
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.19
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-ashok-vihar-phase-2",
+    "name": "Ashok Vihar Phase 2",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4871871,
+      "lng": 77.0284056
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.61
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.12
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.31
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-gwal-pahari",
+    "name": "Gwal Pahari",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4337801,
+      "lng": 77.1468324
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.09
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 4.23
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 4.75
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-nangli-umarpur",
+    "name": "Nangli Umarpur",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4065786,
+      "lng": 77.0843312
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 2.77
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 3.55
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 4.7
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-laxman-vihar-sec-3a",
+    "name": "Laxman Vihar Sector 3A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4792711,
+      "lng": 77.00450409999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.68
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.01
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 7.38
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-huda-sec-23",
+    "name": "Huda Sector 23",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5102487,
+      "lng": 77.0470916
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 4.33
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 4.52
+      },
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.54
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-10",
+    "name": "Sector 10",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4536931,
+      "lng": 77.0009321
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.02
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 7.28
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 8.25
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sushant-lok-3",
+    "name": "Sushant Lok 3",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4219753,
+      "lng": 77.0791496
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 2.55
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 2.8
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 3.42
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-shankar-vihar-sec-104",
+    "name": "Shankar Vihar Sector 104",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4860912,
+      "lng": 76.997427
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 7.49
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.92
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 8.11
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-84",
+    "name": "Sector 84",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3978683,
+      "lng": 76.9735741
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 11.83
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 12.72
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 13.18
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-kadarpur",
+    "name": "Kadarpur",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3802802,
+      "lng": 77.1053673
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 4.8
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 5.85
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 7.37
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-new-palam-vihar-phase-1",
+    "name": "New Palam Vihar Phase 1",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.505248,
+      "lng": 77.01758319999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 5.77
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.49
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 6.56
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-mayfeild-garden-sec-51",
+    "name": "Mayfeild Garden Sector 51",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4253544,
+      "lng": 77.06304709999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.87
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 4.13
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.19
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-4-gurgaon",
+    "name": "Sector 4 Gurgaon",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4738044,
+      "lng": 77.01067610000001
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.04
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.26
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.81
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-urban-estate-sec-4",
+    "name": "Urban Estate Sector 4",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4748343,
+      "lng": 77.0068111
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.42
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.65
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 7.18
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-10a",
+    "name": "Sector 10A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4469327,
+      "lng": 77.0106184
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.2
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.66
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 7.7
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-part-1-sec-15",
+    "name": "Part 1 Sector 15",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4622847,
+      "lng": 77.0602902
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.24
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.62
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 2.73
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sai-kunj",
+    "name": "Sai Kunj",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5133657,
+      "lng": 77.0285565
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.5
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 5.21
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 6.17
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-81a",
+    "name": "Sector 81A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3786372,
+      "lng": 76.954224
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 14.63
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-57-rail-vihar",
+    "name": "Sector 57 Rail Vihar",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4304862,
+      "lng": 77.1014112
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 0.44
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 0.87
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.77
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-12a-jawahar-nagar",
+    "name": "Sector 12A Jawahar Nagar",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4652778,
+      "lng": 77.0269326
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.5
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.51
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.43
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-new-palam-vihar",
+    "name": "New Palam Vihar",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5124381,
+      "lng": 77.0225883
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.84
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 5.63
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.61
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-vatika-sec-83",
+    "name": "Vatika Sector 83",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3984031,
+      "lng": 76.9668501
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 12.34
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 13.19
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 13.81
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-78",
+    "name": "Sector 78",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3732763,
+      "lng": 76.9729472
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 13.64
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 14.09
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 14.52
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-nihali-colony",
+    "name": "Nihali Colony",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5050181,
+      "lng": 77.0226217
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 5.58
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.08
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.29
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-greenwood-city",
+    "name": "Greenwood City",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4456606,
+      "lng": 77.06148329999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.85
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 3.14
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 3.71
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-gurugram-road",
+    "name": "Gurugram Road",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4723165,
+      "lng": 76.946597
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 12.3
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 12.39
+      },
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 13.03
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-milanwali-colony",
+    "name": "Milanwali Colony",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4673177,
+      "lng": 77.0294594
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.23
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.3
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.13
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-13",
+    "name": "Sector 13",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4756706,
+      "lng": 77.03919669999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 3.27
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.73
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 4.02
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sanjay-colony",
+    "name": "Sanjay Colony",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4697692,
+      "lng": 77.0251409
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.63
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.77
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.48
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-c2-block-palam-vihar-sec-3",
+    "name": "C2 Block Palam Vihar Sector 3",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4937582,
+      "lng": 77.0173423
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.89
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 6.33
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.62
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-110",
+    "name": "Sector 110",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5144929,
+      "lng": 77.0197325
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.78
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 5.64
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.97
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-gls-aravali-homes",
+    "name": "Gls Aravali Homes",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4810115,
+      "lng": 77.0845506
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "MG Road",
+        "distance_km": 0.47
+      },
+      {
+        "station": "Sikanderpur",
+        "distance_km": 0.84
+      },
+      {
+        "station": "Phase-2",
+        "distance_km": 1.1
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-udyog-vihar",
+    "name": "Udyog Vihar",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4984141,
+      "lng": 77.08492489999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 0.42
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 0.82
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 0.98
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-88b",
+    "name": "Sector 88B",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4446193,
+      "lng": 76.954224
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 11.67
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 11.95
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 12.9
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-phase-1",
+    "name": "DLF Phase 1",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4650453,
+      "lng": 77.10071169999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 42-43",
+        "distance_km": 0.92
+      },
+      {
+        "station": "Phase 1",
+        "distance_km": 0.96
+      },
+      {
+        "station": "Guru Dronacharya",
+        "distance_km": 1.89
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-shastri-nagar-industrial-area-sec-106",
+    "name": "Shastri Nagar Industrial Area Sector 106",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4978411,
+      "lng": 77.0003067
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 7.38
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 7.6
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 8.05
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-8",
+    "name": "Sector 8",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4668366,
+      "lng": 77.0225219
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.91
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.96
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.8
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dharam-colony",
+    "name": "Dharam Colony",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5011803,
+      "lng": 77.0338583
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.95
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.11
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 5.42
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-huda-sector-sec-55",
+    "name": "Huda Sector Sector 55",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4227417,
+      "lng": 77.1073734
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 0.23
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 1.15
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 2.72
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-tata-lavida",
+    "name": "Tata Lavida",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.534412,
+      "lng": 77.0197817
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 3.11
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 4.25
+      },
+      {
+        "station": "Dwarka Sector-8",
+        "distance_km": 5.78
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-piramid-midtown",
+    "name": "Piramid Midtown",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4046101,
+      "lng": 77.10718849999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 2.1
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 3.15
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 4.7
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-2-palam-vihar",
+    "name": "Sector 2 Palam Vihar",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5095068,
+      "lng": 77.0319784
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.8
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 5.4
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.73
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-82a",
+    "name": "Sector 82A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3857707,
+      "lng": 76.9686267
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 13.03
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 13.98
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 14
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-73",
+    "name": "Sector 73",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4071621,
+      "lng": 77.01182460000001
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 8.29
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 9.31
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 9.35
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-city-4",
+    "name": "DLF City 4",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4646699,
+      "lng": 77.0844801
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 1",
+        "distance_km": 1.18
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.32
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.45
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-central-park-2-bellebue",
+    "name": "Central Park 2 Bellebue",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4225996,
+      "lng": 77.0358504
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.42
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.58
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 6.78
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-26",
+    "name": "Sector 26",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4756705,
+      "lng": 77.1031525
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Guru Dronacharya",
+        "distance_km": 0.7
+      },
+      {
+        "station": "Phase 1",
+        "distance_km": 1.03
+      },
+      {
+        "station": "Sikanderpur",
+        "distance_km": 1.16
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-anant-raj-estate-sec-63-a",
+    "name": "Anant Raj Estate Sector 63 A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3918719,
+      "lng": 77.09197139999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 3.74
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.73
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 6.12
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-ardee-city",
+    "name": "Ardee City",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4419181,
+      "lng": 77.07841760000001
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.01
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 2.21
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 2.5
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-surya-vihar-sec-21",
+    "name": "Surya Vihar Sector 21",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5174627,
+      "lng": 77.0773122
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 2.46
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 2.5
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 3.06
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-mullahera",
+    "name": "Mullahera",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5076116,
+      "lng": 77.0643614
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Cybercity",
+        "distance_km": 2.65
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 2.93
+      },
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 3.05
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-9a",
+    "name": "Sector 9A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4711039,
+      "lng": 76.9981469
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 7.26
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.39
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 8.06
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-bharat-residency",
+    "name": "Bharat Residency",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4641788,
+      "lng": 77.0496175
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.3
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 2.4
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 3.43
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-ambience-island-lagoon-apartment",
+    "name": "Ambience Island Lagoon Apartment",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5030123,
+      "lng": 77.0991495
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 0.51
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 1.12
+      },
+      {
+        "station": "Phase 3",
+        "distance_km": 1.18
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-vatika-city",
+    "name": "Vatika City",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4051331,
+      "lng": 77.0470069
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 6.04
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.45
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.51
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-ghata",
+    "name": "Ghata",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4210843,
+      "lng": 77.11088529999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 0.61
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 1.43
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 3
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-46-south-city-2",
+    "name": "Sector 46 South City 2",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4174148,
+      "lng": 77.04738019999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.25
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 5.69
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 5.89
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-b-block-mayfield-garden",
+    "name": "B Block Mayfield Garden",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4247434,
+      "lng": 77.05747699999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.1
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 4.67
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.73
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-vipul-world-sec-48",
+    "name": "Vipul World Sector 48",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.413178,
+      "lng": 77.03701629999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.18
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 6.76
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 7
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-amstoria-sec-102",
+    "name": "Amstoria Sector 102",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4746084,
+      "lng": 76.9751074
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 9.51
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 9.67
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 10.27
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-29",
+    "name": "Sector 29",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4669058,
+      "lng": 77.0662896
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 0.84
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.05
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 1.95
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-vatika-india-next",
+    "name": "Vatika India Next",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3956737,
+      "lng": 76.9671865
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 12.49
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 13.35
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 13.85
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-paras-irene",
+    "name": "Paras Irene",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3854202,
+      "lng": 77.01695649999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 9.61
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 9.84
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 10.1
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-orchid-petals",
+    "name": "Orchid Petals",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4141482,
+      "lng": 77.0470916
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.59
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 5.78
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.03
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-huda-colony-sec-4",
+    "name": "Huda Colony Sector 4",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4759632,
+      "lng": 77.0039062
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.71
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.96
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 7.45
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-ireo-the-grand-arch",
+    "name": "Ireo The Grand Arch",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.412815,
+      "lng": 77.11220039999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 1.36
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 2.34
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 3.91
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-12",
+    "name": "Sector 12",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4723386,
+      "lng": 77.0320435
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 3.94
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.21
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 4.76
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-new-era",
+    "name": "New Era",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.451658,
+      "lng": 77.092614
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 42-43",
+        "distance_km": 0.77
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 0.96
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.14
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-city-phase-2",
+    "name": "DLF City Phase 2",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4876667,
+      "lng": 77.0881034
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 0.44
+      },
+      {
+        "station": "Phase-2",
+        "distance_km": 0.47
+      },
+      {
+        "station": "Phase 3",
+        "distance_km": 0.85
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-48-gurgaon",
+    "name": "Sector 48 Gurgaon",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4176955,
+      "lng": 77.0359426
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.84
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 6.8
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.96
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-phase-1",
+    "name": "Phase - 1",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5116326,
+      "lng": 77.083787
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Moulsari Avenue",
+        "distance_km": 1.6
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 1.61
+      },
+      {
+        "station": "Phase 3",
+        "distance_km": 2.21
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-paras-quartier",
+    "name": "Paras Quartier",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4372162,
+      "lng": 77.13381609999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 2.86
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 3.19
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 3.42
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-pragati-hills-society",
+    "name": "Pragati Hills Society",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4278174,
+      "lng": 77.04111259999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.65
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.81
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 6.16
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sihi-village-sec-84",
+    "name": "Sihi Village Sector 84",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4115031,
+      "lng": 76.9751074
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 10.9
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 11.67
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 12.75
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sihi-village",
+    "name": "Sihi Village",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4115031,
+      "lng": 76.9751074
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 10.9
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 11.67
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 12.75
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sarswati-kunj-2",
+    "name": "Sarswati Kunj 2",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4370449,
+      "lng": 77.083787
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.93
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 2.12
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 2.59
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-westan-height-golf-course-road",
+    "name": "Westan Height Golf Course Road",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.450524,
+      "lng": 77.09866099999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 0.49
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 0.79
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 2.06
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-rail-vihar-sec-47",
+    "name": "Rail Vihar Sector 47",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4280565,
+      "lng": 77.03881559999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.78
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.91
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 6.36
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-westan-height-sec-53-golf-course-road",
+    "name": "Westan Height Sector 53 Golf Course Road",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.450524,
+      "lng": 77.09866099999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 0.49
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 0.79
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 2.06
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-westan-height",
+    "name": "Westan Height",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.450524,
+      "lng": 77.09866099999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 0.49
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 0.79
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 2.06
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-phase-i",
+    "name": "DLF Phase I",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4650453,
+      "lng": 77.10071169999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 42-43",
+        "distance_km": 0.92
+      },
+      {
+        "station": "Phase 1",
+        "distance_km": 0.96
+      },
+      {
+        "station": "Guru Dronacharya",
+        "distance_km": 1.89
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-26a",
+    "name": "Sector 26A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4689872,
+      "lng": 77.09915079999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 1",
+        "distance_km": 0.57
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.3
+      },
+      {
+        "station": "Guru Dronacharya",
+        "distance_km": 1.47
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-bandhwari",
+    "name": "Bandhwari",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4226183,
+      "lng": 77.14475589999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 3.87
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.05
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 5.08
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-the-crest",
+    "name": "DLF The Crest",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4441628,
+      "lng": 77.1110449
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.07
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 1.39
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 2.02
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-parsvnath-exotica",
+    "name": "Parsvnath Exotica",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4440662,
+      "lng": 77.09915509999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 0.29
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 1.37
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.5
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-56-road",
+    "name": "Sector 56 Road",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4314492,
+      "lng": 77.0984343
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 0.66
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 1.11
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.68
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-41",
+    "name": "Sector 41",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4556795,
+      "lng": 77.0631966
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 0.99
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 2.05
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 3.13
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-medicity",
+    "name": "Medicity",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4384489,
+      "lng": 77.0407101
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.87
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.87
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 5.89
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-phase-2",
+    "name": "DLF Phase 2",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4876667,
+      "lng": 77.0881034
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 0.44
+      },
+      {
+        "station": "Phase-2",
+        "distance_km": 0.47
+      },
+      {
+        "station": "Phase 3",
+        "distance_km": 0.85
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-phase-4",
+    "name": "DLF Phase 4",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4646699,
+      "lng": 77.0844801
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 1",
+        "distance_km": 1.18
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 1.32
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.45
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-phase-5",
+    "name": "DLF Phase 5",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4476911,
+      "lng": 77.09477849999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 53-54",
+        "distance_km": 0.57
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.1
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 1.93
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-block-d-sec-46",
+    "name": "Block D Sector 46",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.44108,
+      "lng": 77.0586051
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 2.43
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 3.72
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 4.13
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-chakkarpur",
+    "name": "Chakkarpur",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4720271,
+      "lng": 77.0895421
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 1",
+        "distance_km": 0.43
+      },
+      {
+        "station": "Sikanderpur",
+        "distance_km": 1.09
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 1.25
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-city-phase-1",
+    "name": "DLF City Phase 1",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4650453,
+      "lng": 77.10071169999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 42-43",
+        "distance_km": 0.92
+      },
+      {
+        "station": "Phase 1",
+        "distance_km": 0.96
+      },
+      {
+        "station": "Guru Dronacharya",
+        "distance_km": 1.89
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-golf-course",
+    "name": "DLF Golf Course",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4611873,
+      "lng": 77.11112140000002
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.45
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 1.95
+      },
+      {
+        "station": "Phase 1",
+        "distance_km": 2.02
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-nirvana-country",
+    "name": "Nirvana Country",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4124299,
+      "lng": 77.06652
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 3.97
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 4.4
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 5.03
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-gurgaon-faridabad-road",
+    "name": "Gurgaon Faridabad Road",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.466687,
+      "lng": 77.1099344
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.63
+      },
+      {
+        "station": "Phase 1",
+        "distance_km": 1.65
+      },
+      {
+        "station": "Guru Dronacharya",
+        "distance_km": 1.86
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-dlf-phase-3",
+    "name": "DLF Phase 3",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4916812,
+      "lng": 77.094897
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Phase 3",
+        "distance_km": 0.27
+      },
+      {
+        "station": "Phase-2",
+        "distance_km": 0.49
+      },
+      {
+        "station": "Belvedere Towers",
+        "distance_km": 0.65
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sushant-lok-phase-3",
+    "name": "Sushant Lok Phase 3",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4183505,
+      "lng": 77.0758733
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 2.92
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 3.27
+      },
+      {
+        "station": "Sector 53-54",
+        "distance_km": 3.94
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-1-palam-vihar",
+    "name": "1 Palam Vihar",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5123884,
+      "lng": 77.037921
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 4.36
+      },
+      {
+        "station": "Dwarka Sector - 21",
+        "distance_km": 4.85
+      },
+      {
+        "station": "Cybercity",
+        "distance_km": 5.26
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-mg-road",
+    "name": "MG Road",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4781546,
+      "lng": 77.0725417
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 0.66
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 0.75
+      },
+      {
+        "station": "Sikanderpur",
+        "distance_km": 2.04
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-a-block-sushant-lok-phase-1",
+    "name": "A Block Sushant Lok Phase 1",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4556335,
+      "lng": 77.0798329
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 0.82
+      },
+      {
+        "station": "Sector 42-43",
+        "distance_km": 1.68
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 1.98
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-malibu-town",
+    "name": "Malibu Town",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4233707,
+      "lng": 77.0463098
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.73
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 5.76
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 5.83
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sadar-bazar",
+    "name": "Sadar Bazar",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4612568,
+      "lng": 77.02981919999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 4.18
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 4.34
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.32
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-saraswati-enclave",
+    "name": "Saraswati Enclave",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4450102,
+      "lng": 76.9952672
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.71
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 8.13
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 9.14
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-sec-37a",
+    "name": "Sector 37A",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4418631,
+      "lng": 76.99238749999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 8.06
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 8.52
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 9.54
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-uppals-southend",
+    "name": "Uppals Southend",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.410492,
+      "lng": 77.0463719
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 5.93
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 5.99
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.25
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-vipul-tatvam-villas",
+    "name": "Vipul Tatvam Villas",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.406287,
+      "lng": 77.0415818
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Sector 55-56",
+        "distance_km": 6.51
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 6.61
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 6.87
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-gupta-colony-palam-vihar",
+    "name": "Gupta Colony Palam Vihar",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.5054354,
+      "lng": 77.02694029999999
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Yashobhoomi Dwarka Sector-25",
+        "distance_km": 5.38
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 5.78
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 5.93
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-suncity-avenue-sec-76",
+    "name": "Suncity Avenue Sector 76",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.3924252,
+      "lng": 76.9944115
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 10.65
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 11.37
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 11.7
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-k-bhavan",
+    "name": "K Bhavan",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4738272,
+      "lng": 76.9703969
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 9.97
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 10.11
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 10.74
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-samaspur-village",
+    "name": "Samaspur Village",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4274258,
+      "lng": 77.0658004
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 3.59
+      },
+      {
+        "station": "Sector 55-56",
+        "distance_km": 3.88
+      },
+      {
+        "station": "Sector 54 Chowk",
+        "distance_km": 3.88
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-rajendra-park",
+    "name": "Rajendra Park",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.492663,
+      "lng": 77.0060658
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 6.87
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 7.38
+      },
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 7.48
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-signature-global-37d",
+    "name": "Signature Global 37D",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4472163,
+      "lng": 76.9617035
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 10.91
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 11.17
+      },
+      {
+        "station": "MG Road",
+        "distance_km": 12.12
+      }
+    ],
+    "societies": []
+  },
+  {
+    "id": "gur-badha",
+    "name": "Badha",
+    "city": "Gurgaon",
+    "centroid": {
+      "lat": 28.4042684,
+      "lng": 76.9448613
+    },
+    "source": "auto-bootstrap",
+    "rent_ranges": {},
+    "rent_sample_sizes": {},
+    "nearest_metros": [
+      {
+        "station": "Millennium City Centre Gurugram",
+        "distance_km": 13.89
+      },
+      {
+        "station": "Iffco Chowk",
+        "distance_km": 14.58
+      }
+    ],
+    "societies": []
   }
 ]
