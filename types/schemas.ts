@@ -78,6 +78,23 @@ export const BHKRentRangeSchema = z
     message: 'BHKRentRange invariant violated: low must be ≤ high',
   });
 
+// Society-level per-BHK rent estimate (chat 1d addition).
+// median = INR/month, base rent, integer (rounded by Stage 6).
+// sample_size = listing count for this society × BHK; minimum 1.
+export const SocietyBhkRentEstimateSchema = z.object({
+  median:      z.number().int().nonnegative(),
+  sample_size: z.number().int().min(1),
+});
+
+// Per-BHK rent-estimate keys for a society. Mirrors RentRangesByBHK's shape.
+export const SocietyRentEstimateByBhkSchema = z.object({
+  studio: SocietyBhkRentEstimateSchema.optional(),
+  '1':    SocietyBhkRentEstimateSchema.optional(),
+  '2':    SocietyBhkRentEstimateSchema.optional(),
+  '3':    SocietyBhkRentEstimateSchema.optional(),
+  '4+':   SocietyBhkRentEstimateSchema.optional(),
+});
+
 // Validates a LocalityRecord at pipeline output and at JSON-load on server
 // boot. GeoJSON geometry gets a minimal structural check only — we trust
 // the pipeline to emit well-formed geometry, and a malformed polygon would
@@ -86,14 +103,14 @@ export const LocalityRecordSchema = z.object({
   id:           z.string().min(1),
   name:         z.string().min(1),
   sector_label: z.string().optional(),
-  city:         z.literal('Gurgaon'),
+  city:         z.enum(['Gurgaon', 'Delhi']),
   centroid:     CoordinatesSchema,
   geometry: z.object({
     type:        z.enum(['Polygon', 'MultiPolygon']),
     coordinates: z.array(z.unknown()),   // intentional — deep GeoJSON validation
                                          // is the pipeline's job, not the loader's
-  }),
-  source: z.enum(['curated', 'osm-import', 'user-submitted']),
+  }).optional(),
+  source: z.enum(['curated', 'auto-bootstrap', 'osm-import', 'user-submitted']),
   rent_ranges: z.object({
     studio: BHKRentRangeSchema.optional(),
     '1':    BHKRentRangeSchema.optional(),
@@ -111,7 +128,7 @@ export const LocalityRecordSchema = z.object({
   nearest_metros: z.array(
     z.object({
       station:     z.string().min(1),
-      line:        z.string().min(1),
+      line:        z.string().min(1).optional(),
       distance_km: z.number().nonnegative(),
     }),
   ),
@@ -133,6 +150,7 @@ export const LocalityRecordSchema = z.object({
         'accepts_both',
         'unknown',
       ]),
+      rent_estimate_by_bhk: SocietyRentEstimateByBhkSchema.optional(),
     }),
   ),
 });

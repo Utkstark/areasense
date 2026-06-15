@@ -3,6 +3,7 @@
 
 import type { Polygon, MultiPolygon } from 'geojson';
 import type {
+  BHK,
   City,
   Coordinates,
   LocalityId,
@@ -22,6 +23,22 @@ export interface MetroStation {
   distance_km: number;   // walking distance from locality centroid
 }
 
+// Per-BHK rent estimate for a single society (median + sample size).
+// Chat 1d decision: emit median (not average) for robustness; emit for any
+// sample size (no minimum threshold); per-BHK split (option B) over overall
+// (option A) so the number aligns with what the user searched for. The
+// sample_size is surfaced so the UI can render confidence ("based on 2
+// listings") and gray out very thin cells if desired.
+export interface SocietyBhkRentEstimate {
+  median:      number;  // INR/month, base rent (excludes maintenance), integer
+  sample_size: number;  // ≥ 1
+}
+
+// Society-level rent estimates keyed by BHK. Named alias rather than
+// inlining Partial<Record<BHK, ...>> at the use site to dodge the multi-
+// line generic parser quirk we hit in chats 1b and 1d.
+export type SocietyRentEstimateByBhk = Partial<Record<BHK, SocietyBhkRentEstimate>>;
+
 // A gated society / named residential complex.
 export interface Society {
   id:           SocietyId;
@@ -38,9 +55,15 @@ export interface Society {
   };
 
   // Aggregated from the source CSV's Tenant_Preference field across all
-  // listings for this society (majority vote; 'unknown' if fewer than 3
-  // listings or no clear majority).
+  // listings for this society (majority vote; chat 1d lowered the threshold
+  // from 3 to 1, so any society with ≥ 1 valid Tenant_Preference value gets
+  // a non-'unknown' signal).
   tenant_preference_signal: TenantPreferenceSignal;
+
+  // Per-BHK median rent within this society. Absent if the society has zero
+  // listings with valid Rent_INR; otherwise contains one entry per BHK that
+  // had at least one valid listing. Chat 1d addition; product-spec §10.3 Step 6.
+  rent_estimate_by_bhk?: SocietyRentEstimateByBhk;
 }
 
 // A rent band: [low, high] in INR per month, BASE RENT (excludes maintenance).
