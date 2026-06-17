@@ -17,7 +17,7 @@ export const SCORING_CONFIG = {
   MIN_QUALIFYING_SOCIETIES: 4,    // rating dimension drops out below this
 
   // === Metro proximity — product-spec §6.1 ===
-  // 2 km = ~25 min walk. Past this, treat metro as a non-amenity.
+  // 2 km = ~25 min walk. Past this, treat metro as a non-amenity.9
   METRO_D_MAX_METERS: 2000,
 
   // === Commute buffer — product-spec §6.1 ===
@@ -51,7 +51,10 @@ export const PIPELINE_CONFIG = {
 } as const;
 
 export const INPUT_LIMITS = {
-  MAX_COMMUTE_MINUTES: { min: 10,   max: 180 },
+  MAX_COMMUTE_MINUTES: { min: 30,   max: 150, step: 15 },
+  //   30–150 in 15-min increments. `step` is read by schemas.ts (Zod refine)
+  //   and SearchForm.tsx (UI control) so the bracket size is owned in one
+  //   place.
   // Min ₹3,000: below this there is effectively no Indian rental market.
   // Still permissive enough for shared-PG / hostel-style queries.
   // (product-spec §4.2)

@@ -331,7 +331,7 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
                   onValueChange={(vals) => field.onChange(vals[0])}
                   min={INPUT_LIMITS.MAX_COMMUTE_MINUTES.min}
                   max={INPUT_LIMITS.MAX_COMMUTE_MINUTES.max}
-                  step={5}
+                  step={INPUT_LIMITS.MAX_COMMUTE_MINUTES.step}
                   className="flex-1 cursor-pointer [&>span:first-of-type]:!bg-gray-200 [&>span:first-of-type>span]:!bg-black [&_[role=slider]]:!border-black [&_[role=slider]]:!bg-white"
                 />
                 <div className="flex items-center gap-2">
@@ -343,6 +343,9 @@ export function SearchForm({ onResult, onLoading }: SearchFormProps) {
                       const v = Number(e.target.value);
                       if (!Number.isNaN(v)) field.onChange(v);
                     }}
+                    min={INPUT_LIMITS.MAX_COMMUTE_MINUTES.min}
+                    max={INPUT_LIMITS.MAX_COMMUTE_MINUTES.max}
+                    step={INPUT_LIMITS.MAX_COMMUTE_MINUTES.step}
                     className="w-20 h-14 text-xl font-bold text-center rounded-xl border-2 border-gray-200 focus-visible:border-black focus-visible:ring-0"
                   />
                   <span className="text-lg font-bold text-gray-400">min</span>

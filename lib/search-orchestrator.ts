@@ -43,6 +43,7 @@ import {
   roundOfficeCoords,
 } from '@/lib/commute-cache';
 import { computeCommuteMatrix } from '@/lib/commute-compute';
+import { prefilterByCommuteFeasibility } from '@/lib/commute-prefilter';
 import { runEdgeCases } from '@/lib/edge-cases';
 import {
   computeBudgetFit,
@@ -202,13 +203,26 @@ export async function search(input: SearchInput): Promise<SearchResult> {
     // Synchronous live compute (~10s). UI shows the cold-start loading copy
     // from product-spec §5 while this resolves. No streaming, no placeholder.
     coldStart = true;
+
+    // Bound the cold-start by physical feasibility. Uses the SYSTEM-WIDE
+    // ceiling (INPUT_LIMITS.MAX_COMMUTE_MINUTES.max), not this user's
+    // max_minutes — preserves the filter-independent cache invariant
+    // (tech-arch §6). See /lib/commute-prefilter.ts for the math.
+    const candidates = prefilterByCommuteFeasibility(
+      office.coordinates,
+      ALL_LOCALITIES,
+    );
+    console.info(
+      `commute-prefilter: ${candidates.length}/${ALL_LOCALITIES.length} localities within ceiling radius`,
+    );
+
     let result;
     try {
       result = await computeCommuteMatrix(
         office.coordinates,
         outboundTime,
         returnTime,
-        ALL_LOCALITIES,
+        candidates,
       );
     } catch (err) {
       throw new DistanceMatrixError(

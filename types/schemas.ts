@@ -13,6 +13,7 @@
 // in lockstep.
 
 import { z } from 'zod';
+import { INPUT_LIMITS } from './config';
 import type { SearchInput } from './input';
 
 // === API-boundary schemas (incoming SearchInput) ===
@@ -46,7 +47,17 @@ export const SearchInputSchema = z.object({
   offices: z.array(OfficeSchema).length(1),     // v0: enforce length 1
                                                 // v1: change to .min(1).max(2)
   commute: z.object({
-    max_minutes: z.number().int().min(10).max(180),  // total daily; no basis toggle
+    max_minutes: z
+      .number()
+      .int()
+      .min(INPUT_LIMITS.MAX_COMMUTE_MINUTES.min)
+      .max(INPUT_LIMITS.MAX_COMMUTE_MINUTES.max)
+      .refine(
+        (n) => n % INPUT_LIMITS.MAX_COMMUTE_MINUTES.step === 0,
+        {
+          message: `Max daily commute must be in ${INPUT_LIMITS.MAX_COMMUTE_MINUTES.step}-minute increments`,
+        },
+      ),  // total daily; basis simplification per product-spec §4.2
     time_of_day: TimeOfDaySchema.optional(),
   }),
   budget_inr: z.number().int().min(3000).max(1_000_000),
