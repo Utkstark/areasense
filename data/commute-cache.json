@@ -200,7 +200,3506 @@
       }
     ],
     "computed_at": "2026-06-13T18:09:43.780Z",
-    "last_accessed": "2026-06-15T21:42:38.758Z"
+    "last_accessed": "2026-06-17T01:54:08.414Z"
+  },
+  "commute:v1:28.492634:77.091666:11:00:19:00": {
+    "key": {
+      "office_coords_rounded": {
+        "lat": 28.492633848365074,
+        "lng": 77.09166617244627
+      },
+      "outbound_time": "11:00",
+      "return_time": "19:00"
+    },
+    "matrix": [
+      {
+        "locality_id": "gur-sec-65",
+        "outbound_minutes": 34,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "gur-sec-102",
+        "outbound_minutes": 34,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "gur-sec-69",
+        "outbound_minutes": 37,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "gur-sushant-lok-phase-1",
+        "outbound_minutes": 18,
+        "return_minutes": 16
+      },
+      {
+        "locality_id": "gur-sec-63",
+        "outbound_minutes": 34,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-sec-48",
+        "outbound_minutes": 28,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-sec-23",
+        "outbound_minutes": 21,
+        "return_minutes": 28
+      },
+      {
+        "locality_id": "gur-sushant-lok-2-sec-57",
+        "outbound_minutes": 22,
+        "return_minutes": 28
+      },
+      {
+        "locality_id": "gur-prem-nagar-sec-13",
+        "outbound_minutes": 22,
+        "return_minutes": 28
+      },
+      {
+        "locality_id": "gur-sec-108",
+        "outbound_minutes": 39,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "gur-sec-51",
+        "outbound_minutes": 27,
+        "return_minutes": 31
+      },
+      {
+        "locality_id": "gur-sec-42",
+        "outbound_minutes": 16,
+        "return_minutes": 12
+      },
+      {
+        "locality_id": "gur-sec-47",
+        "outbound_minutes": 28,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "gur-phase-3-dlf",
+        "outbound_minutes": 10,
+        "return_minutes": 3
+      },
+      {
+        "locality_id": "gur-sec-3",
+        "outbound_minutes": 27,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-sec-24",
+        "outbound_minutes": 8,
+        "return_minutes": 14
+      },
+      {
+        "locality_id": "gur-palam-vihar",
+        "outbound_minutes": 23,
+        "return_minutes": 30
+      },
+      {
+        "locality_id": "gur-sec-28",
+        "outbound_minutes": 13,
+        "return_minutes": 12
+      },
+      {
+        "locality_id": "gur-sec-67",
+        "outbound_minutes": 39,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "gur-sec-52",
+        "outbound_minutes": 21,
+        "return_minutes": 24
+      },
+      {
+        "locality_id": "gur-sec-56",
+        "outbound_minutes": 19,
+        "return_minutes": 24
+      },
+      {
+        "locality_id": "gur-sec-54",
+        "outbound_minutes": 19,
+        "return_minutes": 16
+      },
+      {
+        "locality_id": "gur-sec-62",
+        "outbound_minutes": 26,
+        "return_minutes": 33
+      },
+      {
+        "locality_id": "gur-sec-111",
+        "outbound_minutes": 31,
+        "return_minutes": 36
+      },
+      {
+        "locality_id": "gur-sec-46",
+        "outbound_minutes": 26,
+        "return_minutes": 34
+      },
+      {
+        "locality_id": "gur-sec-37c",
+        "outbound_minutes": 35,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "gur-sec-63a",
+        "outbound_minutes": 32,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "gur-sec-33",
+        "outbound_minutes": 27,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "gur-huda-colony-sec-46",
+        "outbound_minutes": 28,
+        "return_minutes": 33
+      },
+      {
+        "locality_id": "gur-sec-23a",
+        "outbound_minutes": 19,
+        "return_minutes": 24
+      },
+      {
+        "locality_id": "gur-sec-70a",
+        "outbound_minutes": 37,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "gur-sec-40",
+        "outbound_minutes": 20,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "gur-south-city-2",
+        "outbound_minutes": 31,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-sec-15",
+        "outbound_minutes": 18,
+        "return_minutes": 25
+      },
+      {
+        "locality_id": "gur-palam-vihar-extension",
+        "outbound_minutes": 28,
+        "return_minutes": 41
+      },
+      {
+        "locality_id": "gur-sec-37d",
+        "outbound_minutes": 40,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "gur-sec-31",
+        "outbound_minutes": 18,
+        "return_minutes": 25
+      },
+      {
+        "locality_id": "gur-sec-57",
+        "outbound_minutes": 26,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "gur-sushant-lok-2-sec-55",
+        "outbound_minutes": 20,
+        "return_minutes": 23
+      },
+      {
+        "locality_id": "gur-sec-39",
+        "outbound_minutes": 23,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "gur-sec-79",
+        "outbound_minutes": 43,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "gur-south-city",
+        "outbound_minutes": 18,
+        "return_minutes": 21
+      },
+      {
+        "locality_id": "gur-sec-27",
+        "outbound_minutes": 14,
+        "return_minutes": 9
+      },
+      {
+        "locality_id": "gur-sec-49",
+        "outbound_minutes": 30,
+        "return_minutes": 41
+      },
+      {
+        "locality_id": "gur-new-gurgaon",
+        "outbound_minutes": 40,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "gur-sheetla-colony-ashok-vihar-phase-2",
+        "outbound_minutes": 26,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-sec-6",
+        "outbound_minutes": 24,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "gur-sec-88a",
+        "outbound_minutes": 38,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "gur-sec-43",
+        "outbound_minutes": 18,
+        "return_minutes": 16
+      },
+      {
+        "locality_id": "gur-sec-99",
+        "outbound_minutes": 36,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "gur-gurgaon",
+        "outbound_minutes": 24,
+        "return_minutes": 34
+      },
+      {
+        "locality_id": "gur-asf-insignia-rd",
+        "outbound_minutes": 27,
+        "return_minutes": 34
+      },
+      {
+        "locality_id": "gur-new-palam-vihar-phase-2",
+        "outbound_minutes": 29,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "gur-sec-104",
+        "outbound_minutes": 33,
+        "return_minutes": 44
+      },
+      {
+        "locality_id": "gur-sec-83",
+        "outbound_minutes": 38,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "gur-sec-9",
+        "outbound_minutes": 33,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "gur-sec-30",
+        "outbound_minutes": 21,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "gur-sec-81",
+        "outbound_minutes": 43,
+        "return_minutes": 55
+      },
+      {
+        "locality_id": "gur-sec-72a",
+        "outbound_minutes": 29,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "gur-new-colony-sec-7",
+        "outbound_minutes": 29,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-sushant-lok",
+        "outbound_minutes": 18,
+        "return_minutes": 16
+      },
+      {
+        "locality_id": "gur-sec-45",
+        "outbound_minutes": 20,
+        "return_minutes": 28
+      },
+      {
+        "locality_id": "gur-v-block",
+        "outbound_minutes": 10,
+        "return_minutes": 14
+      },
+      {
+        "locality_id": "gur-south-city-1",
+        "outbound_minutes": 17,
+        "return_minutes": 22
+      },
+      {
+        "locality_id": "gur-sec-12a",
+        "outbound_minutes": 24,
+        "return_minutes": 31
+      },
+      {
+        "locality_id": "gur-ashok-vihar-phase-3-extension",
+        "outbound_minutes": 28,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-sec-22",
+        "outbound_minutes": 19,
+        "return_minutes": 25
+      },
+      {
+        "locality_id": "gur-sec-71",
+        "outbound_minutes": 32,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "gur-sec-7-extension",
+        "outbound_minutes": 31,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "gur-sec-53",
+        "outbound_minutes": 15,
+        "return_minutes": 19
+      },
+      {
+        "locality_id": "gur-saraswati-kunj",
+        "outbound_minutes": 15,
+        "return_minutes": 19
+      },
+      {
+        "locality_id": "gur-sec-107",
+        "outbound_minutes": 39,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "gur-sec-5",
+        "outbound_minutes": 28,
+        "return_minutes": 36
+      },
+      {
+        "locality_id": "gur-sec-67a",
+        "outbound_minutes": 45,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "gur-sec-36a",
+        "outbound_minutes": 31,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "gur-wazirabad",
+        "outbound_minutes": 24,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "gur-sec-7",
+        "outbound_minutes": 30,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-sec-89a",
+        "outbound_minutes": 36,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "gur-sec-17",
+        "outbound_minutes": 18,
+        "return_minutes": 24
+      },
+      {
+        "locality_id": "gur-sec-43-block-c",
+        "outbound_minutes": 17,
+        "return_minutes": 20
+      },
+      {
+        "locality_id": "gur-sec-110a",
+        "outbound_minutes": 28,
+        "return_minutes": 36
+      },
+      {
+        "locality_id": "gur-sec-4",
+        "outbound_minutes": 29,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-mayfield-gardens",
+        "outbound_minutes": 30,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "gur-sec-38",
+        "outbound_minutes": 24,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "gur-dlf-city-phase-3",
+        "outbound_minutes": 10,
+        "return_minutes": 3
+      },
+      {
+        "locality_id": "gur-sec-17a",
+        "outbound_minutes": 17,
+        "return_minutes": 23
+      },
+      {
+        "locality_id": "gur-badshahpur",
+        "outbound_minutes": 35,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "gur-sec-11",
+        "outbound_minutes": 25,
+        "return_minutes": 36
+      },
+      {
+        "locality_id": "gur-sec-59",
+        "outbound_minutes": 27,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "gur-sec-105",
+        "outbound_minutes": 34,
+        "return_minutes": 44
+      },
+      {
+        "locality_id": "gur-sec-52a",
+        "outbound_minutes": 18,
+        "return_minutes": 17
+      },
+      {
+        "locality_id": "gur-sec-21",
+        "outbound_minutes": 18,
+        "return_minutes": 20
+      },
+      {
+        "locality_id": "gur-suncity",
+        "outbound_minutes": 21,
+        "return_minutes": 17
+      },
+      {
+        "locality_id": "gur-ganga-vihar-new-palam-vihar-phase-3",
+        "outbound_minutes": 26,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "gur-sec-14",
+        "outbound_minutes": 18,
+        "return_minutes": 21
+      },
+      {
+        "locality_id": "gur-sec-103",
+        "outbound_minutes": 36,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "gur-sec-72",
+        "outbound_minutes": 28,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-sec-34",
+        "outbound_minutes": 34,
+        "return_minutes": 34
+      },
+      {
+        "locality_id": "gur-dlf-city",
+        "outbound_minutes": 5,
+        "return_minutes": 7
+      },
+      {
+        "locality_id": "gur-shanti-nagar-sec-11",
+        "outbound_minutes": 22,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "gur-new-palam-vihar-sec-110",
+        "outbound_minutes": 29,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-dundahera",
+        "outbound_minutes": 16,
+        "return_minutes": 19
+      },
+      {
+        "locality_id": "gur-sec-50",
+        "outbound_minutes": 29,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "gur-sec-77",
+        "outbound_minutes": 37,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "gur-shushant-lok-1-sec-43-c-block",
+        "outbound_minutes": 18,
+        "return_minutes": 16
+      },
+      {
+        "locality_id": "gur-block-5-phase-3-dlf",
+        "outbound_minutes": 14,
+        "return_minutes": 12
+      },
+      {
+        "locality_id": "gur-huda-sec-43",
+        "outbound_minutes": 16,
+        "return_minutes": 15
+      },
+      {
+        "locality_id": "gur-sec-61",
+        "outbound_minutes": 26,
+        "return_minutes": 31
+      },
+      {
+        "locality_id": "gur-part-2-sec-15",
+        "outbound_minutes": 20,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "gur-central-park-2",
+        "outbound_minutes": 30,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "gur-sec-55",
+        "outbound_minutes": 18,
+        "return_minutes": 20
+      },
+      {
+        "locality_id": "gur-sec-46-greenwood-city",
+        "outbound_minutes": 20,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "gur-dlf-cyber-city",
+        "outbound_minutes": 2,
+        "return_minutes": 7
+      },
+      {
+        "locality_id": "gur-sec-22a",
+        "outbound_minutes": 16,
+        "return_minutes": 22
+      },
+      {
+        "locality_id": "gur-sec-22b",
+        "outbound_minutes": 16,
+        "return_minutes": 23
+      },
+      {
+        "locality_id": "gur-sec-66",
+        "outbound_minutes": 37,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "gur-sec-89",
+        "outbound_minutes": 37,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "gur-sec-74",
+        "outbound_minutes": 35,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "gur-sec-112",
+        "outbound_minutes": 33,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "gur-sec-25",
+        "outbound_minutes": 11,
+        "return_minutes": 10
+      },
+      {
+        "locality_id": "gur-sec-68",
+        "outbound_minutes": 36,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "gur-sec-85",
+        "outbound_minutes": 40,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "gur-sec-82",
+        "outbound_minutes": 37,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "gur-sec-106",
+        "outbound_minutes": 33,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "gur-dhanwapur-village",
+        "outbound_minutes": 34,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "gur-shikohpur",
+        "outbound_minutes": 38,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "gur-daulatabad",
+        "outbound_minutes": 35,
+        "return_minutes": 44
+      },
+      {
+        "locality_id": "gur-old-railway-road",
+        "outbound_minutes": 27,
+        "return_minutes": 36
+      },
+      {
+        "locality_id": "gur-sec-36",
+        "outbound_minutes": 30,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "gur-sec-76",
+        "outbound_minutes": 34,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "gur-sec-99a",
+        "outbound_minutes": 37,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "gur-sec-58",
+        "outbound_minutes": 23,
+        "return_minutes": 25
+      },
+      {
+        "locality_id": "gur-sec-70",
+        "outbound_minutes": 35,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "gur-surya-vihar-sec-9a",
+        "outbound_minutes": 31,
+        "return_minutes": 44
+      },
+      {
+        "locality_id": "gur-rail-vihar-sec-56",
+        "outbound_minutes": 17,
+        "return_minutes": 20
+      },
+      {
+        "locality_id": "gur-sikandarpur-badha",
+        "outbound_minutes": 36,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "gur-sec-109",
+        "outbound_minutes": 32,
+        "return_minutes": 41
+      },
+      {
+        "locality_id": "gur-greenopolis",
+        "outbound_minutes": 41,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "gur-sec-60",
+        "outbound_minutes": 29,
+        "return_minutes": 36
+      },
+      {
+        "locality_id": "gur-urban-estate-sec-40",
+        "outbound_minutes": 20,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "gur-old-dlf-colony",
+        "outbound_minutes": 17,
+        "return_minutes": 21
+      },
+      {
+        "locality_id": "gur-sec-1-palam-vihar",
+        "outbound_minutes": 23,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "gur-sec-113",
+        "outbound_minutes": 32,
+        "return_minutes": 41
+      },
+      {
+        "locality_id": "gur-sikanderpur-ghosi",
+        "outbound_minutes": 10,
+        "return_minutes": 9
+      },
+      {
+        "locality_id": "gur-mayfield-garden",
+        "outbound_minutes": 30,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "gur-ashok-vihar-phase-2",
+        "outbound_minutes": 27,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-gwal-pahari",
+        "outbound_minutes": 26,
+        "return_minutes": 30
+      },
+      {
+        "locality_id": "gur-nangli-umarpur",
+        "outbound_minutes": 30,
+        "return_minutes": 36
+      },
+      {
+        "locality_id": "gur-laxman-vihar-sec-3a",
+        "outbound_minutes": 31,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "gur-huda-sec-23",
+        "outbound_minutes": 21,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "gur-sec-10",
+        "outbound_minutes": 32,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "gur-sushant-lok-3",
+        "outbound_minutes": 26,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "gur-shankar-vihar-sec-104",
+        "outbound_minutes": 35,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "gur-sec-84",
+        "outbound_minutes": 37,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "gur-kadarpur",
+        "outbound_minutes": 36,
+        "return_minutes": 41
+      },
+      {
+        "locality_id": "gur-new-palam-vihar-phase-1",
+        "outbound_minutes": 34,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-mayfeild-garden-sec-51",
+        "outbound_minutes": 30,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "gur-sec-4-gurgaon",
+        "outbound_minutes": 29,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-urban-estate-sec-4",
+        "outbound_minutes": 31,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "gur-sec-10a",
+        "outbound_minutes": 27,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "gur-part-1-sec-15",
+        "outbound_minutes": 17,
+        "return_minutes": 22
+      },
+      {
+        "locality_id": "gur-sai-kunj",
+        "outbound_minutes": 29,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-sec-81a",
+        "outbound_minutes": 36,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "gur-sec-57-rail-vihar",
+        "outbound_minutes": 17,
+        "return_minutes": 20
+      },
+      {
+        "locality_id": "gur-sec-12a-jawahar-nagar",
+        "outbound_minutes": 24,
+        "return_minutes": 31
+      },
+      {
+        "locality_id": "gur-new-palam-vihar",
+        "outbound_minutes": 29,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-vatika-sec-83",
+        "outbound_minutes": 36,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "gur-sec-78",
+        "outbound_minutes": 39,
+        "return_minutes": 54
+      },
+      {
+        "locality_id": "gur-nihali-colony",
+        "outbound_minutes": 32,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "gur-greenwood-city",
+        "outbound_minutes": 20,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "gur-gurugram-road",
+        "outbound_minutes": 41,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "gur-milanwali-colony",
+        "outbound_minutes": 24,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "gur-sec-13",
+        "outbound_minutes": 20,
+        "return_minutes": 25
+      },
+      {
+        "locality_id": "gur-sanjay-colony",
+        "outbound_minutes": 25,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "gur-c2-block-palam-vihar-sec-3",
+        "outbound_minutes": 29,
+        "return_minutes": 41
+      },
+      {
+        "locality_id": "gur-sec-110",
+        "outbound_minutes": 36,
+        "return_minutes": 34
+      },
+      {
+        "locality_id": "gur-gls-aravali-homes",
+        "outbound_minutes": 11,
+        "return_minutes": 12
+      },
+      {
+        "locality_id": "gur-udyog-vihar",
+        "outbound_minutes": 8,
+        "return_minutes": 11
+      },
+      {
+        "locality_id": "gur-sec-88b",
+        "outbound_minutes": 38,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "gur-dlf-phase-1",
+        "outbound_minutes": 15,
+        "return_minutes": 11
+      },
+      {
+        "locality_id": "gur-shastri-nagar-industrial-area-sec-106",
+        "outbound_minutes": 33,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "gur-sec-8",
+        "outbound_minutes": 27,
+        "return_minutes": 36
+      },
+      {
+        "locality_id": "gur-dharam-colony",
+        "outbound_minutes": 24,
+        "return_minutes": 33
+      },
+      {
+        "locality_id": "gur-huda-sector-sec-55",
+        "outbound_minutes": 20,
+        "return_minutes": 22
+      },
+      {
+        "locality_id": "gur-tata-lavida",
+        "outbound_minutes": 36,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-piramid-midtown",
+        "outbound_minutes": 26,
+        "return_minutes": 31
+      },
+      {
+        "locality_id": "gur-sec-2-palam-vihar",
+        "outbound_minutes": 24,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "gur-sec-82a",
+        "outbound_minutes": 34,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "gur-sec-73",
+        "outbound_minutes": 37,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "gur-dlf-city-4",
+        "outbound_minutes": 15,
+        "return_minutes": 13
+      },
+      {
+        "locality_id": "gur-central-park-2-bellebue",
+        "outbound_minutes": 25,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-sec-26",
+        "outbound_minutes": 16,
+        "return_minutes": 12
+      },
+      {
+        "locality_id": "gur-anant-raj-estate-sec-63-a",
+        "outbound_minutes": 31,
+        "return_minutes": 36
+      },
+      {
+        "locality_id": "gur-ardee-city",
+        "outbound_minutes": 21,
+        "return_minutes": 23
+      },
+      {
+        "locality_id": "gur-surya-vihar-sec-21",
+        "outbound_minutes": 20,
+        "return_minutes": 20
+      },
+      {
+        "locality_id": "gur-mullahera",
+        "outbound_minutes": 19,
+        "return_minutes": 24
+      },
+      {
+        "locality_id": "gur-sec-9a",
+        "outbound_minutes": 36,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "gur-bharat-residency",
+        "outbound_minutes": 19,
+        "return_minutes": 24
+      },
+      {
+        "locality_id": "gur-ambience-island-lagoon-apartment",
+        "outbound_minutes": 9,
+        "return_minutes": 16
+      },
+      {
+        "locality_id": "gur-vatika-city",
+        "outbound_minutes": 35,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "gur-ghata",
+        "outbound_minutes": 23,
+        "return_minutes": 23
+      },
+      {
+        "locality_id": "gur-sec-46-south-city-2",
+        "outbound_minutes": 30,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "gur-b-block-mayfield-garden",
+        "outbound_minutes": 29,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "gur-vipul-world-sec-48",
+        "outbound_minutes": 30,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "gur-amstoria-sec-102",
+        "outbound_minutes": 34,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "gur-sec-29",
+        "outbound_minutes": 17,
+        "return_minutes": 16
+      },
+      {
+        "locality_id": "gur-vatika-india-next",
+        "outbound_minutes": 37,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "gur-paras-irene",
+        "outbound_minutes": 37,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "gur-orchid-petals",
+        "outbound_minutes": 30,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-huda-colony-sec-4",
+        "outbound_minutes": 30,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "gur-ireo-the-grand-arch",
+        "outbound_minutes": 28,
+        "return_minutes": 31
+      },
+      {
+        "locality_id": "gur-sec-12",
+        "outbound_minutes": 23,
+        "return_minutes": 30
+      },
+      {
+        "locality_id": "gur-new-era",
+        "outbound_minutes": 16,
+        "return_minutes": 17
+      },
+      {
+        "locality_id": "gur-dlf-city-phase-2",
+        "outbound_minutes": 12,
+        "return_minutes": 9
+      },
+      {
+        "locality_id": "gur-sec-48-gurgaon",
+        "outbound_minutes": 28,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "gur-phase-1",
+        "outbound_minutes": 15,
+        "return_minutes": 17
+      },
+      {
+        "locality_id": "gur-paras-quartier",
+        "outbound_minutes": 24,
+        "return_minutes": 23
+      },
+      {
+        "locality_id": "gur-pragati-hills-society",
+        "outbound_minutes": 27,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "gur-sihi-village-sec-84",
+        "outbound_minutes": 33,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "gur-sihi-village",
+        "outbound_minutes": 33,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "gur-sarswati-kunj-2",
+        "outbound_minutes": 23,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "gur-westan-height-golf-course-road",
+        "outbound_minutes": 14,
+        "return_minutes": 13
+      },
+      {
+        "locality_id": "gur-rail-vihar-sec-47",
+        "outbound_minutes": 28,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "gur-westan-height-sec-53-golf-course-road",
+        "outbound_minutes": 14,
+        "return_minutes": 13
+      },
+      {
+        "locality_id": "gur-westan-height",
+        "outbound_minutes": 14,
+        "return_minutes": 13
+      },
+      {
+        "locality_id": "gur-dlf-phase-i",
+        "outbound_minutes": 15,
+        "return_minutes": 11
+      },
+      {
+        "locality_id": "gur-sec-26a",
+        "outbound_minutes": 14,
+        "return_minutes": 9
+      },
+      {
+        "locality_id": "gur-bandhwari",
+        "outbound_minutes": 27,
+        "return_minutes": 31
+      },
+      {
+        "locality_id": "gur-dlf-the-crest",
+        "outbound_minutes": 19,
+        "return_minutes": 15
+      },
+      {
+        "locality_id": "gur-parsvnath-exotica",
+        "outbound_minutes": 15,
+        "return_minutes": 18
+      },
+      {
+        "locality_id": "gur-sec-56-road",
+        "outbound_minutes": 17,
+        "return_minutes": 22
+      },
+      {
+        "locality_id": "gur-sec-41",
+        "outbound_minutes": 18,
+        "return_minutes": 24
+      },
+      {
+        "locality_id": "gur-medicity",
+        "outbound_minutes": 22,
+        "return_minutes": 33
+      },
+      {
+        "locality_id": "gur-dlf-phase-2",
+        "outbound_minutes": 12,
+        "return_minutes": 9
+      },
+      {
+        "locality_id": "gur-dlf-phase-4",
+        "outbound_minutes": 15,
+        "return_minutes": 13
+      },
+      {
+        "locality_id": "gur-dlf-phase-5",
+        "outbound_minutes": 15,
+        "return_minutes": 14
+      },
+      {
+        "locality_id": "gur-block-d-sec-46",
+        "outbound_minutes": 26,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "gur-chakkarpur",
+        "outbound_minutes": 11,
+        "return_minutes": 10
+      },
+      {
+        "locality_id": "gur-dlf-city-phase-1",
+        "outbound_minutes": 15,
+        "return_minutes": 11
+      },
+      {
+        "locality_id": "gur-dlf-golf-course",
+        "outbound_minutes": 16,
+        "return_minutes": 18
+      },
+      {
+        "locality_id": "gur-nirvana-country",
+        "outbound_minutes": 31,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "gur-gurgaon-faridabad-road",
+        "outbound_minutes": 14,
+        "return_minutes": 17
+      },
+      {
+        "locality_id": "gur-dlf-phase-3",
+        "outbound_minutes": 10,
+        "return_minutes": 3
+      },
+      {
+        "locality_id": "gur-sushant-lok-phase-3",
+        "outbound_minutes": 28,
+        "return_minutes": 34
+      },
+      {
+        "locality_id": "gur-1-palam-vihar",
+        "outbound_minutes": 22,
+        "return_minutes": 30
+      },
+      {
+        "locality_id": "gur-mg-road",
+        "outbound_minutes": 14,
+        "return_minutes": 14
+      },
+      {
+        "locality_id": "gur-a-block-sushant-lok-phase-1",
+        "outbound_minutes": 17,
+        "return_minutes": 21
+      },
+      {
+        "locality_id": "gur-malibu-town",
+        "outbound_minutes": 31,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "gur-sadar-bazar",
+        "outbound_minutes": 26,
+        "return_minutes": 30
+      },
+      {
+        "locality_id": "gur-saraswati-enclave",
+        "outbound_minutes": 30,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "gur-sec-37a",
+        "outbound_minutes": 34,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "gur-uppals-southend",
+        "outbound_minutes": 30,
+        "return_minutes": 41
+      },
+      {
+        "locality_id": "gur-vipul-tatvam-villas",
+        "outbound_minutes": 29,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "gur-gupta-colony-palam-vihar",
+        "outbound_minutes": 26,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "gur-suncity-avenue-sec-76",
+        "outbound_minutes": 35,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "gur-k-bhavan",
+        "outbound_minutes": 38,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "gur-samaspur-village",
+        "outbound_minutes": 28,
+        "return_minutes": 34
+      },
+      {
+        "locality_id": "gur-rajendra-park",
+        "outbound_minutes": 34,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "gur-signature-global-37d",
+        "outbound_minutes": 35,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "gur-badha",
+        "outbound_minutes": 37,
+        "return_minutes": 54
+      },
+      {
+        "locality_id": "del-paschim-vihar",
+        "outbound_minutes": 61,
+        "return_minutes": 78
+      },
+      {
+        "locality_id": "del-sec-12-dwarka",
+        "outbound_minutes": 35,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "del-greater-kailash-1",
+        "outbound_minutes": 51,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-vasant-vihar",
+        "outbound_minutes": 37,
+        "return_minutes": 44
+      },
+      {
+        "locality_id": "del-palam",
+        "outbound_minutes": 42,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-vasant-kunj",
+        "outbound_minutes": 35,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-safdarjung-enclave",
+        "outbound_minutes": 42,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "del-kirti-nagar",
+        "outbound_minutes": 51,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-chittaranjan-park",
+        "outbound_minutes": 48,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-pitam-pura",
+        "outbound_minutes": 62,
+        "return_minutes": 76
+      },
+      {
+        "locality_id": "del-vikaspuri",
+        "outbound_minutes": 57,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-sec-22-dwarka",
+        "outbound_minutes": 27,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "del-sec-6-dwarka",
+        "outbound_minutes": 38,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "del-new-rajinder-nagar",
+        "outbound_minutes": 46,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-chanakyapuri",
+        "outbound_minutes": 39,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "del-rajouri-garden",
+        "outbound_minutes": 53,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-chattarpur",
+        "outbound_minutes": 32,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "del-sec-7-dwarka",
+        "outbound_minutes": 34,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "del-kalkaji",
+        "outbound_minutes": 51,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-nizamuddin",
+        "outbound_minutes": 54,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-sarita-vihar",
+        "outbound_minutes": 65,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-defence-colony",
+        "outbound_minutes": 52,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-sec-4-dwarka",
+        "outbound_minutes": 38,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "del-jangpura",
+        "outbound_minutes": 59,
+        "return_minutes": 71
+      },
+      {
+        "locality_id": "del-siddhartha-enclave",
+        "outbound_minutes": 60,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-saket",
+        "outbound_minutes": 43,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "del-munirka",
+        "outbound_minutes": 39,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "del-janakpuri",
+        "outbound_minutes": 49,
+        "return_minutes": 66
+      },
+      {
+        "locality_id": "del-malviya-nagar",
+        "outbound_minutes": 41,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "del-sec-23-dwarka",
+        "outbound_minutes": 28,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "del-dwarka-mor",
+        "outbound_minutes": 44,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-yusuf-sarai",
+        "outbound_minutes": 44,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-mayur-vihar-1",
+        "outbound_minutes": 68,
+        "return_minutes": 79
+      },
+      {
+        "locality_id": "del-sec-19-dwarka",
+        "outbound_minutes": 33,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-dwarka-sec-3",
+        "outbound_minutes": 41,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-chhatarpur-extension",
+        "outbound_minutes": 34,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-prithviraj-road",
+        "outbound_minutes": 46,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-sunder-nagar",
+        "outbound_minutes": 57,
+        "return_minutes": 67
+      },
+      {
+        "locality_id": "del-sec-19b-dwarka",
+        "outbound_minutes": 30,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "del-naraina-vihar",
+        "outbound_minutes": 48,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-gulmohar-park",
+        "outbound_minutes": 45,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "del-sec-11-dwarka",
+        "outbound_minutes": 36,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "del-greater-kailash-enclave-1",
+        "outbound_minutes": 49,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-panchsheel-enclave",
+        "outbound_minutes": 47,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-east-of-kailash",
+        "outbound_minutes": 55,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-south-extension-2",
+        "outbound_minutes": 48,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-sec-18-dwarka",
+        "outbound_minutes": 33,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-gautam-nagar",
+        "outbound_minutes": 49,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-lajpat-nagar",
+        "outbound_minutes": 51,
+        "return_minutes": 63
+      },
+      {
+        "locality_id": "del-lajpat-nagar-4",
+        "outbound_minutes": 54,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-alaknanda",
+        "outbound_minutes": 51,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-punjabi-bagh",
+        "outbound_minutes": 57,
+        "return_minutes": 67
+      },
+      {
+        "locality_id": "del-hauz-khas",
+        "outbound_minutes": 42,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "del-greater-kailash-2",
+        "outbound_minutes": 48,
+        "return_minutes": 70
+      },
+      {
+        "locality_id": "del-jor-bagh",
+        "outbound_minutes": 48,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-sector-d-vasant-kunj",
+        "outbound_minutes": 35,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "del-sec-10-dwarka",
+        "outbound_minutes": 35,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "del-karol-bagh",
+        "outbound_minutes": 53,
+        "return_minutes": 63
+      },
+      {
+        "locality_id": "del-laxmi-nagar",
+        "outbound_minutes": 67,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-krishna-nagar-karol-bagh",
+        "outbound_minutes": 52,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-okhla",
+        "outbound_minutes": 67,
+        "return_minutes": 79
+      },
+      {
+        "locality_id": "del-ashok-vihar",
+        "outbound_minutes": 67,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-sector-c-vasant-kunj",
+        "outbound_minutes": 31,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-green-park",
+        "outbound_minutes": 44,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-shivalik-colony",
+        "outbound_minutes": 39,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "del-mehrauli",
+        "outbound_minutes": 39,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "del-vikram-vihar-lajpat-nagar-4",
+        "outbound_minutes": 53,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-new-friends-colony",
+        "outbound_minutes": 60,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-connaught-place",
+        "outbound_minutes": 51,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-shastri-nagar",
+        "outbound_minutes": 67,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-sec-8-dwarka",
+        "outbound_minutes": 35,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "del-sec-18a-dwarka",
+        "outbound_minutes": 33,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-pocket-10-sector-b-vasant-kunj",
+        "outbound_minutes": 35,
+        "return_minutes": 44
+      },
+      {
+        "locality_id": "del-south-extension",
+        "outbound_minutes": 48,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "del-sarvodaya-enclave",
+        "outbound_minutes": 40,
+        "return_minutes": 55
+      },
+      {
+        "locality_id": "del-sant-nagar-east-of-kailash",
+        "outbound_minutes": 54,
+        "return_minutes": 71
+      },
+      {
+        "locality_id": "del-block-bf-janakpuri",
+        "outbound_minutes": 49,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-dwarka",
+        "outbound_minutes": 33,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-sheikh-sarai",
+        "outbound_minutes": 46,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-sainik-farm",
+        "outbound_minutes": 45,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-ignou-main-road",
+        "outbound_minutes": 41,
+        "return_minutes": 54
+      },
+      {
+        "locality_id": "del-green-park-extension",
+        "outbound_minutes": 44,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-freedom-fighters-enclave",
+        "outbound_minutes": 41,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "del-dakshini-pitampura",
+        "outbound_minutes": 64,
+        "return_minutes": 78
+      },
+      {
+        "locality_id": "del-chhattarpur",
+        "outbound_minutes": 32,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "del-dwarka-sec-9",
+        "outbound_minutes": 32,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "del-sector-a-vasant-kunj",
+        "outbound_minutes": 32,
+        "return_minutes": 41
+      },
+      {
+        "locality_id": "del-greater-kailash",
+        "outbound_minutes": 51,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-lajpat-nagar-3",
+        "outbound_minutes": 54,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-navjeevan-vihar",
+        "outbound_minutes": 41,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "del-vikas-kunj-vikaspuri",
+        "outbound_minutes": 59,
+        "return_minutes": 74
+      },
+      {
+        "locality_id": "del-sector-b-vasant-kunj",
+        "outbound_minutes": 34,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-lajpat-nagar-1",
+        "outbound_minutes": 55,
+        "return_minutes": 71
+      },
+      {
+        "locality_id": "del-new-rajendra-nagar",
+        "outbound_minutes": 46,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-aya-nagar",
+        "outbound_minutes": 19,
+        "return_minutes": 24
+      },
+      {
+        "locality_id": "del-hari-nagar",
+        "outbound_minutes": 50,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-nawada",
+        "outbound_minutes": 46,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-jasola-vihar",
+        "outbound_minutes": 68,
+        "return_minutes": 79
+      },
+      {
+        "locality_id": "del-katwaria-sarai",
+        "outbound_minutes": 42,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "del-patel-nagar",
+        "outbound_minutes": 54,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-ramesh-nagar",
+        "outbound_minutes": 52,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-govindpuri",
+        "outbound_minutes": 53,
+        "return_minutes": 73
+      },
+      {
+        "locality_id": "del-anand-niketan",
+        "outbound_minutes": 39,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-chattarpur-enclave",
+        "outbound_minutes": 30,
+        "return_minutes": 41
+      },
+      {
+        "locality_id": "del-sec-8-rohini",
+        "outbound_minutes": 65,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-arjun-nagar-safdarjung-enclave",
+        "outbound_minutes": 42,
+        "return_minutes": 54
+      },
+      {
+        "locality_id": "del-south-ganesh-nagar",
+        "outbound_minutes": 70,
+        "return_minutes": 81
+      },
+      {
+        "locality_id": "del-khirki-extension",
+        "outbound_minutes": 46,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-anand-lok",
+        "outbound_minutes": 46,
+        "return_minutes": 60
+      },
+      {
+        "locality_id": "del-uttam-nagar-west",
+        "outbound_minutes": 50,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-nangli-sakrawati",
+        "outbound_minutes": 38,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "del-panchsheel-park",
+        "outbound_minutes": 41,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-mohan-garden-extension",
+        "outbound_minutes": 45,
+        "return_minutes": 60
+      },
+      {
+        "locality_id": "del-bhawani-kunj",
+        "outbound_minutes": 32,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "del-ber-sarai",
+        "outbound_minutes": 37,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "del-prasad-nagar",
+        "outbound_minutes": 49,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "del-new-delhi",
+        "outbound_minutes": 47,
+        "return_minutes": 55
+      },
+      {
+        "locality_id": "del-mundka",
+        "outbound_minutes": 44,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-tri-nagar",
+        "outbound_minutes": 60,
+        "return_minutes": 70
+      },
+      {
+        "locality_id": "del-janak-puri-west",
+        "outbound_minutes": 49,
+        "return_minutes": 66
+      },
+      {
+        "locality_id": "del-mohan-garden-uttam-nagar",
+        "outbound_minutes": 50,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-mandi",
+        "outbound_minutes": 30,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "del-shakti-vihar",
+        "outbound_minutes": 66,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-cr-park-main-road",
+        "outbound_minutes": 47,
+        "return_minutes": 63
+      },
+      {
+        "locality_id": "del-gulabi-bagh",
+        "outbound_minutes": 66,
+        "return_minutes": 77
+      },
+      {
+        "locality_id": "del-kakrola",
+        "outbound_minutes": 35,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "del-gwal-pahari",
+        "outbound_minutes": 26,
+        "return_minutes": 30
+      },
+      {
+        "locality_id": "del-kamla-nagar",
+        "outbound_minutes": 70,
+        "return_minutes": 79
+      },
+      {
+        "locality_id": "del-kirtinagar",
+        "outbound_minutes": 51,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-shyam-vihar",
+        "outbound_minutes": 33,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "del-palam-colony-nasirpur",
+        "outbound_minutes": 44,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-todapur",
+        "outbound_minutes": 46,
+        "return_minutes": 55
+      },
+      {
+        "locality_id": "del-sec-1-rohini",
+        "outbound_minutes": 65,
+        "return_minutes": 78
+      },
+      {
+        "locality_id": "del-fateh-nagar",
+        "outbound_minutes": 51,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-sainik-nagar-mansa-ram-park",
+        "outbound_minutes": 46,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-nangal-dewat",
+        "outbound_minutes": 33,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "del-west-patel-nagar",
+        "outbound_minutes": 53,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-mangalam-place",
+        "outbound_minutes": 66,
+        "return_minutes": 82
+      },
+      {
+        "locality_id": "del-roop-nagar",
+        "outbound_minutes": 68,
+        "return_minutes": 77
+      },
+      {
+        "locality_id": "del-pushpanjali-enclave",
+        "outbound_minutes": 70,
+        "return_minutes": 83
+      },
+      {
+        "locality_id": "del-sec-28-dwarka",
+        "outbound_minutes": 28,
+        "return_minutes": 33
+      },
+      {
+        "locality_id": "del-south-patel-nagar",
+        "outbound_minutes": 49,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-mahavir-enclave-part-2-mahavir-enclave",
+        "outbound_minutes": 41,
+        "return_minutes": 55
+      },
+      {
+        "locality_id": "del-mansa-ram-park",
+        "outbound_minutes": 46,
+        "return_minutes": 66
+      },
+      {
+        "locality_id": "del-mohan-garden-razapur-khurd",
+        "outbound_minutes": 51,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-nangloi",
+        "outbound_minutes": 52,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-sitapuri",
+        "outbound_minutes": 46,
+        "return_minutes": 60
+      },
+      {
+        "locality_id": "del-mahavir-enclave-part-1",
+        "outbound_minutes": 43,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-sec-2-dwarka",
+        "outbound_minutes": 42,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "del-daryaganj",
+        "outbound_minutes": 61,
+        "return_minutes": 76
+      },
+      {
+        "locality_id": "del-sec-5-dwarka",
+        "outbound_minutes": 38,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "del-dera-mandi-main-road",
+        "outbound_minutes": 30,
+        "return_minutes": 34
+      },
+      {
+        "locality_id": "del-13-malviya-nagar",
+        "outbound_minutes": 43,
+        "return_minutes": 54
+      },
+      {
+        "locality_id": "del-tyagi-colony-nangloi-extension",
+        "outbound_minutes": 51,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-chandan-hola",
+        "outbound_minutes": 37,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "del-d6-sector-d-vasant-kunj",
+        "outbound_minutes": 36,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "del-uttam-nagar",
+        "outbound_minutes": 49,
+        "return_minutes": 71
+      },
+      {
+        "locality_id": "del-najafgarh",
+        "outbound_minutes": 41,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "del-vishnu-garden",
+        "outbound_minutes": 61,
+        "return_minutes": 77
+      },
+      {
+        "locality_id": "del-laxminagar",
+        "outbound_minutes": 67,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-janakpuri-a-2-block",
+        "outbound_minutes": 52,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-rohtak-road",
+        "outbound_minutes": 43,
+        "return_minutes": 55
+      },
+      {
+        "locality_id": "del-south-extension-1",
+        "outbound_minutes": 50,
+        "return_minutes": 73
+      },
+      {
+        "locality_id": "del-madangir",
+        "outbound_minutes": 45,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "del-greater-kailash-part-3",
+        "outbound_minutes": 47,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-bali-nagar",
+        "outbound_minutes": 53,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-chirag-dilli",
+        "outbound_minutes": 47,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-ranhola",
+        "outbound_minutes": 45,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-shree-radhe-radhe-apartment",
+        "outbound_minutes": 49,
+        "return_minutes": 66
+      },
+      {
+        "locality_id": "del-jivan-park-rani-bagh",
+        "outbound_minutes": 54,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-eastpunjabibagh",
+        "outbound_minutes": 58,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-shadipur",
+        "outbound_minutes": 54,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-west-sagarpur",
+        "outbound_minutes": 47,
+        "return_minutes": 63
+      },
+      {
+        "locality_id": "del-east-patel-nagar",
+        "outbound_minutes": 49,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-chander-vihar-nilothi",
+        "outbound_minutes": 54,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-mohan-garden",
+        "outbound_minutes": 46,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-shakarpur",
+        "outbound_minutes": 66,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-block-16-east-patel-nagar",
+        "outbound_minutes": 49,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-surajkund-road",
+        "outbound_minutes": 59,
+        "return_minutes": 71
+      },
+      {
+        "locality_id": "del-pandav-nagar",
+        "outbound_minutes": 69,
+        "return_minutes": 79
+      },
+      {
+        "locality_id": "del-shiv-nagar-janakpuri",
+        "outbound_minutes": 53,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-ramesh-nagar-metro",
+        "outbound_minutes": 51,
+        "return_minutes": 63
+      },
+      {
+        "locality_id": "del-pusa",
+        "outbound_minutes": 52,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-vasant-kunj-enclave",
+        "outbound_minutes": 34,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "del-kalkaji-extension",
+        "outbound_minutes": 51,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-indraprastha",
+        "outbound_minutes": 69,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-mahavir-enclave",
+        "outbound_minutes": 42,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-west-enclave",
+        "outbound_minutes": 62,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-siddhartha-extension",
+        "outbound_minutes": 60,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-new-manglapuri",
+        "outbound_minutes": 22,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "del-mansarover-garden",
+        "outbound_minutes": 49,
+        "return_minutes": 60
+      },
+      {
+        "locality_id": "del-bhagwati-garden",
+        "outbound_minutes": 48,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-rani-bagh-pitam-pura",
+        "outbound_minutes": 63,
+        "return_minutes": 77
+      },
+      {
+        "locality_id": "del-new-delhi-110058",
+        "outbound_minutes": 50,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-sec-16-dwarka",
+        "outbound_minutes": 41,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "del-rangpuri",
+        "outbound_minutes": 25,
+        "return_minutes": 34
+      },
+      {
+        "locality_id": "del-bijwasan",
+        "outbound_minutes": 23,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "del-sec-57",
+        "outbound_minutes": 26,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "del-dlf-farms",
+        "outbound_minutes": 26,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "del-masjid-moth-village",
+        "outbound_minutes": 51,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-palam-village",
+        "outbound_minutes": 38,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "del-indira-park-rani-bagh",
+        "outbound_minutes": 55,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-sec-15-dwarka",
+        "outbound_minutes": 41,
+        "return_minutes": 54
+      },
+      {
+        "locality_id": "del-sadar-bazaar",
+        "outbound_minutes": 59,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-greater-kailash-enclave-2",
+        "outbound_minutes": 46,
+        "return_minutes": 63
+      },
+      {
+        "locality_id": "del-chhatarpur-enclave",
+        "outbound_minutes": 30,
+        "return_minutes": 41
+      },
+      {
+        "locality_id": "del-tivoli-garden",
+        "outbound_minutes": 33,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "del-bank-vihar",
+        "outbound_minutes": 65,
+        "return_minutes": 79
+      },
+      {
+        "locality_id": "del-maharana-partap-enclave",
+        "outbound_minutes": 61,
+        "return_minutes": 73
+      },
+      {
+        "locality_id": "del-jasola",
+        "outbound_minutes": 68,
+        "return_minutes": 79
+      },
+      {
+        "locality_id": "del-hari-nagar-clock-tower",
+        "outbound_minutes": 50,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-ganesh-nagar-tilak-nagar",
+        "outbound_minutes": 57,
+        "return_minutes": 71
+      },
+      {
+        "locality_id": "del-main-rajapuri-road",
+        "outbound_minutes": 43,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "del-sec-13-dwarka",
+        "outbound_minutes": 37,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "del-west-punjabi-bagh",
+        "outbound_minutes": 56,
+        "return_minutes": 67
+      },
+      {
+        "locality_id": "del-shaheen-bagh",
+        "outbound_minutes": 69,
+        "return_minutes": 84
+      },
+      {
+        "locality_id": "del-subhash-nagar",
+        "outbound_minutes": 52,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-shakti-nagar",
+        "outbound_minutes": 66,
+        "return_minutes": 78
+      },
+      {
+        "locality_id": "del-rajpur",
+        "outbound_minutes": 34,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-mahipalpur",
+        "outbound_minutes": 25,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "del-prahladpur",
+        "outbound_minutes": 62,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-ali",
+        "outbound_minutes": 66,
+        "return_minutes": 86
+      },
+      {
+        "locality_id": "del-saiyad-ul-ajaib",
+        "outbound_minutes": 40,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "del-mayapuri",
+        "outbound_minutes": 51,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-virender-nagar",
+        "outbound_minutes": 53,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-4d-janakpuri",
+        "outbound_minutes": 47,
+        "return_minutes": 55
+      },
+      {
+        "locality_id": "del-saraswati-vihar",
+        "outbound_minutes": 66,
+        "return_minutes": 82
+      },
+      {
+        "locality_id": "del-geetanjali-enclave-malviya-nagar",
+        "outbound_minutes": 39,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "del-sainik-vihar-pitam-pura",
+        "outbound_minutes": 67,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-sec-17-dwarka",
+        "outbound_minutes": 34,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "del-golf-links",
+        "outbound_minutes": 52,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-pocket-11-sector-b-vasant-kunj",
+        "outbound_minutes": 34,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "del-c1a-block-janakpuri",
+        "outbound_minutes": 53,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-mandakini-enclave-colony",
+        "outbound_minutes": 53,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-lajpat-nagar-2",
+        "outbound_minutes": 56,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-new-ashok-nagar",
+        "outbound_minutes": 70,
+        "return_minutes": 81
+      },
+      {
+        "locality_id": "del-rama-krishna-puram",
+        "outbound_minutes": 38,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "del-rani-bagh",
+        "outbound_minutes": 63,
+        "return_minutes": 77
+      },
+      {
+        "locality_id": "del-goyla-village",
+        "outbound_minutes": 31,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "del-arjan-garh",
+        "outbound_minutes": 22,
+        "return_minutes": 25
+      },
+      {
+        "locality_id": "del-dda-flats-munirka",
+        "outbound_minutes": 39,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "del-sec-23b-dwarka",
+        "outbound_minutes": 26,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "del-amar-colony-lajpat-nagar-4",
+        "outbound_minutes": 55,
+        "return_minutes": 70
+      },
+      {
+        "locality_id": "del-pocket-1-sec-23-dwarka",
+        "outbound_minutes": 25,
+        "return_minutes": 33
+      },
+      {
+        "locality_id": "del-mayur-vihar-extension",
+        "outbound_minutes": 68,
+        "return_minutes": 81
+      },
+      {
+        "locality_id": "del-ghitorni",
+        "outbound_minutes": 21,
+        "return_minutes": 21
+      },
+      {
+        "locality_id": "del-neb-sarai-saket",
+        "outbound_minutes": 41,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "del-neb-sarai-sainik-farm",
+        "outbound_minutes": 47,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-old-rajinder-nagar",
+        "outbound_minutes": 48,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "del-moti-bagh",
+        "outbound_minutes": 37,
+        "return_minutes": 44
+      },
+      {
+        "locality_id": "del-paharganj",
+        "outbound_minutes": 59,
+        "return_minutes": 63
+      },
+      {
+        "locality_id": "del-sector-e-vasant-kunj",
+        "outbound_minutes": 29,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "del-block-cb-hari-enclave",
+        "outbound_minutes": 51,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-paschim-puri-pocket-1",
+        "outbound_minutes": 57,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-gh-6",
+        "outbound_minutes": 62,
+        "return_minutes": 76
+      },
+      {
+        "locality_id": "del-block-29-west-patel-nagar",
+        "outbound_minutes": 54,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-qutub-vihar-phase-1",
+        "outbound_minutes": 36,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "del-amritpuri",
+        "outbound_minutes": 54,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-dda-flats-dwarka-23b",
+        "outbound_minutes": 41,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "del-sadat-apartment-a39-okhla-vihar",
+        "outbound_minutes": 63,
+        "return_minutes": 77
+      },
+      {
+        "locality_id": "del-sunlight-colony",
+        "outbound_minutes": 60,
+        "return_minutes": 71
+      },
+      {
+        "locality_id": "del-ayanagar-new-delhi",
+        "outbound_minutes": 19,
+        "return_minutes": 24
+      },
+      {
+        "locality_id": "del-tilak-nagar",
+        "outbound_minutes": 58,
+        "return_minutes": 74
+      },
+      {
+        "locality_id": "del-karam-pura",
+        "outbound_minutes": 61,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-central-market-lajpat-nagar-2",
+        "outbound_minutes": 54,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-sudershan-park",
+        "outbound_minutes": 54,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-sec-14-dwarka",
+        "outbound_minutes": 41,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "del-3b-janakpuri",
+        "outbound_minutes": 51,
+        "return_minutes": 66
+      },
+      {
+        "locality_id": "del-nirmal-vihar",
+        "outbound_minutes": 38,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "del-madanpur-khadar",
+        "outbound_minutes": 70,
+        "return_minutes": 87
+      },
+      {
+        "locality_id": "del-east-punjabi-bagh",
+        "outbound_minutes": 58,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-kapas-hera",
+        "outbound_minutes": 20,
+        "return_minutes": 27
+      },
+      {
+        "locality_id": "del-bakkarwala",
+        "outbound_minutes": 44,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "del-kanhiya-nagar",
+        "outbound_minutes": 63,
+        "return_minutes": 75
+      },
+      {
+        "locality_id": "del-dabri",
+        "outbound_minutes": 47,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-block-no-b1-sanjay-enclave",
+        "outbound_minutes": 47,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-keshav-puram-tri-nagar",
+        "outbound_minutes": 62,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-west-enclave-pitampura-delhi",
+        "outbound_minutes": 62,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-lado-sarai",
+        "outbound_minutes": 38,
+        "return_minutes": 44
+      },
+      {
+        "locality_id": "del-dda-flats-badarpur",
+        "outbound_minutes": 65,
+        "return_minutes": 76
+      },
+      {
+        "locality_id": "del-sudarshan-park",
+        "outbound_minutes": 54,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-molarband",
+        "outbound_minutes": 71,
+        "return_minutes": 82
+      },
+      {
+        "locality_id": "del-sec-16b-dwarka",
+        "outbound_minutes": 37,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "del-matiala",
+        "outbound_minutes": 41,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-mehrauli-gurgaon-road",
+        "outbound_minutes": 20,
+        "return_minutes": 24
+      },
+      {
+        "locality_id": "del-sec-1-dwarka",
+        "outbound_minutes": 40,
+        "return_minutes": 54
+      },
+      {
+        "locality_id": "del-madhu-vihar",
+        "outbound_minutes": 42,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-mahipalpur-extension",
+        "outbound_minutes": 30,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "del-bindapur",
+        "outbound_minutes": 45,
+        "return_minutes": 60
+      },
+      {
+        "locality_id": "del-maan-apartment",
+        "outbound_minutes": 43,
+        "return_minutes": 60
+      },
+      {
+        "locality_id": "del-c-8-keshav-puram",
+        "outbound_minutes": 62,
+        "return_minutes": 74
+      },
+      {
+        "locality_id": "del-raj-nagar",
+        "outbound_minutes": 36,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "del-chandni-chowk",
+        "outbound_minutes": 62,
+        "return_minutes": 73
+      },
+      {
+        "locality_id": "del-sangam-vihar",
+        "outbound_minutes": 58,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-2d-janakpuri",
+        "outbound_minutes": 47,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-nai-basti-lado-sarai",
+        "outbound_minutes": 39,
+        "return_minutes": 44
+      },
+      {
+        "locality_id": "del-block-wz-hari-nagar",
+        "outbound_minutes": 50,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-najafgarh-road-tagore-garden",
+        "outbound_minutes": 55,
+        "return_minutes": 66
+      },
+      {
+        "locality_id": "del-pul-pehlad-pur",
+        "outbound_minutes": 62,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-malka-ganj",
+        "outbound_minutes": 65,
+        "return_minutes": 73
+      },
+      {
+        "locality_id": "del-a4-block-nav-bharat-appartements",
+        "outbound_minutes": 61,
+        "return_minutes": 75
+      },
+      {
+        "locality_id": "del-channa-market",
+        "outbound_minutes": 50,
+        "return_minutes": 60
+      },
+      {
+        "locality_id": "del-mandi-road",
+        "outbound_minutes": 30,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "del-dakshinpuri",
+        "outbound_minutes": 48,
+        "return_minutes": 63
+      },
+      {
+        "locality_id": "del-kharak",
+        "outbound_minutes": 43,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "del-sec-26-dwarka",
+        "outbound_minutes": 28,
+        "return_minutes": 32
+      },
+      {
+        "locality_id": "del-jain-colony-matiala",
+        "outbound_minutes": 44,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-hari-nagar-jaitpur",
+        "outbound_minutes": 68,
+        "return_minutes": 84
+      },
+      {
+        "locality_id": "del-chanakya-place-2",
+        "outbound_minutes": 48,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-siri-fort",
+        "outbound_minutes": 44,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-santosh-park",
+        "outbound_minutes": 49,
+        "return_minutes": 65
+      },
+      {
+        "locality_id": "del-badarpur",
+        "outbound_minutes": 69,
+        "return_minutes": 76
+      },
+      {
+        "locality_id": "del-tagore-garden-extension",
+        "outbound_minutes": 57,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-ram-nagar-paharganj",
+        "outbound_minutes": 59,
+        "return_minutes": 67
+      },
+      {
+        "locality_id": "del-sarvapriya-vihar",
+        "outbound_minutes": 40,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "del-pushp-vihar",
+        "outbound_minutes": 43,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "del-block-jg-1-vikaspuri",
+        "outbound_minutes": 59,
+        "return_minutes": 76
+      },
+      {
+        "locality_id": "del-block-4-subhash-nagar",
+        "outbound_minutes": 53,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-block-1-east-patel-nagar",
+        "outbound_minutes": 47,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-ram-datt-enclave",
+        "outbound_minutes": 53,
+        "return_minutes": 73
+      },
+      {
+        "locality_id": "del-old-jnu-campus",
+        "outbound_minutes": 37,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "del-pocket-9-sector-b-vasant-kunj",
+        "outbound_minutes": 35,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-sec-18b-dwarka",
+        "outbound_minutes": 48,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-pocket-dg2-vikaspuri",
+        "outbound_minutes": 57,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-b-block-east-of-kailash",
+        "outbound_minutes": 59,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-new-multan-nagar",
+        "outbound_minutes": 62,
+        "return_minutes": 78
+      },
+      {
+        "locality_id": "del-dwarka-greens-apartment",
+        "outbound_minutes": 40,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "del-pocket-3-sec-12-dwarka",
+        "outbound_minutes": 36,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "del-pocket-2-sector-b-vasant-kunj",
+        "outbound_minutes": 35,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-malcha",
+        "outbound_minutes": 36,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "del-pocket-2-sec-6-dwarka",
+        "outbound_minutes": 40,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "del-neeti-bagh",
+        "outbound_minutes": 48,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-arjun-nagar-kotla-mubarakpur",
+        "outbound_minutes": 53,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-pocket-4-sec-1-dwarka",
+        "outbound_minutes": 40,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "del-dwarka-sec-23",
+        "outbound_minutes": 28,
+        "return_minutes": 37
+      },
+      {
+        "locality_id": "del-mahavir-campus",
+        "outbound_minutes": 35,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "del-block-d2a-janakpuri",
+        "outbound_minutes": 48,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "del-sector-e2",
+        "outbound_minutes": 30,
+        "return_minutes": 38
+      },
+      {
+        "locality_id": "del-dwarka-sec-19",
+        "outbound_minutes": 33,
+        "return_minutes": 43
+      },
+      {
+        "locality_id": "del-pankha-road",
+        "outbound_minutes": 43,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-gh-14",
+        "outbound_minutes": 61,
+        "return_minutes": 79
+      },
+      {
+        "locality_id": "del-vikas-puri",
+        "outbound_minutes": 57,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-palam-colony-palam",
+        "outbound_minutes": 39,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-srs-residency",
+        "outbound_minutes": 55,
+        "return_minutes": 74
+      },
+      {
+        "locality_id": "del-block-38-west-patel-nagar",
+        "outbound_minutes": 55,
+        "return_minutes": 66
+      },
+      {
+        "locality_id": "del-harsh-vihar-pitam-pura",
+        "outbound_minutes": 66,
+        "return_minutes": 77
+      },
+      {
+        "locality_id": "del-noor-nagar",
+        "outbound_minutes": 62,
+        "return_minutes": 77
+      },
+      {
+        "locality_id": "del-uer-heights-loknayakpuram",
+        "outbound_minutes": 45,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "del-chaukhandi",
+        "outbound_minutes": 59,
+        "return_minutes": 75
+      },
+      {
+        "locality_id": "del-pitam",
+        "outbound_minutes": 62,
+        "return_minutes": 76
+      },
+      {
+        "locality_id": "del-new-krishna-park",
+        "outbound_minutes": 59,
+        "return_minutes": 75
+      },
+      {
+        "locality_id": "del-c-block-dayanand-colony",
+        "outbound_minutes": 56,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-ashok-nagar",
+        "outbound_minutes": 54,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-freedom-fighter-colony",
+        "outbound_minutes": 41,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "del-anand-nagar-inderlok",
+        "outbound_minutes": 65,
+        "return_minutes": 75
+      },
+      {
+        "locality_id": "del-block-11-west-patel-nagar",
+        "outbound_minutes": 50,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-sheikh-sarai-village",
+        "outbound_minutes": 47,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "del-sec-11-pocket-3",
+        "outbound_minutes": 34,
+        "return_minutes": 47
+      },
+      {
+        "locality_id": "del-alaknanda-shivalik-apartment",
+        "outbound_minutes": 53,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-friends-colony-new-friends-colony",
+        "outbound_minutes": 60,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-gh-13",
+        "outbound_minutes": 60,
+        "return_minutes": 78
+      },
+      {
+        "locality_id": "del-block-a1a-janakpuri",
+        "outbound_minutes": 55,
+        "return_minutes": 74
+      },
+      {
+        "locality_id": "del-pocket-3-sector-d-vasant-kunj",
+        "outbound_minutes": 32,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "del-pocket-1-sec-12-dwarka",
+        "outbound_minutes": 38,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "del-alaknanda-gangotri-apartment",
+        "outbound_minutes": 53,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-pocket-7-sec-12-dwarka",
+        "outbound_minutes": 36,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "del-amar-colony",
+        "outbound_minutes": 55,
+        "return_minutes": 70
+      },
+      {
+        "locality_id": "del-block-1b-ramesh-nagar",
+        "outbound_minutes": 54,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-dayanand-colony-lajpat-nagar-4",
+        "outbound_minutes": 56,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-mayur-kunj",
+        "outbound_minutes": 68,
+        "return_minutes": 79
+      },
+      {
+        "locality_id": "del-sector-b-pocket-1",
+        "outbound_minutes": 35,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "del-saidulajab",
+        "outbound_minutes": 42,
+        "return_minutes": 49
+      },
+      {
+        "locality_id": "del-vasant-kunj-d-8",
+        "outbound_minutes": 33,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "del-pocket-2-sec-1-dwarka",
+        "outbound_minutes": 40,
+        "return_minutes": 54
+      },
+      {
+        "locality_id": "del-block-12-east-patel-nagar",
+        "outbound_minutes": 48,
+        "return_minutes": 60
+      },
+      {
+        "locality_id": "del-block-36-east-patel-nagar",
+        "outbound_minutes": 49,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-pochanpur-colony",
+        "outbound_minutes": 26,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "del-tughlakabad-extension",
+        "outbound_minutes": 55,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-chhatarpur-farms",
+        "outbound_minutes": 34,
+        "return_minutes": 40
+      },
+      {
+        "locality_id": "del-palam-extension",
+        "outbound_minutes": 37,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "del-block-gh-5-and-7",
+        "outbound_minutes": 61,
+        "return_minutes": 78
+      },
+      {
+        "locality_id": "del-jawahar-park-khanpur",
+        "outbound_minutes": 48,
+        "return_minutes": 67
+      },
+      {
+        "locality_id": "del-c2-block-janakpuri",
+        "outbound_minutes": 48,
+        "return_minutes": 67
+      },
+      {
+        "locality_id": "del-baprola",
+        "outbound_minutes": 37,
+        "return_minutes": 46
+      },
+      {
+        "locality_id": "del-sultanpur",
+        "outbound_minutes": 22,
+        "return_minutes": 28
+      },
+      {
+        "locality_id": "del-uttam-nagar-nawada",
+        "outbound_minutes": 48,
+        "return_minutes": 67
+      },
+      {
+        "locality_id": "del-naraina-village",
+        "outbound_minutes": 45,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-shadipur-mandir-wali-gali",
+        "outbound_minutes": 56,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-gh-9",
+        "outbound_minutes": 63,
+        "return_minutes": 79
+      },
+      {
+        "locality_id": "del-jhandewalan",
+        "outbound_minutes": 50,
+        "return_minutes": 60
+      },
+      {
+        "locality_id": "del-block-c4f-janakpuri",
+        "outbound_minutes": 48,
+        "return_minutes": 67
+      },
+      {
+        "locality_id": "del-3-vikaspuri",
+        "outbound_minutes": 61,
+        "return_minutes": 74
+      },
+      {
+        "locality_id": "del-krishna-nagar-safdarjung-enclave",
+        "outbound_minutes": 42,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "del-sri-niwaspuri",
+        "outbound_minutes": 57,
+        "return_minutes": 71
+      },
+      {
+        "locality_id": "del-parkash-mohalla",
+        "outbound_minutes": 55,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-shyam-nagar-vishnu-garden",
+        "outbound_minutes": 59,
+        "return_minutes": 74
+      },
+      {
+        "locality_id": "del-raja-puri-matiala",
+        "outbound_minutes": 40,
+        "return_minutes": 55
+      },
+      {
+        "locality_id": "del-rohini-sec-8",
+        "outbound_minutes": 65,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-kishan-ganj",
+        "outbound_minutes": 55,
+        "return_minutes": 64
+      },
+      {
+        "locality_id": "del-dera-mandi",
+        "outbound_minutes": 34,
+        "return_minutes": 39
+      },
+      {
+        "locality_id": "del-block-e-param-puri",
+        "outbound_minutes": 49,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-manglapuri",
+        "outbound_minutes": 45,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-shakur-basti",
+        "outbound_minutes": 65,
+        "return_minutes": 76
+      },
+      {
+        "locality_id": "del-gole-market",
+        "outbound_minutes": 48,
+        "return_minutes": 57
+      },
+      {
+        "locality_id": "del-matiala-extension",
+        "outbound_minutes": 43,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-shiv-park-kakrola",
+        "outbound_minutes": 41,
+        "return_minutes": 53
+      },
+      {
+        "locality_id": "del-bharat-vihar-dwarka",
+        "outbound_minutes": 41,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-school-block",
+        "outbound_minutes": 67,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-sitapuri-part-1",
+        "outbound_minutes": 45,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-tughlakabad",
+        "outbound_minutes": 58,
+        "return_minutes": 73
+      },
+      {
+        "locality_id": "del-ashok-vihar-north",
+        "outbound_minutes": 67,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-palam-colony",
+        "outbound_minutes": 42,
+        "return_minutes": 56
+      },
+      {
+        "locality_id": "del-nangli-dairy",
+        "outbound_minutes": 44,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "del-sultanpuri",
+        "outbound_minutes": 62,
+        "return_minutes": 77
+      },
+      {
+        "locality_id": "del-vani-vihar",
+        "outbound_minutes": 51,
+        "return_minutes": 67
+      },
+      {
+        "locality_id": "del-ramphal-chowk-road",
+        "outbound_minutes": 37,
+        "return_minutes": 50
+      },
+      {
+        "locality_id": "del-paschim-puri",
+        "outbound_minutes": 56,
+        "return_minutes": 68
+      },
+      {
+        "locality_id": "del-dwarka-sec-14",
+        "outbound_minutes": 41,
+        "return_minutes": 51
+      },
+      {
+        "locality_id": "del-nasirpur",
+        "outbound_minutes": 46,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-rohini-16",
+        "outbound_minutes": 48,
+        "return_minutes": 61
+      },
+      {
+        "locality_id": "del-vipin-garden-extension",
+        "outbound_minutes": 47,
+        "return_minutes": 59
+      },
+      {
+        "locality_id": "del-dwarka-sec-9-road",
+        "outbound_minutes": 31,
+        "return_minutes": 42
+      },
+      {
+        "locality_id": "del-molar-band-extension",
+        "outbound_minutes": 68,
+        "return_minutes": 80
+      },
+      {
+        "locality_id": "del-raj-nagar-2-extension",
+        "outbound_minutes": 34,
+        "return_minutes": 48
+      },
+      {
+        "locality_id": "del-main-chhatarpur-road",
+        "outbound_minutes": 36,
+        "return_minutes": 45
+      },
+      {
+        "locality_id": "del-new-mahavir-nagar",
+        "outbound_minutes": 58,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-ghasipura",
+        "outbound_minutes": 41,
+        "return_minutes": 52
+      },
+      {
+        "locality_id": "del-2b-janakpuri",
+        "outbound_minutes": 54,
+        "return_minutes": 72
+      },
+      {
+        "locality_id": "del-aya-nagar-extension",
+        "outbound_minutes": 17,
+        "return_minutes": 17
+      },
+      {
+        "locality_id": "del-sarai-rohilla",
+        "outbound_minutes": 62,
+        "return_minutes": 75
+      },
+      {
+        "locality_id": "del-vijay-enclave",
+        "outbound_minutes": 42,
+        "return_minutes": 58
+      },
+      {
+        "locality_id": "del-block-16-west-patel-nagar",
+        "outbound_minutes": 55,
+        "return_minutes": 66
+      },
+      {
+        "locality_id": "del-nanhey-park",
+        "outbound_minutes": 51,
+        "return_minutes": 62
+      },
+      {
+        "locality_id": "del-sec-21-dwarka",
+        "outbound_minutes": 28,
+        "return_minutes": 35
+      },
+      {
+        "locality_id": "del-kamla-nagar-market",
+        "outbound_minutes": 64,
+        "return_minutes": 78
+      },
+      {
+        "locality_id": "del-1-block-main-road",
+        "outbound_minutes": 57,
+        "return_minutes": 69
+      },
+      {
+        "locality_id": "del-pandav-nagar-east-delhi-akshardham-metro",
+        "outbound_minutes": 66,
+        "return_minutes": 77
+      }
+    ],
+    "computed_at": "2026-06-17T02:05:47.820Z",
+    "last_accessed": "2026-06-19T09:13:04.781Z"
   },
   "commute:v1:28.495329:77.089253:09:00:18:00": {
     "key": {
